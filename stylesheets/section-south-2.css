@@ -1,0 +1,83 @@
+/*
+** @section 
+** - define background image positioning and column container positioning
+*/
+section {
+  background-image: url(../images/backgrounds/south-section-2.jpg);
+  background-size: 1530px 2450px;     /* Define precise size of the background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 2450px;
+  min-height: 2450px;
+  max-height: 2450px;
+}
+
+section #column_container {
+  display: flex;
+  height: 2200px;     /* Must match background size dimensions */
+  width: 1010px;
+  border:5px solid transparent;
+  margin: 128px auto 0 auto;
+}
+
+/*
+** @columns
+** - Define width and positioning of columns
+*/
+#column_container #Slip-1{
+  width: 166px;
+  margin: 0 0 0 3px;
+}
+#column_container #Column-3{
+  width:492px;
+  margin: 0 0 0 82px;
+}
+#column_container #Slip-2{
+  width:166px;
+  margin: 0 0 0 79px;
+}
+
+/*
+** @shelf
+** - Precise positioning of the shelves
+*/
+.shelf{
+  box-shadow:inset -10px -5px 20px 2px rgba(40,40,40,0.5);
+}
+
+#Slip-1 > #shelf-6{height:200px;margin-top:665px;}
+#Slip-1 > #shelf-5{height:200px;margin-top:20px;}
+#Slip-1 > #shelf-4{height:200px;margin-top:18px;}
+#Slip-1 > #shelf-3{height:200px;margin-top:20px;}
+#Slip-1 > #shelf-2{height:200px;margin-top:18px;}
+#Slip-1 > #shelf-1{height:424px;margin-top:20px;}
+
+#Column-3 > #shelf-8{height:201px;margin-top:5px;}
+#Column-3 > #shelf-7{height:203px;margin-top:18px;}
+#Column-3 > #shelf-6{height:203px;margin-top:18px;}
+#Column-3 > #shelf-5{height:262px;margin-top:18px;}
+#Column-3 > #shelf-4{height:262px;margin-top:19px;}
+#Column-3 > #shelf-3{height:262px;margin-top:19px;}
+#Column-3 > #shelf-2{height:262px;margin-top:19px;}
+#Column-3 > #shelf-1{height:395px;margin-top:19px;}
+  
+#Slip-2 > #shelf-6{height:200px;margin-top:665px;}
+#Slip-2 > #shelf-5{height:200px;margin-top:20px;}
+#Slip-2 > #shelf-4{height:200px;margin-top:20px;}
+#Slip-2 > #shelf-3{height:200px;margin-top:20px;}
+#Slip-2 > #shelf-2{height:200px;margin-top:21px;}
+#Slip-2 > #shelf-1{height:422px;margin:20px 0 0 2px;}
+
+#column_container .format_wall-section__4to .book{
+  min-width:35px;
+}
+
+/*
+** @toolTip
+*/
+#column_container #Slip-2 .shelf .book .toolTip{
+    left:-350px !important;
+    border-left:0px solid rgba(50,150,255,0.8);
+    border-right:5px solid rgba(50,150,255,0.8);
+}

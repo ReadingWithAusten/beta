@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>South Wall | Reading With Austen</title>
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <!-- Note Cascading -->
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/header.css">
+  <link rel="stylesheet" href="stylesheets/wall-view.css">
+  <link rel="stylesheet" href="stylesheets/wall-south.css">
+</head>
+
+<body>
+  <div id="col_nav__container">
+    <div id="prevPage">
+      <a href="east-wall.html" ><p><<</p></a>
+    </div>
+    <div id="nextPage">
+      <a href="west-wall.html"><p>>></p></a>
+    </div>
+  </div>
+  <!-- 
+  HEADER
+  -->
+  <header>
+    <nav id="nav_primary__container">
+      <ul>
+        <a class="header__link" href="home.html"><li>Home</li></a>
+        <a class="header__link" href="south-wall.html"><li class="header__current-page">Library</li></a>
+        <a class="header__link"><li id="header__title">Reading With Austen</li></a>
+        <a class="header__link" href="catalogue.html"><li>Catalogue</li></a>
+        <a class="header__link" href="about"><li>About</li></a>
+      </ul>
+    </nav>
+    <nav id="nav_secondary__container">
+     <ul>
+        <a class="header__link" href="east-wall.html"><li>East Wall</li></a>
+        <a class="header__link" href="south-wall.html"><li class="header__current-page">South Wall</li></a>
+        <a class="header__link" href="west-wall.html"><li>West Wall</li></a>
+      </ul>
+    </nav>
+    <nav id="nav_tertiary__container">
+      <ul>
+        <a class="header__link" href="south-section-1.html"><li>Section 1</li></a>
+        <a class="header__link" href="south-section-2.html"><li>Section 2</li></a>
+        <a class="header__link" href="south-section-3.html"><li>Section 3</li></a>
+      </ul>
+    </nav>
+    <div id="nav_acccessability_container" onclick="toggleAnimation()">
+      <img id="nav_accessability__play" src="images/play-animation.svg" class="nav_acccessability__hide">
+      <img id="nav_accessability__pause" src="images/pause-animation.svg">
+    </div>
+  </header>
+  <!--
+  SECTION
+  -->
+  <section id="content_body">
+    <ul id="column_container"></ul>
+  </section>
+
+  <!-- 
+  FOOTER
+  -->
+   <footer>
+    <ul>
+      <li><img id="footer_plate" src="images/footer_plate.png" alt=""></li>
+      <li>
+        <img id="footer_mcgill" src="images/mcgill.svg" alt="">
+        <p>Burney Centre</p>
+      </li>
+      <li>
+        <p id="footerContact">
+          The Burney Centre<br> Department of English<br> McGill University<br> 853 Sherbrooke St. W.<br> Montreal, PQ H3A 0G5<br> Canada
+          <br> Phone: (514) 398-6132 <br>
+        </p>
+      </li>
+      <li>
+        <ul id="footerLinks">
+          <li><a href="">External Link</a></li>
+          <li><a href="">External Link</a></li>
+          <li><a href="">External Link</a></li>
+          <li><a href="">External Link</a></li>
+        </ul>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="javascripts/functions.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/southcase.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  function makeWall(LAYOUT = SOUTHCASE_LAYOUT, ELEMENT = 'column_container') {
+    let WALL = document.getElementById(ELEMENT);
+    let col_num = 1;
+    Object.keys(LAYOUT).forEach(col => {
+        console.log('populating: '+col)
+        let column = "";
+        let shelf_num = 1;
+        
+        Object.keys(LAYOUT[col]).forEach(sh => {
+          let shelfFormat = LAYOUT[col][sh][0].format;
+          let shelf = "<ul class='shelf format_" + shelfFormat + "' id='shelf-" + shelf_num + "'>";
+          
+          Object.keys(LAYOUT[col][sh]).forEach(book => {
+            let bk = LAYOUT[col][sh][book];
+            
+
+            // Set up Book classes
+            let folder_class = "no_folder";
+            if (bk.folder_name) {
+              folder_class = "has_folder";
+            }
+
+            // Width based on number of volumes
+            let standard_bk_width = 2.8;
+            let spineWidth = standard_bk_width * parseInt(bk.volumes);
+            if(spineWidth > 40){spineWidth = 40}
+            if(!spineWidth || spineWidth == 0){
+              folder_class += " no_volumes";
+              spineWidth = 4;
+            }
+            let toolTipWidth = spineWidth+30;
+
+            // Set spine image
+            let spine = "images\\spines\\heylyn-theological-1749_spine-crop.png";     //default spine
+            if(bk.spine == 'y'){
+              spine = "images\\spines\\" + bk.folder_name + "_spine-crop.png";
+            }else{
+              let stock = stock_spines[bk.volumes];
+              spine = "images\\spines\\stock_spines\\" + stock;
+              folder_class += " book__stock book__stock-"+bk.volumes;
+            }
+
+            let id = col+"-"+sh+"-"+bk.id;
+            let img = "<img src='" + spine + "' class='book_spine' style='max-width:" + spineWidth + "px'>";
+            let title = (bk.title != "null" || !bk.title) ? "Title Unavailable" : cropString(bk.title,10);
+            let link = makeBookViewInLibraryAnchor(bk)+"#bookID-"+bk.book_id;
+
+            // Select info for 'hover' tooltip here
+            let tool_tip = "<div class='toolTip'><p class='toolTip_title'>" + cropString(bk.title,10) + "</p><p class='toolTip_author'>" + bk.author + "</p><i>Book ID - "+bk.book_id+"</i></div>";
+
+            // Final Book Element - identified by bk.id
+            shelf += "<a href='" + link + "' class='book " + folder_class + "'><li id='bookID-" + bk.id + "' data-id='" + bk.id + "' style='width:"+spineWidth+"px'>" + img + tool_tip + "</li></a>";
+
+          });
+          shelf_num++;
+          shelf += "</ul>";
+          column = shelf + column;
+        });
+        col_num++;
+        //column += "</li>";
+        let col_out = "<li class='column' id='" + col + "'>" + column + "</li>";
+        WALL.innerHTML += col_out;
+    });
+  }
+  makeWall();
+</script>
+</html>

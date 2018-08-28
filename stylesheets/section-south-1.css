@@ -1,0 +1,88 @@
+/*
+** @header
+*/
+/* Defines the current wall */
+header #nav_secondary__container #nav_section__container::before{
+  content:"South Wall";
+  display:block;
+  position: absolute;
+  top:15px;
+  left:43%;
+  font-size:1.1vw;    
+  color: black;
+  text-decoration: underline;
+}
+/*
+** @section 
+** - define background image positioning and column container positioning
+*/
+section {
+  background-image: url(../images/backgrounds/south-section-1.1.jpg);
+  background-size: 1230px 2250px;     /* Define precise size of the background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin-top:90px;
+  display: flex;
+  height: 2250px;
+  min-height: 2250px;
+  max-height: 2250px;
+}
+section #column_container {
+  display: flex;
+  height: 2040px;     /* Must match background size dimensions */
+  width: 790px;
+  
+  border:5px solid transparent;
+  margin: 120px auto 0 auto;
+}
+
+/*
+** @columns
+** - Define width and positioning of columns
+*/
+#column_container #Column-1{
+  width:480px;
+  margin: 0 0 0 3px;
+}
+#column_container #Column-2{
+  width:214px;
+  margin: 0 0 0 78px;
+}
+
+/*
+** @shelf
+** - Precise positioning of the shelves
+*/
+.shelf{
+  box-shadow: inset -10px 10px 20px 2px rgba(40,40,40,0.5);
+  border-radius: 3px;
+}
+
+#Column-1 > #shelf-10{height:187px;margin-top:2px;width:482px;}
+#Column-1 > #shelf-9{height:189px;margin-top:16px;width:481px;}
+#Column-1 > #shelf-8{height:189px;margin-top:16px;width:481px;}
+#Column-1 > #shelf-7{height:185px;margin-top:17px;}
+#Column-1 > #shelf-6{height:188px;margin-top:16px;}
+#Column-1 > #shelf-5{height:186px;margin-top:17px;}
+#Column-1 > #shelf-4{height:187px;margin-top:16px;}
+#Column-1 > #shelf-3{height:186px;margin-top:17px;}
+#Column-1 > #shelf-2{height:187px;margin-top:17px;}
+#Column-1 > #shelf-1{height:192px;margin-top:17px;}
+
+#Column-2 > #shelf-8{height:189px;margin-top:3px;}
+#Column-2 > #shelf-7{height:189px;margin-top:17px;}
+#Column-2 > #shelf-6{height:188px;margin-top:15px;}
+#Column-2 > #shelf-5{height:244px;margin-top:16px;}
+#Column-2 > #shelf-4{height:244px;margin-top:16px;}
+#Column-2 > #shelf-3{height:245px;margin-top:16px;}
+#Column-2 > #shelf-2{height:245px;margin-top:16px;}
+#Column-2 > #shelf-1{height:370px;margin-top:16px;}
+
+/*
+** @tooltip
+*/
+#column_container #Column-2 .shelf .book .toolTip{
+    left:-350px !important;
+    border-left:0px solid rgba(50,150,255,0.8);
+    border-right:5px solid rgba(50,150,255,0.8);
+}

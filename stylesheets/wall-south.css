@@ -1,0 +1,100 @@
+/*
+** @section 
+*/
+section#content_body{
+  background-image: url(../images/backgrounds/south-wall.jpg);
+  background-size: 1550px 1160px;     /* Define precise size of the background */
+  background-position: center -80px;
+  background-repeat: no-repeat;
+  padding-top:90px;
+  margin-top: 0px !important;
+  min-height: 1160px;
+  max-height: 1160px;
+  height: 1160px;
+  width:100vw;
+}
+
+section #column_container{
+  border:5px solid transparent;
+  width:775px;
+  height:605px;
+  margin: 150px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+** @columns
+*/
+#Column-1{  margin:5px 0 0 15px;  width:133px;}
+#Column-2{  margin:4px 0 0 21px;  width:58px; }
+#Slip-1{    margin:4px 0 0 22px;  width:45px; }
+#Column-3{  margin:4px 0 0 22px;  width:133px;}
+#Slip-2{    margin:5px 0 0 21px;  width:45px; }
+#Column-4{  margin:5px 0 0 22px;  width:59px; }
+#Column-5{  margin:5px 0 0 22px;  width:133px;}
+
+/*
+** @shelf
+*/
+#column_container #Column-1 #shelf-10{ margin:0px 0 0 0; height: 53px;}
+#column_container #Column-1 #shelf-9{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-8{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-7{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-6{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-5{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-4{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-3{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-2{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-1 #shelf-1{ margin:5px 0 0 0; height: 56px;}
+
+#column_container #Column-2 #shelf-8{ margin:0px 0 0 0; height: 54px;}
+#column_container #Column-2 #shelf-7{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-2 #shelf-6{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-2 #shelf-5{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-2 #shelf-4{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-2 #shelf-3{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-2 #shelf-2{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-2 #shelf-1{ margin:5px 0 0 0; height: 106px;}
+
+#column_container #Slip-1 #shelf-6{ margin:178px 0 0 0; height: 54px;}
+#column_container #Slip-1 #shelf-5{ margin:6px 0 0 0;   height: 53px;}
+#column_container #Slip-1 #shelf-4{ margin:5px 0 0 0;   height: 54px;}
+#column_container #Slip-1 #shelf-3{ margin:5px 0 0 0;   height: 54px;}
+#column_container #Slip-1 #shelf-2{ margin:5px 0 0 0;   height: 54px;}
+#column_container #Slip-1 #shelf-1{ margin:5px 0 0 0;   height: 114px;}
+
+#column_container #Column-3 #shelf-8{ margin:0px 0 0 0; height: 54px;}
+#column_container #Column-3 #shelf-7{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-3 #shelf-6{ margin:5px 0 0 0; height: 55px;}
+#column_container #Column-3 #shelf-5{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-3 #shelf-4{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-3 #shelf-3{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-3 #shelf-2{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-3 #shelf-1{ margin:5px 0 0 0; height: 106px;}
+
+#column_container #Slip-2 #shelf-6{ margin:178px 0 0 0; height: 53px;}
+#column_container #Slip-2 #shelf-5{ margin:6px 0 0 0;   height: 53px;}
+#column_container #Slip-2 #shelf-4{ margin:5px 0 0 0;   height: 54px;}
+#column_container #Slip-2 #shelf-3{ margin:5px 0 0 0;   height: 54px;}
+#column_container #Slip-2 #shelf-2{ margin:5px 0 0 0;   height: 54px;}
+#column_container #Slip-2 #shelf-1{ margin:5px 0 0 0;   height: 114px;}
+
+#column_container #Column-4 #shelf-7{ margin:59px 0 0 0; height: 54px;}
+#column_container #Column-4 #shelf-6{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-4 #shelf-5{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-4 #shelf-4{ margin:5px 0 0 0; height: 70px;}
+#column_container #Column-4 #shelf-3{ margin:5px 0 0 0; height: 70px;}
+#column_container #Column-4 #shelf-2{ margin:5px 0 0 0; height: 71px;}
+#column_container #Column-4 #shelf-1{ margin:5px 0 0 0; height: 108px;}
+
+#column_container #Column-5 #shelf-10{ margin:0px 0 0 0; height: 53px;}
+#column_container #Column-5 #shelf-9{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-5 #shelf-8{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-5 #shelf-7{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-5 #shelf-6{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-5 #shelf-5{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-5 #shelf-4{ margin:5px 0 0 0; height: 55px;}
+#column_container #Column-5 #shelf-3{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-5 #shelf-2{ margin:5px 0 0 0; height: 54px;}
+#column_container #Column-5 #shelf-1{ margin:5px 0 0 0; height: 56px;}

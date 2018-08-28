@@ -1,0 +1,91 @@
+/*
+** @header
+*/
+/* Defines the current wall */
+header #nav_secondary__container #nav_section__container::before{
+  content:"West Wall";
+  display:block;
+  position: absolute;
+  top:15px;
+  left:43%;
+  font-size:1.1vw;    
+  color: black;
+  text-decoration: underline;
+}
+
+/*
+** @section 
+** - define background image positioning and column container positioning
+*/
+section#content_body{
+  background-image: url(../images/backgrounds/west-section-3.jpg);
+  background-size: 1030px 2050px;     /* Define precise size of the background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-top: 80px !important;
+  height: 2050px;
+  min-height: 2050px;
+  max-height: 2050px;
+}
+
+
+section #column_container {
+  display: flex;
+  height: 1870px;     
+  width: 620px;
+  border: 5px solid transparent;
+  margin: 100px auto 0 auto;
+}
+
+/*
+** @columns
+** - Define width and positioning of columns
+*/
+#column_container #Column-4{
+  width: 190px;
+  margin: 0 0 0 50px;
+}
+#column_container #Column-5{
+  width: 298px;
+  margin: 0 0 0 67px;
+}
+
+/*
+** @shelf
+** - Precise positioning of the shelves
+*/
+.shelf{
+  box-shadow: inset 0px -5px 20px 2px rgba(40,40,40,0.5);
+  border-radius:3px;
+}
+
+#Column-4 > #shelf-6{height:239px;margin-top:10px;}
+#Column-4 > #shelf-5{height:239px;margin-top:15px;}
+#Column-4 > #shelf-4{height:320px;margin-top:16px;}
+#Column-4 > #shelf-3{height:320px;margin-top:17px;width:190px;}
+#Column-4 > #shelf-2{height:320px;margin-top:15px;}
+#Column-4 > #shelf-1{height:323px;margin-top:16px;width:193px;}
+
+#Column-5 > #shelf-6{height:239px;margin-top:10px;}
+#Column-5 > #shelf-5{height:239px;margin-top:15px;}
+#Column-5 > #shelf-4{height:320px;margin-top:16px;}
+#Column-5 > #shelf-3{height:320px;margin-top:17px;}
+#Column-5 > #shelf-2{height:320px;margin-top:15px;}
+#Column-5 > #shelf-1{height:324px;margin-top:16px;}
+
+#column_container .format_wall-section__folio .book,
+#column_container .format_wall-section__fol\. .book{
+  min-width:25px;
+}
+
+#column_container .format_wall-section__4to .book{
+  min-width:10px;
+}
+
+/*
+** @book
+*/
+#bookID-1077{
+  width:90px !important;
+}

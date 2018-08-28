@@ -1,0 +1,82 @@
+#modal{
+  padding-top:8em;
+}
+
+/*
+** @section 
+** - define background image positioning and column container positioning
+*/
+section {
+  background-image: url(../images/backgrounds/east-section-3.jpg);
+  background-size: 1800px 2600px;     /* Define precise size of the background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-top:33px !important;
+  height: 2600px;
+  min-height: 2600px;
+  max-height: 2600px;
+}
+
+section #column_container {
+  display: flex;
+  height: 2290px;     
+  width: 950px;
+  border:5px solid transparent;
+  margin: 180px auto 0 auto;
+}
+
+/*
+** @columns
+** - Define width and positioning of columns
+*/
+#column_container #Column-4{
+  width: 293px;
+  margin: 0 0 0 5px;
+}
+#column_container #Column-5{
+  width:492px;
+  margin: 0 0 0 105px;
+}
+
+/*
+** @shelf
+** - Precise positioning of the shelves
+*/
+.shelf{
+  box-shadow: inset 2px 5px 20px 0px rgba(40,40,40,0.5);
+  padding: 0 0 0 2px;
+  border-radius: 3px;
+}
+#Column-4 > #shelf-7{height:190px;margin-top:217px;}
+#Column-4 > #shelf-6{height:189px;margin-top:20px;}
+#Column-4 > #shelf-5{height:186px;margin-top:22px;}
+#Column-4 > #shelf-4{height:187px;margin-top:22px;}
+#Column-4 > #shelf-3{height:390px;margin-top:23px;}
+#Column-4 > #shelf-2{height:390px;margin-top:22px;}
+#Column-4 > #shelf-1{height:393px;margin-top:22px;}
+
+#Column-5 > #shelf-8{height:188px;margin-top:8px;  width:500px;}
+#Column-5 > #shelf-7{height:188px;margin-top:21px; width:500px;}
+#Column-5 > #shelf-6{height:187px;margin-top:22px; width:499px;}
+#Column-5 > #shelf-5{height:186px;margin-top:23px; width:498px;}
+#Column-5 > #shelf-4{height:187px;margin-top:21px; width:498px;}
+#Column-5 > #shelf-3{height:390px;margin-top:24px;}
+#Column-5 > #shelf-2{height:393px;margin-top:22px;}
+#Column-5 > #shelf-1{height:393px;margin-top:21px;}
+
+#column_container .format_wall-section__folio .book,
+#column_container .format_wall-section__fol\. .book{
+  min-width:22px;
+}
+
+#column_container .format_wall-section__4to .book{
+  min-width:26px;
+}
+
+/*
+** @book
+*/
+#bookID-187{
+  width:35px !important;
+}

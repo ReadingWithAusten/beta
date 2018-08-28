@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+/* @MODAL @ANCHOR @html link*/
+#modal a:hover,
+#modal a:link,
+#modal a:visited,
+#modal a:focus,
+#modal a:active {
+  color: #282828;
+  text-decoration: none;
+  outline: none;
+}
+#modal a::after {
+  transform: translateY(0px);
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+#modal a:hover {
+  color: royalblue;
+  text-decoration: underline;
+}
+
+/* Everything previous is for testing */
+/* @EVENTS */
+.no-scroll{
+  overflow:hidden;
+}
+.modal__display {
+  z-index: 5;
+  opacity: 1;
+  transition: z-index 0s, opacity 0.3s ease-in-out;
+}
+
+.modal__display #modal_content_container,
+.modal__display #modal_nav_container {
+  transform: translateY(15px);
+}
+
+.modal__hide {
+  z-index: -5;
+  opacity: 0;
+  transition: z-index 0.5s, opacity 0.3s ease-in-out;
+}
+
+.fade_image_out {
+  opacity: 0 !important;
+}
+
+/* 
+** @MODAL @CONTAINER 
+*/
+#modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 110vh;
+  width: 100vw;
+  position: fixed;
+  padding: 5em 0 0 0;
+  margin: -2% 0 0 0;
+}
+
+/*Size of modal box*/
+#modal_imgViewer,
+#modal_content_container,
+#modal_nav_container {
+  display: block;
+  width: 95%;
+  max-width: 60vw;
+  max-height: 70vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#modal_content_container {
+  box-shadow: -10px -10px 10px -10px black;
+  background-color: #fafafa;
+  border: 2px solid royalblue;
+  border-radius: 3px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  height: 90vh;
+  position: relative;
+  padding: 10px 5px;
+  z-index: 2;
+  text-align: center;
+}
+
+#modal_nav_container {
+  overflow: auto;
+  width: 80%;
+}
+#modal_nav_container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+#modal_nav_container > ul .modal_nav__button {
+  display: inline-block;
+  cursor: pointer;
+  font-family: helvetica;
+  border: 2px solid #1079bf;
+  box-shadow: 5px 5px 5px -5px black;
+  border-bottom: none;
+  color: #1079bf;
+  padding: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: whitesmoke;
+  margin: 0 2px;
+}
+#modal_nav_container > ul .modal_nav__button:hover {
+  color: white;
+  background-color: royalblue;
+}
+
+
+/* 
+** @MODAL @CONTENT BODY 
+*/
+#modal_content,
+#modal_images {
+  background-color: whitesmoke;
+  border: 1px solid rgba(40, 40, 40, 0.2);
+  border-radius: 2px;
+  box-shadow: 4px 4px 5px -6px black;
+  height: 100%;
+  width: 47%;
+  margin: 0 1%;
+  padding-bottom: 5%;
+  display: inline-block;
+  overflow-y:auto;
+  overflow-x: hidden;
+  vertical-align: top;
+}
+
+
+/* 
+** @MODAL @IMAGES 
+*/
+#modal_images img {
+  border: 5px solid white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px -5px black;
+  cursor: alias;
+}
+#modal_images img:hover{
+  box-shadow: 5px 5px 10px -6px black;
+  transform: scale(1.05);
+}
+#modal_images #modal_images__featured img:hover{
+  box-shadow: 3px 3px 5px -5px black;
+  transform:none;
+}
+
+#modal_images #modal_images__featured{
+  position: relative;
+}
+
+/* applies tooltip on hover of featured image
+#modal_images #modal_images__featured:hover:after{
+  content: "Zoom in";
+  bottom:-25px;
+  z-index: 20;
+  color:royalblue;
+  display: block;
+  border: 1px solid royalblue;
+  box-shadow: 3px 3px 3px -3px black;
+  padding: 2px 5px;
+  border-radius: 2px;
+  position: absolute;
+  left:30%;
+  transform: translateX(-50%);
+}
+*/
+
+#modal_images #modal_images__featured img {
+  cursor: zoom-in;
+  display: block;
+  margin: 5% auto;
+  background-color: lightskyblue;
+  max-width: 75%;
+  min-height: 200px;
+}
+#modal_images #modal_images__list {
+  width: 90%;
+  display: block;
+  margin: 0px auto 20px auto;
+}
+#modal_images #modal_images__list li {
+  background-color: aquamarine;
+  display: inline-block;
+  margin: 1%;
+}
+#modal_images #modal_images__list img {
+  height: 80px;
+  display: block;
+  min-width: 40px;
+}
+/* If book.folder_name == null */
+.modal_noImages{
+  width:50%;
+  height:50%;
+  border:10px solid white;
+  box-shadow:3px 3px 5px -5px black;
+  border-radius: 5px;
+  margin:5% auto;
+  background-color:rgba(0,0,0,0.1);
+  font-family: helvetica, sans-serif;
+  font-size:1em;
+  color:grey;
+  position: relative;
+}
+
+.modal_noImages:before{
+  position: absolute;
+  content: "This book currently has no images";
+  display: block;
+  font-weight: bolder;
+  top:40%;
+  left: calc(50% - 35%);
+  width:70%;
+}
+
+
+/* 
+** @MODAL @CONTENT 
+*/
+#modal_content {
+  text-align: left;
+  padding: 2%;
+}
+#modal_content__id,
+#modal_content__images,
+#modal_content__folder_name,
+#modal_content__transcript,
+#modal_content__volumes,
+#modal_content__author_type,
+#modal_content__subject{
+  display: none;
+}
+#modal_content p{
+  font-size:1em;
+  font-family:sans-serif;
+  margin: 10px 0;
+}
+#modal_content span{
+  font-family: serif;
+  font-weight:bold;
+  font-size:1.1em;
+  margin: 0 10px 0  0;
+  text-transform: capitalize;
+}
+#modal_content__link:hover::before {
+  content: "Open in new tab";
+  display: inline-block;
+  border: 1px solid royalblue;
+  box-shadow: 3px 3px 3px -3px black;
+  padding: 2px 5px;
+  border-radius: 2px;
+  position: absolute;
+  margin: 1em 0 0 30px;
+}
+
+
+
+/* 
+** @MODAL @VIEWER 
+*/
+#modal_imgViewer {
+  position: absolute;
+  display: inline-block;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#modal_imgViewer__content {
+  position: relative;
+}
+#modal_imgViewer img {
+  box-shadow: 5px 5px 5px -4px black;
+  border: 25px solid whitesmoke;
+  max-height: 75vh;
+  display: block;
+  position: relative;
+  margin: 0px auto;
+}
+#modal_imgViewer #modal_imgViewer_nav {
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+}
+#modal_imgViewer #modal_imgViewer_nav li {
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  display: inline-block;
+  font-family: sans-serif;
+  padding: 1% 1% 0.5% 1%;
+  font-size: 20px;
+  border-radius: 3px;
+  margin: -2px 0.5% 0 0.5%;
+  box-shadow: 3px 3px 5px -4px black;
+  color: royalblue;
+  cursor: pointer;
+}
+#modal_imgViewer #modal_imgViewer_nav li:hover {
+  color: white;
+  background-color: royalblue;
+  border-color: transparent;
+}
+#modal_imgViewer #modal_imgViewer__text {
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  color: transparent;
+  padding: 1%;
+  width: 50vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding:30px;
+  max-height:30px;
+  overflow: hidden;
+  transition:all 0.8s ease-in-out, color 0.2s ease-in-out;
+}
+/* Hover Arrow */
+#modal_imgViewer #modal_imgViewer__text::before {
+  cursor: pointer;
+  line-height:30px;
+  content:"^";
+  font-weight: bold;
+  color: lightskyblue;
+  text-shadow: 1px 1px 1px black;
+  font-size: 4em;
+  font-family: monospace;
+  display: block;
+  margin:0 auto;
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+#modal_imgViewer #modal_imgViewer__text h2 {
+  font-style: italic;
+  font-size: 1em;
+  margin: 0 0 10px 0;
+}
+#modal_imgViewer #modal_imgViewer__text p {
+  text-align: center;
+  font-family: helvetica;
+}
+#modal_imgViewer__text:hover{
+  max-height: 300px !important;
+  color: #2f2f2f !important;
+  background-color: rgba(230,230,230,0.9) !important;
+  box-shadow: 0px -5px 5px -5px black;
+}

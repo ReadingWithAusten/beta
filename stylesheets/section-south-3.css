@@ -1,0 +1,96 @@
+/*
+** @header
+*/
+/* Defines the current wall */
+header #nav_secondary__container #nav_section__container::before{
+  content:"South Wall";
+  display:block;
+  position: absolute;
+  top:15px;
+  left:43%;
+  font-size:1.1vw;    
+  color: black;
+  text-decoration: underline;
+}
+
+/*
+** @section 
+** - define background image positioning and column container positioning
+*/
+section {
+  background-image: url(../images/backgrounds/south-section-3.jpg);
+  background-size: 1395px 2570px;     /* Define precise size of the background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-top:70px !important;
+  height: 2570px;
+  min-height: 2570px;
+  max-height: 2570px;
+}
+
+
+section #column_container {
+  display: flex;
+  height: 2310px;     
+  width: 880px;
+  border:5px solid transparent;
+  margin: 140px auto 0 auto;
+}
+
+/*
+** @columns
+** - Define width and positioning of columns
+*/
+#column_container #Column-4{
+  width: 233px;
+  margin: 0 0 0 33px;
+}
+#column_container #Column-5{
+  width:518px;
+  margin: 0 0 0 84px;
+}
+
+/*
+** @shelf
+** - Precise positioning of the shelves
+*/
+.shelf{
+  box-shadow: inset 10px 10px 20px 2px rgba(40,40,40,0.5);
+  border-radius: 3px;
+}
+#Column-4 > #shelf-7{height:212px;margin-top:236px;}
+#Column-4 > #shelf-6{height:212px;margin-top:20px;}
+#Column-4 > #shelf-5{height:277px;margin-top:19px;}
+#Column-4 > #shelf-4{height:274px;margin-top:18px;}
+#Column-4 > #shelf-3{height:277px;margin-top:20px;}
+#Column-4 > #shelf-2{height:276px;margin-top:20px;}
+#Column-4 > #shelf-1{height:418px;margin-top:19px;}
+
+#Column-5 > #shelf-10{height:210px;margin-top:5px;}
+#Column-5 > #shelf-9{height:211px;margin-top:20px;}
+#Column-5 > #shelf-8{height:212px;margin-top:21px;}
+#Column-5 > #shelf-7{height:212px;margin-top:19px;}
+#Column-5 > #shelf-6{height:212px;margin-top:19px;}
+#Column-5 > #shelf-5{height:211px;margin-top:18px;}
+#Column-5 > #shelf-4{height:213px;margin-top:20px;}
+#Column-5 > #shelf-3{height:213px;margin-top:19px;}
+#Column-5 > #shelf-2{height:212px;margin-top:19px;}
+#Column-5 > #shelf-1{height:216px;margin-top:18px;}
+
+#column_container .format_wall-section__folio .book,
+#column_container .format_wall-section__fol\. .book{
+  min-width:25px;
+}
+
+#column_container .format_wall-section__4to .book{
+  min-width:30px;
+}
+
+/*
+** @book
+*/
+#bookID-722{
+  width:300px !important;
+}
+

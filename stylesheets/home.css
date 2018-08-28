@@ -1,0 +1,50 @@
+/*
+** @section 
+** - define background image positioning and column container positioning
+*/
+section#content_body{
+  background-image: url(../images/backgrounds/landing.jpg);
+  background-size: auto 100vh;     /* Define precise size of the background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top:90px;
+  margin-top: 0px !important;
+  min-height:100vh;
+}
+section#content_body div{
+  top:0;
+  left:0;
+  width:50vw;
+  max-width: 500px;
+  margin:20px 0 0 0;
+  background-color:rgba(40,40,40,0.6);
+  color:whitesmoke;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding:1em;
+  box-shadow: 3px 3px 7px -5px black;
+}
+section#content_body div h1{
+  text-align: center;
+  font-size: 2em;
+}
+
+section#content_body div p{
+  font-size:1em;
+  margin: 2vh 0;
+  text-align: left;
+}
+
+section#content_body div button{
+  border:none;
+  border-radius: 3px;
+  background-color: rgba(0,200,100,0.8);
+  color:white;
+  font-size:18px;
+  padding: 5px 10px;
+  margin: 10px auto 0 auto;;
+  display: block;
+  cursor: pointer;
+}
+

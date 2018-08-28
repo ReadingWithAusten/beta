@@ -1,0 +1,89 @@
+/*
+** @section 
+*/
+section#content_body{
+  background-image: url(../images/backgrounds/east-wall.jpg);
+  background-size: 1300px 935px;     /* Define precise size of the background */
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  margin-top: 40px !important;
+  min-height: 935px;
+  max-height: 935px;
+  height: 935px;
+}
+
+section #column_container{
+  border:5px solid transparent;
+  width:760px;
+  height:605px;
+  margin: 205px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+** @columns
+*/
+#Column-1{  margin:5px 0 0 5px;  width:105px; }
+#Column-2{  margin:6px 0 0 21px; width:62px;  }
+#Slip-1{    margin:5px 0 0 20px; width:66px;  }
+#Column-3{  margin:7px 0 0 21px; width:148px; }
+#Slip-2{    margin:5px 0 0 22px; width:65px;  }
+#Column-4{  margin:7px 0 0 22px; width:62px;  }
+#Column-5{  margin:6px 0 0 21px; width:105px; }
+
+/*
+** @shelf
+*/
+#column_container #Column-1 #shelf-7{ margin:53px 0 0 0; height: 49px;}
+#column_container #Column-1 #shelf-6{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-1 #shelf-5{ margin:5px 0 0 0; height: 48px;}
+#column_container #Column-1 #shelf-4{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-1 #shelf-3{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-1 #shelf-2{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-1 #shelf-1{ margin:5px 0 0 0; height: 101px;}
+
+#column_container #Column-2 #shelf-7{ margin:54px 0 0 0; height: 48px;}
+#column_container #Column-2 #shelf-6{ margin:5px 0 0 0; height: 48px;}
+#column_container #Column-2 #shelf-5{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-2 #shelf-4{ margin:5px 0 0 0; height: 48px;}
+#column_container #Column-2 #shelf-3{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-2 #shelf-2{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-2 #shelf-1{ margin:5px 0 0 0; height: 101px;}
+
+#column_container #Slip-1 #shelf-5{ margin:200px 0 0 0; height: 52px;}
+#column_container #Slip-1 #shelf-4{ margin:5px 0 0 0; height: 70px;}
+#column_container #Slip-1 #shelf-3{ margin:5px 0 0 0; height: 70px;}
+#column_container #Slip-1 #shelf-2{ margin:5px 0 0 0; height: 68px;}
+#column_container #Slip-1 #shelf-1{ margin:6px 0 0 0; height: 101px;}
+
+#column_container #Column-3 #shelf-7{ margin:53px 0 0 0; height: 48px;}
+#column_container #Column-3 #shelf-6{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-3 #shelf-5{ margin:5px 0 0 0; height: 48px;}
+#column_container #Column-3 #shelf-4{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-3 #shelf-3{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-3 #shelf-2{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-3 #shelf-1{ margin:5px 0 0 0; height: 101px;}
+
+#column_container #Slip-2 #shelf-5{ margin:200px 0 0 0; height: 52px;}
+#column_container #Slip-2 #shelf-4{ margin:5px 0 0 0; height: 70px;}
+#column_container #Slip-2 #shelf-3{ margin:5px 0 0 0; height: 70px;}
+#column_container #Slip-2 #shelf-2{ margin:5px 0 0 0; height: 68px;}
+#column_container #Slip-2 #shelf-1{ margin:6px 0 0 0; height: 101px;}
+
+#column_container #Column-4 #shelf-7{ margin:53px 0 0 0; height: 48px;}
+#column_container #Column-4 #shelf-6{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-4 #shelf-5{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-4 #shelf-4{ margin:5px 0 0 0; height: 48px;}
+#column_container #Column-4 #shelf-3{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-4 #shelf-2{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-4 #shelf-1{ margin:5px 0 0 0; height: 101px;}
+
+#column_container #Column-5 #shelf-8{ margin:0px 0 0 0; height: 48px;}
+#column_container #Column-5 #shelf-7{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-5 #shelf-6{ margin:5px 0 0 0; height: 48px;}
+#column_container #Column-5 #shelf-5{ margin:6px 0 0 0; height: 48px;}
+#column_container #Column-5 #shelf-4{ margin:5px 0 0 0; height: 49px;}
+#column_container #Column-5 #shelf-3{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-5 #shelf-2{ margin:5px 0 0 0; height: 101px;}
+#column_container #Column-5 #shelf-1{ margin:5px 0 0 0; height: 101px;}

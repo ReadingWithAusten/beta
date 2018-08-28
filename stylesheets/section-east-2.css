@@ -1,0 +1,75 @@
+/*
+** @section 
+** - define background image positioning and column container positioning
+*/
+section {
+  background-image: url(../images/backgrounds/east-section-2.jpg);
+  background-size: 1600px 2650px;     /* Define precise size of the background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 2650px;
+  margin-top: 80px;
+  min-height: 2650px;
+  max-height: 2650px;
+}
+
+
+section #column_container {
+  display: flex;
+  height: 2390px;     /* Must match background size dimensions */
+  width: 1100px;
+  border:5px solid transparent;
+  margin: 140px auto 0 auto;
+}
+
+/*
+** @columns
+** - Define width and positioning of columns
+*/
+#column_container #Slip-1{
+  width: 220px;
+  margin: 0 0 0 6px;
+}
+#column_container #Column-3{
+  width:490px;
+  margin: 0 0 0 73px;
+}
+#column_container #Slip-2{
+  width:215px;
+  margin: 0 0 0 76px;
+}
+
+/*
+** @shelf
+** - Precise positioning of the shelves
+*/
+.shelf{
+  box-shadow:inset 0px 5px 20px 2px rgba(40,40,40,0.9);
+  border-radius: 3px;
+}
+
+#Slip-1 > #shelf-5{height:217px;margin-top:810px;}
+#Slip-1 > #shelf-4{height:282px;margin-top:24px;}
+#Slip-1 > #shelf-3{height:281px;margin-top:24px;}
+#Slip-1 > #shelf-2{height:282px;margin-top:24px;}
+#Slip-1 > #shelf-1{height:410px;margin-top:24px;}
+
+#Column-3 > #shelf-7{height:200px;margin-top:220px;width:494px;}
+#Column-3 > #shelf-6{height:198px;margin-top:21px;width:494px;}
+#Column-3 > #shelf-5{height:197px;margin-top:22px;width:493px;}
+#Column-3 > #shelf-4{height:197px;margin-top:22px;width:492px;}
+#Column-3 > #shelf-3{height:412px;margin-top:22px;}
+#Column-3 > #shelf-2{height:412px;margin-top:22px;}
+#Column-3 > #shelf-1{height:412px;margin-top:22px;}
+  
+#Slip-2 > #shelf-5{height:217px;margin-top:810px;width:218px;}
+#Slip-2 > #shelf-4{height:282px;margin-top:24px;width:217px;}
+#Slip-2 > #shelf-3{height:281px;margin-top:24px;width:216px;}
+#Slip-2 > #shelf-2{height:282px;margin-top:24px;width:216px;}
+#Slip-2 > #shelf-1{height:410px;margin-top:24px;}
+
+#column_container .format_wall-section__folio .book,
+#column_container .format_wall-section__fol\. .book{
+  min-width:18px;
+}

@@ -1,0 +1,223 @@
+/*
+** @header
+*/
+
+/* Give space for header */
+section{
+  margin-top:80px;
+}
+header .header__current-page {
+  color: darkseagreen;
+}
+/* Consider as container */
+header{
+  top:0;  /* Stick header to top */
+  position: fixed;
+  width: 100%;
+  min-width: 500px;
+  z-index: 10;
+  visibility: inherit;
+  text-align: center;
+}
+header nav ul{
+  color: #efeff0;
+  display: block;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 0;
+  opacity: 1;
+  text-align:center;
+}
+
+/*
+** @navigation @primary
+*/
+header #nav_primary__container{
+  background-color: #33658a;
+  z-index: 1;
+  display: block;
+  position:relative;
+  box-shadow: 0px 5px 10px -5px #141414;
+}
+header #nav_primary__container ul li{
+  text-align: center;
+  font-size:1.5em; /* HEADER SIZE BASED ON SCREEN WIDTH, FIXED SIZES FOR SMALLER SCREENS*/
+  padding: 0.5vw 1.5vw;
+  display: inline-block;
+  margin:0 1.5vw; 
+  border-top:3px solid transparent;
+  border-bottom:3px solid transparent;
+  transition: all 0.8s ease-in-out, border 0.5s ease-in-out, color 1s ease-in-out, font-size 1.5s ease-in-out;
+}
+header #nav_primary__container ul li:hover{
+  border-bottom: 3px solid #86baa1;
+  color: #86baa1;
+}
+header #nav_primary__container #header__title{
+  color: #fafafa;
+  font-size: 1.5em;
+  display: inline-block;
+  letter-spacing:5px;
+  width:26%;
+  border-bottom:3px solid transparent;
+  border-top:3px solid transparent;
+  border-left:3px solid whitesmoke;
+  border-right:3px solid whitesmoke;
+  transition:all 0.5s ease-in-out,border-top 0.8s ease-in-out,border-bottom 0.8s ease-in-out;
+}
+header #nav_primary__container #header__title:hover{
+  border-bottom:3px solid whitesmoke;
+  border-top:3px solid whitesmoke;
+  border-left:3px solid transparent;
+  border-right:3px solid transparent;
+  transition:all 0.5s ease-in-out,border-right 0.8s ease-in-out,border-left 0.8s ease-in-out;
+}
+
+/*
+** @navigation @secondary
+*/
+header #nav_secondary__container{
+  margin: 0px auto 0 auto;
+  font-size: 1.1em;
+  display: block;
+  width:37em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #2b303a;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 5px 10px -3px #141414;
+}
+
+header #nav_secondary__container li{
+  margin: 0 0.5em;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  transition:all 0.2s ease-in-out;
+  display:inline-block;
+  border-bottom: 3px solid transparent;
+}
+
+header #nav_secondary__container ul li:hover{
+  border-bottom: 3px solid #86baa1 !important;
+  color: #86baa1;
+}
+header #nav_secondary__container .header__current-page{
+  background-color:rgba(80,80,80,1);
+  color:whitesmoke;
+}
+header #nav_secondary__container .header__current-page:hover{
+  border-bottom: 3px solid transparent !important;
+}
+
+
+/*
+** @navigation @teriary
+*/
+header #nav_tertiary__container{
+  background-color:rgba(80,80,80,1);
+  margin: 0 auto 0 auto;
+  font-size: 0.9em;
+  display: block;
+  width:37em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius:5px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 10px 10px -10px #141414;
+}
+header #nav_tertiary__container li{
+  margin: 0 1em;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  display: inline-block;
+  transition:all 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+header #nav_tertiary__container li:hover{
+  border-bottom: 3px solid #86baa1 !important;
+  color: #86baa1;
+}
+
+/*
+** @column navigator
+*/
+/* Just focuses to a shelf, deletable */
+#prevPage,
+#nextPage{
+  width: 7vw;
+  height:100vh;  
+  position: fixed;
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: 0 0 5vw 2vw white;
+  cursor: pointer;
+}
+#prevPage a,
+#nextPage a{
+  display: block;
+  color: rgba(51,101,138,0.4);
+  font-size: 4vw;
+  text-align: center;
+  width:100%;
+  top: 35%;
+  font-family: sans-serif;
+  position: relative;
+}
+#prevPage:hover,
+#nextPage:hover{
+  background-color: rgba(51,101,138,0.4);
+  box-shadow: 0 0 7vw 7vw rgba(51,101,138,0.4);
+}
+#prevPage:hover > a p,
+#nextPage:hover > a p{
+  color:whitesmoke;
+}
+#prevPage{
+  left:0;
+}
+#nextPage{
+  right:0;
+}
+
+
+/*
+** @animation @accessability
+ */
+#nav_acccessability_container{
+  position: absolute;
+  border-radius: 50%;
+  top:80px;
+  left:10%;
+  cursor: pointer;
+}
+
+#nav_acccessability_container img{
+  width: 40px;
+  height: 40px;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  transition: all 0.3s ease-in-out;
+}
+#nav_acccessability_container:after{
+  content:"Toggle animations";
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  width:200px;
+  font-size:20px;
+  padding:10px;
+  margin: -10px 0 0 50px;
+  border-left:4px solid rgba(50,150,255,0.8);
+  opacity: 0;
+  z-index: -1;
+  transition:0.4s ease-in-out;
+  background-color:rgba(255,255,255,0.8);
+}
+#nav_acccessability_container:hover:after{
+  opacity: 1;
+  margin: 0 0 0 50px;
+  z-index: 1;
+}
+.nav_acccessability__hide{
+  opacity: 0;
+  z-index: -1;
+}
