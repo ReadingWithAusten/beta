@@ -1908,9 +1908,8 @@ let BOOK_TO_FOLDER = {
   ],
   "bradley-new-1717": [
     "bradley-new-1717_plate.JPG",
-    "bradley-new-1717_spine-orig.tif",
     "bradley-new-1717_title.JPG",
-    "bradley-new-1717_title.tif"
+    "bradley-new-1717_spine-orig.JPG"
   ],
   "brewster-natural-1833": [
     "brewster-natural-1833_cover.JPG",
