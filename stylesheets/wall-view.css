@@ -60,11 +60,11 @@
 .shelf::before{
   display:block;
   position:absolute;
-  font-size:1.1em;
+  font-size:1em;
   z-index: 1;
   width:100%;
   bottom:0;
-  top:20%;
+  left:0;
   text-align: center;
   color:rgba(250,250,250,0.7);
   text-shadow: 1px 1px rgba(40,40,40,0.8);
@@ -81,7 +81,7 @@
 */
 #column_container .column .shelf .book{
   background-color:rgba(40,40,40,0.3);
-  border-left:0px solid rgba(40,40,40,0.4);
+  border-left:1px solid rgba(40,40,40,1);
   position:relative;
   align-self: flex-end;
 }
