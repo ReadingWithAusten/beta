@@ -30,6 +30,18 @@
       return wall + "-section-" + number + ".html?book-id=" + bk["book_id"];
   }
 
+  //Changes font on Header Title Click
+  const font = document.getElementById('nav_primary__container');
+  let fonts = ["font__lusitana","font__baskerville","font__times","font__serif"];
+  let current_font = 0;
+  document.getElementById('content_body').classList.toggle(fonts[current_font]);
+  font.addEventListener('click', event =>{
+    console.log(fonts[current_font])
+    document.getElementById('content_body').classList.toggle(fonts[current_font]);
+    current_font++;
+    current_font == fonts.length ? current_font = 0 : "";    
+    document.getElementById('content_body').classList.toggle(fonts[current_font]);
+  });
 
   // Reduce size of string
   function cropString(_string = "", length = 25) {

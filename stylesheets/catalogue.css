@@ -8,11 +8,34 @@
   padding:1%;
 }
 /*
+** @info
+*/
+#query__info{
+  width:40vw;
+  font-size: 0.9em;
+  text-align: justify;
+  margin:0 auto;
+  padding:1.5vw 3vw;
+  border-left:3px solid rgba(50,150,255,0.8);
+  border:1px solid lightgrey;
+  border-radius: 2px;
+}
+#query__info p{
+  margin:10px 0;
+}
+#query__info a{
+  border-bottom: 1px solid black;
+}
+#query__info a:hover{
+  border-bottom: 1px solid rgba(50,150,255,0.8);
+  color:rgb(80,80,80);
+}
+/*
 ** @input
 */
 #query__input input,  
-#query__input select{
-  display: inline-block;
+#query__input select,
+#query__input label{
   border:1px solid transparent;
   border-bottom:1px solid lightgrey;
   border-left:0px solid transparent; 
@@ -30,17 +53,28 @@
 #query__input select:focus{
   border-left:5px solid rgba(0,120,255,0.5);
   border-bottom:1px solid transparent;
-  background-color: rgba(193, 235, 255, 0.39);
+  background-color: rgba(223, 245, 255, 0.3);
   color:rgb(40,40,40);
   font-size:1.05em;
 }
 #query__input input{
   background: url(../images/search.svg) 10px center no-repeat;
   background-size: 20px;
-  
   padding-left:40px;
 }
-#query__input #query__button_submit{
+#query__input label{
+  font-family: sans-serif;
+  border-bottom:0;
+  padding:0;
+  margin:30px auto 10px auto;
+}
+#query__input #query__check_boolean{
+  display:inline-block;
+  transition:0.3s ease-in-out;
+  cursor: pointer;
+}
+#query__input #query__button_submit,
+#query__output #query__show-more{
   border:none;
   background-color: rgba(50,150,255,0.8);
   color:white;
@@ -50,8 +84,9 @@
   transition:all 0.2s ease-in-out;
   box-sizing:border-box;
 }
-#query__input #query__button_submit:hover{
-  background-color: rgba(0,120,255,0.9);
+#query__input #query__button_submit:hover,
+#query__output #query__show-more:hover{
+  background-color: rgba(30,120,255,0.9);
 }
 
 
@@ -91,7 +126,6 @@
   overflow: hidden;
   padding:1%;
   transition:all 0.3s ease-in-out;
-  font-family: sans-serif;
   font-size:0.9em;
   position: relative;
 }
@@ -129,13 +163,22 @@
   font-style: italic;
 }
 .query__highlight{
-  background-color:rgba(255,255,0,0.6);
-  padding:5px;
+  background-color:rgba(255,255,0,0.5);
+  border-bottom:2px solid rgba(50,150,255,0.8);
+  padding:1px;
+}
+.query__highlight-category{
+  background-color:rgba(255,150,0,0.5);
+  padding:2px;
 }
 .query_result__category{
-  font-style: normal !important;
-  font-family: serif;
   font-weight: bold;
   text-transform: capitalize;
   font-size:1.1em;
 }
+#query__results-shown{
+  margin:20px 0;
+}
+/*
+#query__show-more is same as search button
+*/

@@ -32,55 +32,59 @@ header nav ul{
 /*
 ** @navigation @primary
 */
-header #nav_primary__container{
+#nav_primary__container{
   background-color: #33658a;
   z-index: 1;
   display: block;
   position:relative;
   box-shadow: 0px 5px 10px -5px #141414;
 }
-header #nav_primary__container ul li{
+#nav_primary__container ul{
+  max-width:1700px;
+}
+#nav_primary__container ul li{
   text-align: center;
-  font-size:1.5em; /* HEADER SIZE BASED ON SCREEN WIDTH, FIXED SIZES FOR SMALLER SCREENS*/
-  padding: 0.5vw 1.5vw;
+  font-size:1.4em; /* HEADER SIZE BASED ON SCREEN WIDTH, FIXED SIZES FOR SMALLER SCREENS*/
   display: inline-block;
-  margin:0 1.5vw; 
-  border-top:3px solid transparent;
-  border-bottom:3px solid transparent;
+  width: 6em;
+  margin:0 1em;
+  padding: 0.5em 0;
+  border-bottom:  3px solid transparent;
+  border-top:     3px solid transparent;
   transition: all 0.8s ease-in-out, border 0.5s ease-in-out, color 1s ease-in-out, font-size 1.5s ease-in-out;
 }
-header #nav_primary__container ul li:hover{
+#nav_primary__container ul li:hover{
   border-bottom: 3px solid #86baa1;
   color: #86baa1;
 }
-header #nav_primary__container #header__title{
-  color: #fafafa;
-  font-size: 1.5em;
-  display: inline-block;
-  letter-spacing:5px;
-  width:26%;
-  border-bottom:3px solid transparent;
-  border-top:3px solid transparent;
-  border-left:3px solid whitesmoke;
-  border-right:3px solid whitesmoke;
+#nav_primary__container #header__title{
+  color: #fafafa;  
+  font-size: 1.7em;
+  width:17em;
+  padding:0.3em 0;
+  letter-spacing: 5px;
+  border-bottom:  3px solid transparent;
+  border-top:     3px solid transparent;
+  border-left:    3px solid whitesmoke;
+  border-right:   3px solid whitesmoke;
   transition:all 0.5s ease-in-out,border-top 0.8s ease-in-out,border-bottom 0.8s ease-in-out;
 }
-header #nav_primary__container #header__title:hover{
-  border-bottom:3px solid whitesmoke;
-  border-top:3px solid whitesmoke;
-  border-left:3px solid transparent;
-  border-right:3px solid transparent;
+#nav_primary__container #header__title:hover{
+  border-bottom:  3px solid whitesmoke;
+  border-top:     3px solid whitesmoke;
+  border-left:    3px solid transparent;
+  border-right:   3px solid transparent;
   transition:all 0.5s ease-in-out,border-right 0.8s ease-in-out,border-left 0.8s ease-in-out;
 }
 
 /*
 ** @navigation @secondary
 */
-header #nav_secondary__container{
-  margin: 0px auto 0 auto;
+#nav_secondary__container{
+  width:600px;
   font-size: 1.1em;
-  display: block;
-  width:37em;
+  display:block;
+  margin:0 auto;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #2b303a;
@@ -88,24 +92,23 @@ header #nav_secondary__container{
   text-align: center;
   box-shadow: 0px 5px 10px -3px #141414;
 }
-
-header #nav_secondary__container li{
-  margin: 0 0.5em;
-  padding: 0.5em 1.5em 0.5em 1.5em;
-  transition:all 0.2s ease-in-out;
+#nav_secondary__container li{
+  padding:0.5em 1.2em;
+  margin: 0 1em;
   display:inline-block;
   border-bottom: 3px solid transparent;
+  transition:all 0.2s ease-in-out;
 }
 
-header #nav_secondary__container ul li:hover{
+#nav_secondary__container ul li:hover{
   border-bottom: 3px solid #86baa1 !important;
   color: #86baa1;
 }
-header #nav_secondary__container .header__current-page{
+#nav_secondary__container .header__current-page{
   background-color:rgba(80,80,80,1);
   color:whitesmoke;
 }
-header #nav_secondary__container .header__current-page:hover{
+#nav_secondary__container .header__current-page:hover{
   border-bottom: 3px solid transparent !important;
 }
 
@@ -113,67 +116,81 @@ header #nav_secondary__container .header__current-page:hover{
 /*
 ** @navigation @teriary
 */
-header #nav_tertiary__container{
+#nav_tertiary__container{
+  width:530px;
+  display:block;
+  margin:0 auto;
   background-color:rgba(80,80,80,1);
-  margin: 0 auto 0 auto;
-  font-size: 0.9em;
-  display: block;
-  width:37em;
+  font-size: 0.9em; 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius:5px;
   position: relative;
-  text-align: center;
-  box-shadow: 0px 10px 10px -10px #141414;
+  box-shadow: 0px 5px 10px -5px #141414;
 }
-header #nav_tertiary__container li{
-  margin: 0 1em;
-  padding: 0.5em 1.5em 0.5em 1.5em;
+#nav_tertiary__container li{
+  padding: 0.4em 1.5em;
+  margin: 0 2.5em;
   display: inline-block;
   transition:all 0.2s ease-in-out;
   border-bottom: 3px solid transparent;
 }
-header #nav_tertiary__container li:hover{
+#nav_tertiary__container li:hover{
   border-bottom: 3px solid #86baa1 !important;
   color: #86baa1;
 }
 
 /*
-** @column navigator
+** @column @next @prev navigator
 */
-/* Just focuses to a shelf, deletable */
-#prevPage,
-#nextPage{
-  width: 7vw;
-  height:100vh;  
+#col_nav__container #col_nav__prevPage,
+#col_nav__container #col_nav__nextPage{
+  width: 9vw;
+  height:100vh;
   position: fixed;
+  padding:1vw;
   background-color: rgba(255,255,255,0.8);
   box-shadow: 0 0 5vw 2vw white;
   cursor: pointer;
+  transition:all 0.5s ease-in-out;
 }
-#prevPage a,
-#nextPage a{
+#col_nav__container #col_nav__prevPage p,
+#col_nav__container #col_nav__nextPage p{
   display: block;
-  color: rgba(51,101,138,0.4);
-  font-size: 4vw;
+  color: rgba(150,150,150,0.9);
+  font-size: 1vw;
   text-align: center;
   width:100%;
-  top: 35%;
-  font-family: sans-serif;
+  padding-top:150px;
   position: relative;
+  transition:all 0.5s ease-in-out;
 }
-#prevPage:hover,
-#nextPage:hover{
-  background-color: rgba(51,101,138,0.4);
-  box-shadow: 0 0 7vw 7vw rgba(51,101,138,0.4);
+#col_nav__container #col_nav__prevPage img,
+#col_nav__container #col_nav__nextPage img{
+  width:100%;
+  margin: 10px 0;
+  opacity:0.6;
+  transition:0.5s ease-in-out;
 }
-#prevPage:hover > a p,
-#nextPage:hover > a p{
-  color:whitesmoke;
+#col_nav__container #col_nav__prevPage img{
+  transform: rotateY(180deg);
 }
-#prevPage{
+#col_nav__container #col_nav__prevPage:hover,
+#col_nav__container #col_nav__nextPage:hover{
+  background-color: rgba(50,150,255,0.2);
+  box-shadow: 0 0 7vw 7vw rgba(50,150,255,0.2);
+}
+#col_nav__container #col_nav__prevPage:hover a p,
+#col_nav__container #col_nav__nextPage:hover a p{
+  color: rgb(100,100,100);
+}
+#col_nav__container #col_nav__prevPage:hover img,
+#col_nav__container #col_nav__nextPage:hover img{
+  opacity: 1;
+}
+#col_nav__container #col_nav__prevPage{
   left:0;
 }
-#nextPage{
+#col_nav__container #col_nav__nextPage{
   right:0;
 }
 

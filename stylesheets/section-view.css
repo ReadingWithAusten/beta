@@ -160,18 +160,27 @@ html {
   top:-50px;
   left:0px;
   margin: -20px 0 0 0px;
+  font-size: 0.8em;
   padding:10px;
   position: absolute;
   width:300px;
   border-left:5px solid rgba(50,150,255,0.8);
   box-shadow:5px 5px 5px -5px black;
-  background-color:rgba(230,230,230,0.9);
+  background-color:rgba(240,240,240,0.9);
   transition:all 0.3s ease-in-out, margin 0.8s ease-in-out;
 }
+.book .toolTip *{
+  margin: 0 0 2px 0;
+  padding:2px 0;
+}
 .book .toolTip .toolTip_title{
-  font-family: helvetica, sans-serif;
-  font-size: 0.9em;
-  margin:0 0 10px 0;
+  border-bottom:1px solid lightgrey;
+}
+.book .toolTip .toolTip_author{
+  
+}
+.book .toolTip .toolTip_date{
+
 }
 .book:hover > .toolTip{
   opacity: 1 !important;

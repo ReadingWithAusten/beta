@@ -13,17 +13,16 @@ section#content_body{
   min-height:100vh;
 }
 section#content_body div{
-  top:0;
-  left:0;
   width:50vw;
   max-width: 500px;
-  margin:20px 0 0 0;
-  background-color:rgba(40,40,40,0.6);
-  color:whitesmoke;
+  margin:150px auto;
+  background-color:rgba(50,50,50,0.5);
+  color:rgba(240,240,240,0.9);
+  text-shadow: 1px 1px 1px grey;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   padding:1em;
-  box-shadow: 3px 3px 7px -5px black;
+  border:1px solid black;
 }
 section#content_body div h1{
   text-align: center;

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>West Section 1</title>
+  <title>Reading with Austen | South Wall, Centre Section</title>
   <link rel="shortcut icon" href="images/favicon.png" />
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="stylesheets/header.css">
@@ -47,13 +47,12 @@
       </ul>
     </div>
   </modal>
-  
   <div id="col_nav__container">
-    <div id="prevPage">
-      <a href="south-section-1.html" ><p><<</p></a>
+    <div id="col_nav__prevPage">
+      <a href="south-section-1.html"><p>To<br>South Wall<br>Left Section</p><img src="images/navigation_arrow.png"></a>
     </div>
-    <div id="nextPage">
-      <a href="south-section-3.html"><p>>></p></a>
+    <div id="col_nav__nextPage">
+      <a href="south-section-3.html"><p>To<br>South Wall<br>Right Section</p><img src="images/navigation_arrow.png"></a>
     </div>
   </div>
 
@@ -66,7 +65,7 @@
       <ul>
         <a class="header__link" href="index.html"><li>Home</li></a>
         <a class="header__link" href="south-wall.html"><li class="header__current-page">Library</li></a>
-        <a class="header__link"><li id="header__title">Reading With Austen</li></a>
+        <a class="header__link" href="index.html"><li id="header__title">Reading With Austen</li></a>
         <a class="header__link" href="catalogue.html"><li>Catalogue</li></a>
         <a class="header__link" href="about"><li>About</li></a>
       </ul>
@@ -80,9 +79,9 @@
     </nav>
     <nav id="nav_tertiary__container">
       <ul>
-        <a class="header__link" href="south-section-1.html"><li>Section 1</li></a>
-        <a class="header__link" href="south-section-2.html"><li class="header__current-page">Section 2</li></a>
-        <a class="header__link" href="south-section-3.html"><li>Section 3</li></a>
+        <a class="header__link" href="south-section-1.html"><li>Left</li></a>
+        <a class="header__link" href="south-section-2.html"><li class="header__current-page">Center</li></a>
+        <a class="header__link" href="south-section-3.html"><li>Right</li></a>
       </ul>
     </nav>
     <div id="nav_acccessability_container" onclick="toggleAnimation()">
@@ -95,9 +94,7 @@
   SECTION
   -->
   <section id="content_body">
-    <ul id="column_container">
-
-    </ul>
+    <ul id="column_container"></ul>
   </section>
 
   <!-- 
@@ -172,7 +169,7 @@
             }
             
             // Select info for 'hover' tooltip here
-            let tool_tip = "<div class='toolTip' style='left:" + toolTipWidth + "px;'><p class='toolTip_title'>" + title + "</p><p class='toolTip_author'>" + author + "</p><i>Book ID - " + bk.id + " </i></div>";
+            let tool_tip = "<div class='toolTip' style='left:" + toolTipWidth + "px;'><p class='toolTip_title'>" + cropString(bk.title,10) + "</p><p class='toolTip_author'>" + bk.author + "</p><p class='toolTip_date'>Published - " + bk.date_published + "</p><i>Book ID - "+bk.book_id+"</i></div>";
 
             // Final Book Element - identified by bk.id
             shelf += "<li onclick='populateModal(" + bk.id + ");' class='book " + folder_class + "' id='bookID-" + bk.id + "' data-id='" + bk.id + "' style='width:"+spineWidth+"px'><img src='" + spine + "' class='book_spine'>" + tool_tip + "</li>";

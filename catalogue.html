@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Catalogue | Reading With Austen</title>
+    <title>Reading with Austen | Catalogue</title>
     <link rel="shortcut icon" href="images/favicon.png" />
-    <!-- Note Cascading -->
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/header.css">
     <link rel="stylesheet" href="stylesheets/catalogue.css">
@@ -20,7 +19,7 @@
       <ul>
         <a class="header__link" href="index.html"><li>Home</li></a>
         <a class="header__link" href="south-wall.html"><li>Library</li></a>
-        <a class="header__link"><li id="header__title">Reading With Austen</li></a>
+        <a class="header__link" href="index.html"><li id="header__title">Reading With Austen</li></a>
         <a class="header__link" href="catalogue.html"><li class="header__current-page">Catalogue</li></a>
         <a class="header__link" href="about.html"><li>About</li></a>
       </ul>
@@ -31,6 +30,10 @@
   SECTION
   -->
     <section id="content_body">
+        <div id="query__info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat hic libero quidem incidunt molestias porro labore animi minima! Rem dolorum quibusdam laudantium at vel explicabo, itaque eligendi molestiae a et assumenda maiores labore quae voluptate temporibus repellendus fugiat placeat similique! Culpa, nihil, at! Vero porro veritatis dolore minus ducimus quam, ad eum perferendis eius autem! Facere consequuntur laborum optio adipisci, placeat ea eaque dolorem similique, ut corporis velit repellat. Deserunt eligendi, aspernatur quis delectus suscipit accusamus et, vel veniam nisi expedita cumque dolor esse repellendus repellat natus architecto aliquid eum labore hic laboriosam, provident doloremque. Debitis, minima aliquam quibusdam!</p>
+            You can view the full spreadsheet <a href="#">Here</a>
+        </div>
         <div id="query__input">
             <select name="category">
                 <option value="all">All Categories</option>}
@@ -43,12 +46,15 @@
                 <option value="language">Language</option>
                 <option value="subject">Subject</option>
             </select>
+            <label for="query__check_boolean">Boolean Search <input type="checkbox" name="check_boolean" id="query__check_boolean" onclick="setQueryToBoolean()"></label>
             <input id="query__input_text" type="text" name="query" placeholder="Austen, Jane" value="Austen, Jane">
             <button id="query__button_submit" value="Search" onclick="queryCatalogue();">Search</button>
         </div>
         <div id="query__output">
             <div id="query__number-results_container"></div>
             <ul id="query__results">Explore the Godmersham Park Catalogue</ul>
+            <div id="query__results-shown"></div>
+            <button id="query__show-more" class="query_hide-output" onclick="showMoreResults()">Show More</button>
         </div>
     </section>
 

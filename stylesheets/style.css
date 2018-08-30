@@ -1,3 +1,49 @@
+/*
+** @fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Lusitana');
+
+.font__lusitana:before,
+.font__baskerville:before,
+.font__times:before,
+.font__serif:before{
+  font-size:1em;
+  background-color:rgba(255,255,255,0.9);
+  z-index: 10;
+  position: absolute;
+  opacity: 1;
+  top:0%;
+  left:0%;
+  border:1px solid grey;
+  padding:0.5em;
+  color:rgb(80,80,80);
+  border-radius: 2px;
+}
+.font__lusitana:before{
+  content:"Font: Lusitana";
+}
+.font__baskerville:before{
+  content:"Font: Baskerville";
+}
+.font__times:before{
+  content:"Font: Times New Roman";
+}
+.font__serif:before{
+  content:"Font: Georgia";
+}
+.font__lusitana{
+  font-family: 'Lusitana', serif !important;
+}
+.font__baskerville{
+  font-family: 'Libre Baskerville', serif !important;
+}
+.font__times{
+  font-family: Times New Roman !important;
+}
+.font__serif{
+  font-family: Georgia !important;
+}
+
 /* 
 ** @generic
 */
@@ -9,13 +55,11 @@
 
 a,
 a:hover,
-a:visited {
+a:visited,
+a:focus{
   text-decoration: none;
   color: inherit;
-}
-
-html {
-  font-family: 'Libre Baskerville', serif !important;
+  outline:0;
 }
 
 body > section{
@@ -144,7 +188,7 @@ footer ul {
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  max-width:60vw
+  max-width:1500px;
 }
 
 footer ul li {

@@ -163,24 +163,6 @@ li {
 #modal_images #modal_images__featured{
   position: relative;
 }
-
-/* applies tooltip on hover of featured image
-#modal_images #modal_images__featured:hover:after{
-  content: "Zoom in";
-  bottom:-25px;
-  z-index: 20;
-  color:royalblue;
-  display: block;
-  border: 1px solid royalblue;
-  box-shadow: 3px 3px 3px -3px black;
-  padding: 2px 5px;
-  border-radius: 2px;
-  position: absolute;
-  left:30%;
-  transform: translateX(-50%);
-}
-*/
-
 #modal_images #modal_images__featured img {
   cursor: zoom-in;
   display: block;
@@ -248,11 +230,9 @@ li {
 }
 #modal_content p{
   font-size:1em;
-  font-family:sans-serif;
   margin: 10px 0;
 }
 #modal_content span{
-  font-family: serif;
   font-weight:bold;
   font-size:1.1em;
   margin: 0 10px 0  0;
@@ -355,7 +335,6 @@ li {
 }
 #modal_imgViewer #modal_imgViewer__text p {
   text-align: center;
-  font-family: helvetica;
 }
 #modal_imgViewer__text:hover{
   max-height: 300px !important;

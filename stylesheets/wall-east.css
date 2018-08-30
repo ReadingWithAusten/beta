@@ -7,9 +7,13 @@ section#content_body{
   background-position: center 20px;
   background-repeat: no-repeat;
   margin-top: 40px !important;
+  max-width: 1300px;
+  min-width:1300px;
+  width:1300px;
   min-height: 935px;
   max-height: 935px;
   height: 935px;
+  margin:0 auto;
 }
 
 section #column_container{
