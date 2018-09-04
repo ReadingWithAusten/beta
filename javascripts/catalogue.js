@@ -122,7 +122,7 @@
           }
           NUMBER_RESULTS.innerHTML = "<p>Found <span id='query__number-results'>" + result.length + "</span> Books</p>";
           total_results_shown = 0;
-          number_displayed_results = result.length;
+          number_displayed_results = 18;
           if (number_displayed_results > result.length) {
               number_displayed_results = result.length;
           }
