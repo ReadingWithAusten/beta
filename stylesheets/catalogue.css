@@ -66,9 +66,10 @@
   font-family: sans-serif;
   border-bottom:0;
   padding:0;
-  margin:30px auto 10px auto;
+  margin:0px auto 10px auto;
 }
-#query__input #query__check_boolean{
+#query__input #query__check_boolean,
+#query__input #query__check_filterImages{
   display:inline-block;
   transition:0.3s ease-in-out;
   cursor: pointer;
@@ -135,6 +136,7 @@
 }
 #query__results li::before{
   content:"View Book in Library";
+  background-color:transparent;
   position: absolute;
   display: block;
   border-left:2px solid transparent;
@@ -146,9 +148,10 @@
   left:31%;
   max-height: 0;
   overflow: hidden;
-  transition:all 1s ease-in-out;
+  transition:all 0.8s ease-in-out;
 }
 #query__results li:hover::before{
+  background-color:rgba(255,255,255,0.8);
   max-height: 100px;
   padding:5px;
   color:black;

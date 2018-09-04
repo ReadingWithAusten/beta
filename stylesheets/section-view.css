@@ -129,11 +129,11 @@ html {
 }
 
 .book__stock{
-  background-color:rgba(50,50,50,1);
+  background-color:rgba(20,20,20,1);
 }
 
 .book__stock img{
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /*

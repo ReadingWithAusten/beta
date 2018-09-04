@@ -1,0 +1,300 @@
+<html lang="en" class="shelf-view">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reading With Austen | Library</title>
+    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Lovers+Quarrel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+</head>
+
+<body id="body">
+    <header>
+        <ul>
+            <a class="headerLink" href="#">
+        Home
+      </a>
+            <a class="headerLink" href="#">
+        Library
+      </a>
+            <a class="headerLink" id="PLATE_IMG">Reading with Austen</a>
+            <a class="headerLink" href="#">
+        Catalogue
+      </a>
+            <a class="headerLink" href="#">
+          About
+      </a>
+        </ul>
+    </header>
+
+    <body>
+        <section id="background-test">
+          <ul>
+            <li>- apply modal</li>
+            <li>- apply background</li>
+            <li>- check sizing</li>
+            <li>- apply books width based on volume number</li>
+            <li>- apply book height based on format</li>
+          </ul>
+        </section>
+        <section>
+            WestCase
+            <ul id='WESTCASE_LAYOUT'></ul>
+            Southcase
+            <ul id='SOUTHCASE_LAYOUT'></ul>
+            Eastcase
+            <ul id='EASTCASE_LAYOUT'></ul>
+        </section>
+    </body>
+    <footer>
+        <ul>
+            <li><img id="footer_plate" src="plate1.png" alt=""></li>
+            <li>
+                <img id="footer_mcgill" src="mcgill.svg" alt="">
+                <p>Burney Centre</p>
+            </li>
+            <li>
+                <p id="footerContact">
+                    The Burney Centre<br> Department of English<br> McGill University<br> 853 Sherbrooke St. W.<br> Montreal, PQ H3A 0G5<br> Canada
+                    <br> Phone: (514) 398-6132 <br>
+                </p>
+            </li>
+        </ul>
+    </footer>
+</body>
+<style>
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  transition:all 0.2s ease-in-out;
+}
+#background-test{
+  display: none;
+}
+body{
+  font-size: 30px;
+  text-align: center;
+}
+section >ul{
+  border:2px solid rgba(200,200,200,0.8);
+  margin:0 0 100px 0;
+  padding: 10px 0;
+}
+section{
+  background-color:whitesmoke !important;
+}
+.column{
+  text-align: left;
+  display:block;
+  border:2px solid grey;
+  display:inline-block;
+  width:260px;
+  margin:0 2px 10px 2px ;
+}
+
+.shelf{
+  display:flex;
+  border:2px solid red;
+  width:100%;
+  margin:0 0 10px 0;
+  background-color:rgba(40,40,40,0.2);
+}
+
+.book{
+  display:inline-block;
+  flex:1 0 auto;
+  width:8px;
+  height:60px;
+  border:1px solid black;
+  position:relative;
+  margin:0.5px;
+}
+.book:hover{
+  border:2px solid orangered;
+}
+
+img{
+  display: none;
+}
+.toolTip{
+  position: absolute;
+  opacity: 0;
+  border:1px solid purple;
+  width:400px;
+  font-size:12px;
+  background-color:lightgrey;
+  z-index:-1;
+}
+
+.book:hover > .toolTip{
+  opacity: 1 !important;
+  z-index: 10;
+}
+.no_folder{
+  background-color: rgba(40,40,40,0.3);
+}
+.has_folder{
+  background-color: cornflowerblue;
+}
+
+
+
+</style>
+<script src="headerShrink.js"></script>
+<script src="east.js"></script>
+<script src="south.js"></script>
+<script src="west.js"></script>
+
+<!-- Create layout objects
+Sends in JSON 'data' variable
+-->
+<script>
+    
+    // Organize shelves to columns, output in --CASE_LAYOUT.js files (ie. the final form used to populate)
+    // Utilizes --case.js file with 'let data' variable (ie. the JSON export from postgres)
+        // src="../public/javascripts/eastcase.js"
+
+let LIBRARY = document.getElementById('library');
+function createLayoutFromJSON(data,name){
+    
+    // note needing to change columns to slips
+    let columns = {
+        1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [],10:[],11:[],12:[]
+    };
+
+    for (let book = 0; book < data.length; book++) {
+        for (let col = 1; col <= 12;col++) {
+            let column = "slip " + col; // change this to look for columns or slips
+            
+            if (data[book].location.indexOf(column) > -1) {
+                columns[col].push(data[book]);
+            }
+        }
+    }
+
+    let COLUMNS = {
+        "Column-1": {},
+        "Column-2": {},
+        "Column-3": {},
+        "Column-4": {},
+        "Column-5": {},
+        "Column-6": {},
+        "Column-7": {},
+        "Column-8": {},
+        "Column-9": {},
+        "Column-10": {},
+        "Column-11": {},
+        "Column-12": {},
+    }
+    Object.keys(columns).forEach(c => {
+        //console.log("\tSTART Column "+c);
+        for (let sh = 1; sh <= 12; sh++) {
+            COLUMNS["Column-"+c]["Shelf-"+sh] = [];
+            //console.log("\tCOLUMN "+c+" SHELF "+sh);
+            columns[c].forEach(book => {
+                let location = book.location;
+                let column = "slip " + c;   //change this to look for columns or slips
+                let shelf = "shelf "+ sh;
+                //console.log(location+" "+column+" "+shelf)
+                if (location.indexOf(column) > -1 && location.indexOf(shelf) > -1){
+                    COLUMNS["Column-"+c]["Shelf-"+sh].push(book);
+                }
+            });
+        }
+    });
+    LAYOUTS[name] = COLUMNS;
+    //makeWall(LAYOUTS[name],name)
+    console.log(LAYOUTS);
+  }
+
+let LAYOUTS = {};
+
+//createLayoutFromJSON(westcase_data,"WESTCASE_LAYOUT");
+createLayoutFromJSON(southcase_data,"SOUTHCASE_LAYOUT");
+createLayoutFromJSON(eastcase_data,"EASTCASE_LAYOUT");
+
+//console.log(LAYOUTS)
+
+    // Replace rest of text with ellipses
+    function cropString( _string = "" , _length = 25 ){
+        let new_string = _string.split(' ');
+        let max_length = _length;
+        if(new_string.length > max_length){
+            new_string = new_string.slice(0,max_length).join(" ")+ "...";
+        }else{
+            new_string = new_string.slice(0,_string.length).join(" ");
+        }
+        return new_string;
+    }
+
+//Add shelves to DOM
+//Requires that appropriate JS file (eg. SOUTHCASE_LAYOUT.js) is present
+function makeWall(LAYOUT, ELEMENT){
+    let WALL = document.getElementById(ELEMENT);
+    let col_num = 1;
+    Object.keys(LAYOUT).forEach( col =>{
+        let column = "<li class='column' id='column-" + col_num + "'>";
+        let shelf_num = 1;
+        Object.keys(LAYOUT[col]).forEach( sh =>{
+            let shelf = "<ul class='shelf' id='shelf-" + shelf_num + "'>";
+            Object.keys(LAYOUT[col][sh]).forEach( book =>{
+                let bk = LAYOUT[col][sh][book];
+                //console.log(col+" "+sh+" "+book);
+                let folder_class = "no_folder";
+                if(bk.folder_name) {
+                    folder_class = "has_folder";
+                }
+                let title = "N/A", author = "N/A";
+                if(bk.title) title = cropString(bk.title,10);
+                if(bk.author) author = cropString(bk.author,5);
+
+                //format ie. height
+                //bk.format;
+
+                //volumes ie. width
+                let standard_bk_width = 8;
+                let width =  standard_bk_width * parseInt(bk.volumes);
+
+                // Select info for 'hover' tooltip here
+                let tool_tip = "<div class='toolTip'><p class='toolTip_title'>" + title + "</p><p class='toolTip_author'>" + author + "</p><i>Book ID - " + bk.id + " </i></div>";
+
+                // Final Book Element
+                shelf += "<li onclick='getBook(this);' class='book " + folder_class + "' id='bookID-" + bk.id + "' data-id='"+bk.id+"' data-format='"+bk.transcript+"' style='width:"+width+"px'><img src='" + bk.folder_name + "' class='book_spine'>" + tool_tip + "</li>"
+            });
+            shelf_num++;
+            shelf += "</ul>";
+            column += shelf;
+        });
+        col_num++;
+        column += "</li>";
+        WALL.innerHTML += column;
+    });
+}
+makeWall(WESTCASE_LAYOUT,'WESTCASE_LAYOUT');
+makeWall(SOUTHCASE_LAYOUT,'SOUTHCASE_LAYOUT');
+makeWall(EASTCASE_LAYOUT,'EASTCASE_LAYOUT');
+
+// on book click, searches all shelves
+function getBook(item){
+    find(WESTCASE_LAYOUT,item);
+    find(SOUTHCASE_LAYOUT,item);
+    find(EASTCASE_LAYOUT,item);
+}
+
+function find(LAYOUT,item){
+    Object.keys(LAYOUT).forEach( col =>{        
+        Object.keys(LAYOUT[col]).forEach( sh =>{
+            Object.keys(LAYOUT[col][sh]).forEach( book =>{
+                if(LAYOUT[col][sh][book].id == item.dataset.id) {
+                  // display to console
+                  // Put modal calls here
+                  console.log(LAYOUT[col][sh][book]);
+                }
+            });
+        });
+    });
+}
+</script>
+</html>

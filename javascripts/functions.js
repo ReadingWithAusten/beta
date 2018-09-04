@@ -1,3 +1,4 @@
+  /*
   let stock_spines = {
       1: "stock-colour-1vol.png",
       2: "stock-colour-2vol.png",
@@ -15,6 +16,24 @@
       20: "stock-colour-20vol.png",
       25: "stock-colour-25vol.png",
   };
+  */
+  let stock_spines = {
+      1: "stock-gray-1vol.png",
+      2: "stock-gray-2vol.png",
+      3: "stock-gray-3vol.png",
+      4: "stock-gray-4vol.png",
+      5: "stock-gray-5vol.png",
+      6: "stock-gray-6vol.png",
+      7: "stock-gray-7vol.png",
+      8: "stock-gray-8vol.png",
+      9: "stock-gray-9vol.png",
+      10: "stock-gray-10vol.png",
+      11: "stock-gray-11vol.png",
+      14: "stock-gray-14vol.png",
+      16: "stock-gray-16vol.png",
+      20: "stock-gray-20vol.png",
+      25: "stock-gray-25vol.png",
+  };  
 
   // Create link to section, opens book modal
   function makeBookViewInLibraryAnchor(bk) {
@@ -58,11 +77,13 @@
 
   // Fade-in content areas
   window.addEventListener('load', function(event) {
+      document.getElementById('content_body').classList.toggle('show-body');
+      document.getElementById('nav_secondary__container').classList.toggle('show-body');
+      document.getElementById('nav_tertiary__container').classList.toggle('show-body');
       let column_container = document.getElementById('column_container');
       if (column_container) {
           column_container.classList.toggle('show-body');
       }
-      document.getElementById('content_body').classList.toggle('show-body');
       let URL_BOOK_ID = getParameterByName('book-id');
       if (URL_BOOK_ID) {
           populateModal(URL_BOOK_ID);

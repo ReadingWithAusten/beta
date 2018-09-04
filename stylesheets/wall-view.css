@@ -19,7 +19,7 @@
   transition:all 0.3s ease-in-out;
   opacity:0;
 }
-
+/*
 #column_container #Column-1::before,
 #column_container #Column-2::before{content: "Section 1";}
 
@@ -31,6 +31,46 @@
 #column_container #Column-5::before{content: "Section 3";}
 
 #column_container .column:hover::before{
+  opacity: 1;
+}
+*/
+.column_capstone{
+  position:absolute;
+  display: block;
+  z-index: 1;
+  margin:-40px 0;
+  opacity: 0;  
+  border:1px solid grey;
+  border-radius: 1px;
+  background-color:rgba(255,255,255,0.9);
+  box-shadow: 5px 5px 7px -5px black;
+  transition:0.3s ease-in-out;
+}
+.column_capstone::before{
+  transition:0.3s ease-in-out;
+  display:block;
+  padding:5px 7px;
+  font-size:1em;
+  color: rgba(80,80,80,1);
+}
+.column_capstone:hover::before{
+  padding: 5px 7px 5px 7px;
+  border-left:5px solid rgba(50,150,255,0.8);
+}
+.column_capstone#column_capstone-Column-1::before,
+.column_capstone#column_capstone-Column-2::before{
+  content:"Left Section";
+}
+.column_capstone#column_capstone-Slip-1::before,
+.column_capstone#column_capstone-Column-3::before,
+.column_capstone#column_capstone-Slip-2::before{
+  content:"Centre Section";
+}
+.column_capstone#column_capstone-Column-4::before,
+.column_capstone#column_capstone-Column-5::before{
+  content:"Right Section";
+}
+.column:hover .column_capstone{
   opacity: 1;
 }
 
@@ -84,26 +124,26 @@
   border-left:1px solid rgba(40,40,40,1);
   position:relative;
   align-self: flex-end;
+  
 }
 #column_container .column .shelf .book .book_spine{
   height: 100%;
   width: 100%;
-  opacity: 0.8;
-  opacity: 1;
+  opacity: 0.9;
   background-color:rgba(40,40,40, 0.4);
   position: absolute;
   bottom:0;
 }
 #column_container .column .shelf .book__stock{
-  background-color:rgba(0,150,150,0.7);
+  background-color:rgba(0,0,0,1);
 }
 
 #column_container .column .shelf .book__stock .book_spine{
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 #column_container .column .shelf:hover{
-  box-shadow:inset -2px 5px 20px 2px rgba(40,40,140,0.8);
+  box-shadow:inset -2px 5px 20px 2px rgba(140,140,240,0.8);
 }
 #column_container .column .shelf .book:hover{
   border:1px solid aquamarine;
@@ -116,6 +156,7 @@
   display: block;
   opacity: 0;
   z-index: -1;
+  color:rgba(40,40,40,0.9);
   position: absolute;
   top:-40px;
   left:50px;
@@ -123,9 +164,10 @@
   padding:10px;
   width:300px;
   font-size:0.7em;
+  border:1px solid grey;
   border-left:5px solid rgba(50,150,255,0.8);
   box-shadow:5px 5px 5px -5px black;
-  background-color: rgba(245,245,245,0.9);
+  background-color: rgba(255,255,255,0.93);
   transition:all 0.3s ease-in-out, opacity 0.5s ease-in-out, margin 0.5s ease-in-out;
 }
 #column_container #Column-5 .shelf .book .toolTip,

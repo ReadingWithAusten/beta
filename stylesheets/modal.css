@@ -73,8 +73,9 @@ li {
 #modal_nav_container {
   display: block;
   width: 95%;
-  max-width: 60vw;
-  max-height: 70vh;
+  width:80vw;
+  max-width: 1000px;
+  max-height: 450px;
   margin: 0 auto;
   text-align: center;
 }
@@ -149,7 +150,7 @@ li {
   border: 5px solid white;
   border-radius: 5px;
   box-shadow: 3px 3px 5px -5px black;
-  cursor: alias;
+  cursor: zoom-in;
 }
 #modal_images img:hover{
   box-shadow: 5px 5px 10px -6px black;
@@ -164,7 +165,6 @@ li {
   position: relative;
 }
 #modal_images #modal_images__featured img {
-  cursor: zoom-in;
   display: block;
   margin: 5% auto;
   background-color: lightskyblue;
@@ -206,7 +206,7 @@ li {
   content: "This book currently has no images";
   display: block;
   font-weight: bolder;
-  top:40%;
+  top:30%;
   left: calc(50% - 35%);
   width:70%;
 }

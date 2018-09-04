@@ -41,7 +41,7 @@ function populateModalImages(book){
     let imagesList = "";
     let count = 1;
     for (let image = 1; image < folderImages.length; image++){
-      imagesList += '<li><img src="images/books/' + book.folder_name + '/' + folderImages[image] +'" alt="" data-image-id="' + count + '" onclick="changeImage(this)"/></li>';
+      imagesList += '<li><img src="images/books/' + book.folder_name + '/' + folderImages[image] +'" alt="" data-image-id="' + count + '" onclick="openImageViewer(this)"/></li>';
       count++;
     }
     let imagesListContainer = '<ul id="modal_images__list">' + imagesList + '</ul>';
@@ -106,7 +106,7 @@ function populateModal(bookID) {
   openModal();
 }
 
-// To switch featured image with one on list
+// To switch featured image with one on list - not being used
 function changeImage(img) {
   let featured_container = document.getElementById('modal_images__featured');
   let images_list_location = img.parentElement;
@@ -166,7 +166,7 @@ function changeImageViewerImage(direction) {
   let images_list = Array.from(document.getElementById('modal_images__list').getElementsByTagName('img'));
   let current_image = document.getElementById('modal_imgViewer__content').getElementsByTagName('img')[0];
   let imgViewer_text = document.getElementById('modal_imgViewer__text');
-  current_image.setAttribute('onclick','changeImage(this)'); 
+  //current_image.setAttribute('onclick','changeImage(this)'); 
   
   switch (direction) {
     case 'prev':{
@@ -190,10 +190,12 @@ function changeImageViewerImage(direction) {
   }
   
   //Empty images list and repopulate
+  /* Turned off switching of image position
   document.getElementById('modal_images__list').innerHTML = "";
   images_list.forEach(img => {
     document.getElementById('modal_images__list').innerHTML += "<li>" + img.outerHTML + "</li>";
   });
+  */
 }
 
 function nextBook() {
