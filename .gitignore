@@ -5,3 +5,4 @@ walk.py
 folder_relations.txt
 javascripts/old/
 javascripts/new/
+.gitignore

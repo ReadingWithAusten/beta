@@ -165,7 +165,8 @@
             if(bk.spine == 'y'){
               spine = "images\\spines\\" + bk.folder_name + "_spine-crop.png";
             }else{
-              let stock = stock_spines[bk.volumes];
+              let num_volumes = bk.volumes <= 20? bk.volumes : 20;
+              let stock = stock_spines[num_volumes];
               spine = "images\\spines\\stock_spines\\" + stock;
               folder_class += " book__stock book__stock-"+bk.volumes;
             }

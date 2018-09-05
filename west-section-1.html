@@ -48,7 +48,7 @@
   </modal>
   <div id="col_nav__container">
     <div id="col_nav__nextPage">
-      <a href="west-section-1.html"><p>To<br>West Wall<br>Centre Section</p><img src="images/navigation_arrow.png"></a>
+      <a href="west-section-2.html"><p>To<br>West Wall<br>Centre Section</p><img src="images/navigation_arrow.png"></a>
     </div>
   </div>
 
@@ -161,7 +161,8 @@
             if(bk.spine == 'y'){
               spine = "images\\spines\\" + bk.folder_name + "_spine-crop.png";
             }else{
-              let stock = stock_spines[bk.volumes];
+              let num_volumes = bk.volumes <= 20? bk.volumes : 20;
+              let stock = stock_spines[num_volumes];
               spine = "images\\spines\\stock_spines\\" + stock;
               folder_class += " book__stock book__stock-"+bk.volumes;
             }
