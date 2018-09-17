@@ -81,6 +81,7 @@ section #column_container {
 #column_container .format_wall-section__folio .book,
 #column_container .format_wall-section__fol\. .book{
   min-width:25px;
+  height:250px;
 }
 
 #column_container .format_wall-section__4to .book{
@@ -90,7 +91,15 @@ section #column_container {
 /*
 ** @book
 */
-#bookID-722{
-  width:300px !important;
-}
+#bookID-719{  width:100px !important;}
+#bookID-722{  width:300px !important;}
+#bookID-724{  width:220px !important;}
+#bookID-725{  width:50px !important;}
+#bookID-755{  width:130px !important;}
+#bookID-757{  width:40px !important;}
+#bookID-804{  width:20px !important;}
+#bookID-807{  width:120px !important;}
+#bookID-808{  width:60px !important;}
+#bookID-809{  width:190px !important;}
+#bookID-810{  width:40px !important;}
 

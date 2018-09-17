@@ -151,7 +151,7 @@
             if (bk.author) author = cropString(bk.author, 5);
 
            //Set styles based on number of volumes
-            let standard_bk_width = 15;
+            let standard_bk_width = 17;
             let spineWidth = standard_bk_width * parseInt(bk.volumes);
             if(!spineWidth) spineWidth = standard_bk_width;
             let toolTipWidth = spineWidth+30;
@@ -168,7 +168,7 @@
             }
             
             // Select info for 'hover' tooltip here
-            let tool_tip = "<div class='toolTip' style='left:" + toolTipWidth + "px;'><p class='toolTip_title'>" + cropString(bk.title,10) + "</p><p class='toolTip_author'>" + bk.author + "</p><p class='toolTip_date'>Published: " + bk.date_published + "</p><i>Book ID: "+bk.book_id+"</i></div>";
+            let tool_tip = "<div class='toolTip' style='left:" + toolTipWidth + "px;'><p class='toolTip_title'>" + cropString(bk.title,10) + "</p><p class='toolTip_author'>" + bk.author + "</p><p class='toolTip_date'>Published: " + bk.date_published + "</p><i>Catalogue ID: "+bk.book_id+"</i></div>";
 
             // Final Book Element - identified by bk.id
             shelf += "<li onclick='populateModal(" + bk.id + ");' class='book " + folder_class + "' id='bookID-" + bk.id + "' data-id='" + bk.id + "' style='width:"+spineWidth+"px'><img src='" + spine + "' class='book_spine'>" + tool_tip + "</li>";

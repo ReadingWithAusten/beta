@@ -60,3 +60,10 @@ section #column_container {
 #Column-2 > #shelf-3{height:319px;margin-top:17px;}
 #Column-2 > #shelf-2{height:321px;margin-top:17px;}
 #Column-2 > #shelf-1{height:321px;margin-top:16px;}
+
+/*
+** @book individual
+*/
+#bookID-934,#bookID-935{ width: 40px !important; }
+#bookID-938{ width: 90px !important; }
+#bookID-939{ width: 120px !important;}

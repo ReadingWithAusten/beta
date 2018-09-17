@@ -69,9 +69,14 @@ section #column_container {
 #Slip-2 > #shelf-2{height:200px;margin-top:21px;}
 #Slip-2 > #shelf-1{height:422px;margin:20px 0 0 2px;}
 
-#column_container .format_wall-section__4to .book{
-  min-width:35px;
-}
+#bookID-620{  width:60px !important;}
+#bookID-635{  width:100px !important;}
+#bookID-636{  width:130px !important;}
+#bookID-637{  width:140px !important;}
+#bookID-655{  width:20px !important;}
+#bookID-656{  width:50px !important;}
+#bookID-676{  width:50px !important;}
+#bookID-868{  width:140px !important;}
 
 /*
 ** @toolTip

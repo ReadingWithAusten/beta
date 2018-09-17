@@ -72,7 +72,7 @@ function walkCaseLayout(bookID){
   Object.keys(data).forEach( column =>{
     Object.keys(data[column]).forEach( shelf =>{
       Object.keys(data[column][shelf]).forEach( book =>{
-        if(data[column][shelf][book].id == bookID){
+        if(data[column][shelf][book].book_id == bookID){
           CURRENT_BOOK = data[column][shelf][book];
           CURRENT_BOOK_LOCATION[0] = column;
           CURRENT_BOOK_LOCATION[1] = shelf;
@@ -86,7 +86,7 @@ function walkCaseLayout(bookID){
 
 // Fills modal with relevant information from element onclick
 function populateModal(bookID) {
-  console.log("populating modal");
+  console.log("populating modal: "+bookID);
 
   // Grab book data
   walkCaseLayout(bookID);

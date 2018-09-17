@@ -74,18 +74,7 @@ section #column_container {
 #Column-5 > #shelf-2{height:320px;margin-top:15px;}
 #Column-5 > #shelf-1{height:324px;margin-top:16px;}
 
-#column_container .format_wall-section__folio .book,
-#column_container .format_wall-section__fol\. .book{
-  min-width:25px;
-}
-
-#column_container .format_wall-section__4to .book{
-  min-width:10px;
-}
-
 /*
 ** @book
 */
-#bookID-1077{
-  width:90px !important;
-}
+#bookID-1077{ width:80px !important; }

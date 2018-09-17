@@ -1,12 +1,12 @@
   let QUERY_INPUT_PLACEHOLDERS = [
       "Austen, Jane", "Shakespeare, William", "Homer", "Voltaire", "Swift, Jonathan", "Pope, Alexander"
   ];
+  // Randomize text field placeholder
+  document.getElementById('query__input_text').placeholder = QUERY_INPUT_PLACEHOLDERS[Math.floor(Math.random()*QUERY_INPUT_PLACEHOLDERS.length)];
 
   let RESULTS_CONTAINER = document.getElementById('query__output');
   let RESULTS_LIST = document.getElementById('query__results');
   let NUMBER_RESULTS = document.getElementById('query__number-results_container');
-  //let snap = Defiant.getSnapshot(COMPLETE_DATA);
-  let boolean_search = false;
   let filter_images = false;
   let total_results_shown = 0;
   let number_displayed_results = 18;
@@ -14,18 +14,20 @@
   let query = "";
   let query_result = [];
 
-  function setQueryToBoolean() {
-    boolean_search = document.getElementById('query__check_boolean').checked;
-    document.getElementById('query__input_text').value = "";
-  }
+  document.addEventListener('keypress', (event) => {
+      event.key == "Enter" ? queryCatalogue() : "";
+  });
+
   function getFilterImages(){
-    filter_images = document.getElementById('query__check_filterImages').checked;
     if(filter_images && query_result.length > 0){
       let resultWithImages = query_result.filter( bk =>{
         return (bk.images && (bk.images == "yes"));
       });
+      console.log(resultWithImages)
       renderQuery(resultWithImages, query);
     }else if(!filter_images && query_result.length > 0){
+      renderQuery(query_result,query);
+    }else{
       renderQuery(query_result,query);
     }
   }
@@ -38,7 +40,6 @@
               if(keys[i] == "date_published"){
                 return queryDatePublished(COMPLETE_DATA[book], query);
               }else if (COMPLETE_DATA[book][keys[i]].toString().toLowerCase().indexOf(query.toLowerCase()) > -1) {
-                  //console.log('Found: ' + book + " " + keys[i]);
                   return true;
               }
           }
@@ -49,6 +50,7 @@
       RESULTS_LIST.innerHTML = "";
       category = document.getElementsByName('category')[0].value;
       query = document.getElementsByName('query')[0].value;
+      filter_images = document.getElementById('query__check_filterImages').checked;
       console.log(category + " " + query);
       query_result = [];
       if (category == "all") {
@@ -63,7 +65,6 @@
                         queryDatePublished(COMPLETE_DATA[book], query) ? query_result.push(COMPLETE_DATA[book]) : "";
                       }else if (COMPLETE_DATA[book][key]) {
                           if (COMPLETE_DATA[book][key].toString().toLowerCase().indexOf(query.toLowerCase()) > -1) {
-                              //console.log(COMPLETE_DATA[book]);
                               query_result.push(COMPLETE_DATA[book]);
                           }
                       }
@@ -84,29 +85,7 @@
       query_result.sort((a,b)=>{
         return a.book_id - b.book_id;
       });
-
-      getFilterImages()
-      filter_images? getFilterImages() :renderQuery(unique, query);
-
-      /*
-        RESULTS.innerHTML = "";
-        category = document.getElementsByName('category')[0].value;
-        query = document.getElementsByName('query')[0].vlue;
-        let path = "";
-
-        if(IS_BOOLEAN_SEARCH){
-
-        }else{
-          if (category == 'all') {
-              path = "//*[contains(text(), '" + query + "')]/..";
-          }else{
-              path = "//*[contains(" + category + ",'" + query + "')]";
-          }
-        }
-          
-        let result = JSON.search(snap, path);
-        renderQuery(result, query);
-        */
+      filter_images ? getFilterImages() : renderQuery(query_result, query);
   }
 
   // Output results of query to DOM
@@ -114,7 +93,8 @@
       RESULTS_CONTAINER.classList.add('query_hide-output');
       setTimeout(function() {
           document.getElementById('query__show-more').classList.remove('query_hide-output');
-          if (result.length == 0) {
+          if (result.length == 0 || query == "") {
+              console.log('Query returned no results');
               NUMBER_RESULTS.innerHTML = "<p>The query returned no books.</p>";
               document.getElementById('query__results-shown').innerHTML ="";
               document.getElementById('query__show-more').classList.add('query_hide-output');
@@ -148,12 +128,11 @@
               RESULTS_LIST.innerHTML += wall_link;
           }
           if (total_results_shown < result.length) {
-            document.getElementById('query__results-shown').innerHTML = total_results_shown + " / " + query_result.length;
+            document.getElementById('query__results-shown').innerHTML = total_results_shown + " / " + result.length;
           }else if(total_results_shown == result.length){
-            document.getElementById('query__results-shown').innerHTML = total_results_shown + " / " + query_result.length;
+            document.getElementById('query__results-shown').innerHTML = total_results_shown + " / " + result.length;
             document.getElementById('query__show-more').classList.add('query_hide-output');
           }
-          console.log(total_results_shown+" first query")
       }, 300);
       setTimeout(function() {
           RESULTS_CONTAINER.classList.remove('query_hide-output');
@@ -164,10 +143,6 @@
       let regex = new RegExp(query, "gi");
       return string.toString().replace(regex, '<span class="query__highlight">' + query + '</span>');
   }
-  document.addEventListener('keypress', (event) => {
-      event.key == "Enter" ? queryCatalogue() : "";
-  });
-
   function showMoreResults() {
       let count = total_results_shown + number_displayed_results;
       if (count > query_result.length) {
@@ -257,7 +232,6 @@
       default:
         console.log("\tdefault: "+parsed_date.dates);
         return false;
-        break; 
     }
   }
   /*

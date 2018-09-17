@@ -131,13 +131,13 @@ ul li {
   box-shadow:-5px -2px 10px -3px black;
 }
 /*
-** @format 
+** @format wall view
 */
-.format_12mo .book{     height: 35px; }
-.format_8vo .book{      height: 40px; }
-.format_4to .book{      height: 55px; }
+.format_12mo .book{     height: 32px; }
+.format_8vo .book{      height: 38px; }
+.format_4to .book{      height: 50px; }
 .format_folio .book,
-.format_fol\. .book{    height: 80px; }
+.format_fol\. .book{    height: 70px; }
 
 /*
 .format_12mo{           border:2px solid yellowgreen !important; }
@@ -150,21 +150,6 @@ ul li {
 .format_folio .book,
 .format_fol\. .book{    height: 80px; }
 
-.shelf::before{
-  display:block;
-  position:absolute;
-  font-size:1.5em;
-  text-align: center;
-  width:100%;
-  top:20%;
-  color:rgba(250,250,250,0.7);
-  text-shadow: 1px 1px rgba(40,40,40,0.8);
-}
-.format_8vo::before{  content:"8vo";  }
-.format_12mo::before{ content:"12mo"; }
-.format_4to::before{  content:"4to";  }
-.format_folio::before,
-.format_fol\.::before{content:"folio";}
 
 /*
 ** @footer
@@ -175,37 +160,56 @@ footer {
   bottom: 0;
   color: white;
   display: block;
-  opacity: 0.9;
+  opacity: 1;
   padding: 2% 0;
   position: relative;
   width: 100%;
+  z-index: 2;
+  font-family: 'Lusitana', serif !important;
 }
 
 footer ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   margin: 0 auto;
   text-align: center;
   width: 100%;
   max-width:1500px;
 }
 
-footer ul li {
-  align-self: center;
-  flex: 0 1 20%;
-  list-style: none;
-  margin: 0px 2%;
-  padding: 10px;
-  width: 100%;
+footer > ul > li {
+  vertical-align: middle;
+  display: inline-block;
+  width:45%;
+  margin:0 1vw;
+  position: relative;
 }
-
+#footer__logo{
+  text-align: left;
+}
+#footer__logo img{
+  transform:rotateY(180deg);
+  width:100px;
+}
+#footer__logo h2{
+  position: absolute;
+  top:0;
+  left:80px;
+  font-size:3em;
+  line-height: 40px;
+}
+#footer__burney{
+  text-align: right;
+}
+#footer__burney img{
+  margin:0 0 -15px 0;
+}
 footer #footer_plate {
-  height: 120px;
+  width:100%;
+  max-width:150px;
 }
 
 footer #footer_mcgill {
-  width: 150px;
+  width: 100%;
+  max-width:250px;
 }
 
 footer #footerContact {
@@ -222,4 +226,24 @@ footer #footerLinks {
 footer #footerLinks li {
   padding: 5px;
   text-align: left;
+}
+footer #footerLinks a:hover{
+  transition: all 0.3s ease-in-out;
+  color: rgba(255, 117, 0, 1);
+}
+
+@media only screen and (max-width:850px){
+  footer > ul > li{    
+    width:40%;
+    margin: 30px 0;
+  }
+  #footerContact,#footerLinks li{
+    text-align: center !important;
+  }
+}
+@media only screen and (max-width:500px){
+  footer > ul > li{    
+    width:60%;
+    margin: 1em 0;    
+  }
 }

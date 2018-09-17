@@ -150,10 +150,9 @@ section #column_container {
 /*
 ** @book
 */
-#bookID-1068{
-  width:250px !important;
-}
-
+#bookID-1068{ width:200px !important;}
+#bookID-1053{ width: 50px !important;}
+#bookID-1060,#bookID-1195,#bookID-1182,#bookID-1183,#bookID-1185 { width: 25px !important;}
 /*
 ** @toolTip
 */

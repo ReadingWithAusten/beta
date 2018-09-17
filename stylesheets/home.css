@@ -3,47 +3,48 @@
 ** - define background image positioning and column container positioning
 */
 section#content_body{
-  background-image: url(../images/backgrounds/landing.jpg);
-  background-size: auto 100vh;     /* Define precise size of the background */
-  background-position: top center;
+  background-image: url(../images/backgrounds/landing2.jpg);
+  background-size: 1500px auto;     /* Define precise size of the background */
+  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding-top:90px;
+  background-attachment: ;
+  padding:0;
   margin-top: 0px !important;
-  min-height:100vh;
 }
-section#content_body div{
+section#content_body #home__intro{
   width:50vw;
-  max-width: 500px;
+  max-width:550px;
   margin:150px auto;
-  background-color:rgba(50,50,50,0.5);
-  color:rgba(240,240,240,0.9);
-  text-shadow: 1px 1px 1px grey;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding:1em;
-  border:1px solid black;
+  background-color:rgba(0,50,105,0.4);
+  color:rgba(255,255,255,1);
+  text-shadow: 2px 2px 2px black;
+  border-radius: 5px;
+  padding:3em 3em 0 3em;
+  border:1px solid transparent;
 }
-section#content_body div h1{
+section#content_body #home__intro h2{
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
+  font-style: italic;
 }
 
-section#content_body div p{
-  font-size:1em;
-  margin: 2vh 0;
-  text-align: left;
+section#content_body #home__intro p{
+  font-size:1.2em;
+  margin: 2em 0;
+  text-align: justify;
 }
-
-section#content_body div button{
-  border:none;
-  border-radius: 3px;
-  background-color: rgba(0,200,100,0.8);
-  color:white;
-  font-size:18px;
-  padding: 5px 10px;
-  margin: 10px auto 0 auto;;
-  display: block;
-  cursor: pointer;
+@media only screen and (max-width:1000px){
+  section#content_body{  background-size:1300px; background-position: center left;  }
+  section#content_body #home__intro{    width:100%;  }
+  section#content_body #home__intro h2{ font-size:1.2em;  }
+  section#content_body #home__intro p{  font-size:1em; }
 }
-
+@media only screen and (max-width:550px){
+  section#content_body{  background-size:1100px auto;  }
+  section#content_body #home__intro{    
+    width:90%;  
+    padding:20px 20px 0px 20px;
+  }
+  section#content_body #home__intro h2{ font-size:1.2em;  }
+  section#content_body #home__intro p{  font-size:1em; }
+}

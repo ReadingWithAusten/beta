@@ -31,8 +31,8 @@
   -->
     <section id="content_body">
         <div id="query__info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In fugiat hic libero quidem incidunt molestias porro labore animi minima! Rem dolorum quibusdam laudantium at vel explicabo, itaque eligendi molestiae a et assumenda maiores labore quae voluptate temporibus repellendus fugiat placeat similique! Culpa, nihil, at! Vero porro veritatis dolore minus ducimus quam, ad eum perferendis eius autem! Facere consequuntur laborum optio adipisci, placeat ea eaque dolorem similique, ut corporis velit repellat. Deserunt eligendi, aspernatur quis delectus suscipit accusamus et, vel veniam nisi expedita cumque dolor esse repellendus repellat natus architecto aliquid eum labore hic laboriosam, provident doloremque. Debitis, minima aliquam quibusdam!</p>
-            You can view the full spreadsheet <a href="#">Here</a>
+            <p>Trying to find books written by Maria Edgeworth or published in 1768?<br>Search the catalogue below.<br><br>
+            For more information about our transcription of the catalogue, metadata entry, and editorial guidelines, see <a href="about.html#about_data-description">Data Description</a> on the About page.</p>
         </div>
         <div id="query__input">
             <select name="category">
@@ -46,9 +46,8 @@
                 <option value="language">Language</option>
                 <option value="subject">Subject</option>
             </select>
-            <label for="query__check_boolean">Boolean Search <input type="checkbox" name="check_boolean" id="query__check_boolean" onclick="setQueryToBoolean()"></label>
-            <label for="query__check_filterImages">Show results with images <input type="checkbox" name="check_filterImages" id="query__check_filterImages" onclick="getFilterImages()"></label>
-            <input id="query__input_text" type="text" name="query" placeholder="Austen, Jane" value="Austen, Jane">
+            <input id="query__input_text" type="text" name="query" placeholder="Austen, Jane">
+            <label for="query__check_filterImages">Only show results with images <input type="checkbox" name="check_filterImages" id="query__check_filterImages" onclick="queryCatalogue()"></label>
             <button id="query__button_submit" value="Search" onclick="queryCatalogue();">Search</button>
         </div>
         <div id="query__output">

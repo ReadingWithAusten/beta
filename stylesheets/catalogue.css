@@ -4,7 +4,7 @@
   text-align: center;
   width:90%;
   max-width:1200px;
-  margin:3vh auto;
+  margin:5px auto;
   padding:1%;
 }
 /*
@@ -31,7 +31,7 @@
   color:rgb(80,80,80);
 }
 /*
-** @input
+** @input area
 */
 #query__input input,  
 #query__input select,
@@ -40,12 +40,20 @@
   border-bottom:1px solid lightgrey;
   border-left:0px solid transparent; 
   font-size:1em;
-  display: block;
-  margin: 0 auto 20px auto;
-  padding:5px 10px;
-  width:25%;
   color:rgb(100,100,100);
   transition:all 0.3s ease-in-out;
+}
+#query__input input[type=text],
+#query__input select{
+  display: inline-block;
+  margin: 10px 15px;
+  padding:5px 10px;
+  width:30%;
+  max-width:250px;
+}
+#query__input label,
+#query__input input[type=checkbox]{
+  display:block;
 }
 #query__input input:hover,
 #query__input input:focus,
@@ -57,7 +65,7 @@
   color:rgb(40,40,40);
   font-size:1.05em;
 }
-#query__input input{
+#query__input input[type=text]{
   background: url(../images/search.svg) 10px center no-repeat;
   background-size: 20px;
   padding-left:40px;
@@ -68,7 +76,6 @@
   padding:0;
   margin:0px auto 10px auto;
 }
-#query__input #query__check_boolean,
 #query__input #query__check_filterImages{
   display:inline-block;
   transition:0.3s ease-in-out;
@@ -125,7 +132,7 @@
   vertical-align: top;
   margin:1%;
   overflow: hidden;
-  padding:1%;
+  padding:25px 20px;
   transition:all 0.3s ease-in-out;
   font-size:0.9em;
   position: relative;
@@ -139,24 +146,22 @@
   background-color:transparent;
   position: absolute;
   display: block;
-  border-left:2px solid transparent;
-  border-right:2px solid transparent;
   border-bottom:2px solid transparent;
   padding:5px;
   color:transparent;
   top:0;
-  left:31%;
+  left:0;
+  text-align: center;
+  width:100%;
   max-height: 0;
   overflow: hidden;
   transition:all 0.8s ease-in-out;
 }
 #query__results li:hover::before{
   background-color:rgba(255,255,255,0.8);
-  max-height: 100px;
+  max-height: 90px;
   padding:5px;
   color:black;
-  border-left:2px solid rgba(50,150,255,0.8);
-  border-right:2px solid rgba(50,150,255,0.8);
   border-bottom:2px solid rgba(50,150,255,0.8);
 }
 #query__results li p{
@@ -182,6 +187,23 @@
 #query__results-shown{
   margin:20px 0;
 }
-/*
-#query__show-more is same as search button
-*/
+@media only screen and (max-width:1000px){
+  #query__results li{
+    width:45%;
+  }
+}
+@media only screen and (max-width:700px){
+  #query__number-results_container{
+    width:100%;
+  }
+  #query__info{
+    width:80%;
+  }
+  #query__input input[type=text],#query__input select{
+    width:80%;
+  }
+  #query__results li{
+    width:100%;
+    font-size: 0.8em;
+  }
+}

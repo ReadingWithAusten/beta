@@ -81,3 +81,50 @@ section #column_container{
 #column_container #Column-5 #shelf-3{ margin:5px 0 0 0; height: 101px;}
 #column_container #Column-5 #shelf-2{ margin:5px 0 0 0; height: 101px;}
 #column_container #Column-5 #shelf-1{ margin:5px 0 0 0; height: 101px;}
+
+
+/*
+** @book individual
+*/
+.book__stock-1{ width: 4px; }
+.book__stock-2{ width: 8px; }
+.book__stock-3{ width: 10px; }
+.book__stock-4{ width: 14px; }
+.book__stock-5{ width: 20px; }
+.book__stock-6{ width: 25px; }
+.book__stock-8{ width: 35px; }
+.book__stock-10{ width: 33px; }
+.book__stock-11{ width: 55px; }
+
+.format_folio .book__stock-1{ width: 6px;}
+.format_folio .book__stock-2{ width: 15px;}
+.format_folio .book__stock-3{ width: 20px;}
+.format_folio .book__stock-4{ width: 30px;}
+.format_folio .book__stock-6{ width: 35px;}
+.format_folio .book__stock-7{ width: 55px;}
+.format_folio .book__stock-10{ width: 60px;}
+
+
+#Column-1 #shelf-3 .book__stock-1{ width: 6px; }
+#Column-1 #shelf-3 .book__stock-2{ width: 10px; }
+#Column-1 #shelf-3 .book__stock-3{ width: 15px; }
+#Column-1 #shelf-3 .book__stock-4{ width: 20px; }
+#Column-1 #shelf-4 .book__stock-1{ width: 5px; }
+#Column-1 #shelf-4 .book__stock-2{ width: 9px; }
+#Column-1 #shelf-5 .book__stock-1{ width: 7px; }
+#Column-1 #shelf-5 .book__stock-2{ width: 15px; }
+#Column-1 #shelf-6 .book__stock-1{ width: 4.5px; }
+#Column-1 #shelf-6 .book__stock-2{ width: 9px; }
+#Column-1 #shelf-6 .book__stock-4{ width: 15px; }
+#Column-4 #shelf-2 .book__stock-2{ width: 10px;}
+#Column-4 #shelf-4 .book__stock-3{ width: 15px;}
+#Slip-1 #shelf-5 .book__stock-2{ width: 7px; }
+#Slip-1 #shelf-5 .book__stock-3{ width: 9px; }
+#Slip-1 #shelf-5 .book__stock-6{ width: 13px; }
+
+#bookID-939{ width: 35px !important; }
+#bookID-1068{ width: 70px !important; }
+#bookID-1077{ width: px !important; }
+#bookID-{ width: px !important; }
+#bookID-{ width: px !important; }
+#bookID-{ width: px !important; }
