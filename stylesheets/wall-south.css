@@ -129,6 +129,7 @@ section #column_container{
 
 /* column 2, shelf 5*/
 #bookID-598{  max-width:3px;  }
+#Column-2 #shelf-5 .book__stock-1{ max-width:4px;}
 
 /* column 2, shelf 6*/
 #bookID-602{  width:30px !important;  }

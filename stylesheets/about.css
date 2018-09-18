@@ -10,7 +10,7 @@ header{
   transition:0.15s ease-in-out;
 }
 #content_body a:hover{
-  color: darkorange;
+  color: orangered;
 }
 #content_body h1{
   font-size:2em;
@@ -36,8 +36,8 @@ header{
   margin:30px;
 }
 #content_body div{
-  padding:130px 2vw 50px 2vw;
-  margin: -90px auto 70px auto;
+  padding:85px 2vw 50px 2vw;
+  margin: -80px auto 00px auto;
   width:50vw;
   max-width:650px;
   min-width:550px;
@@ -45,7 +45,7 @@ header{
 }
 #content_body img{
   display: block;
-  width:auto;
+  width:90%;
   height: auto;
   border:10px solid white;
   background-color:rgba(50,150,255,0.2);
@@ -53,9 +53,9 @@ header{
   box-shadow:1px 1px 7px -4px black;
   color: rgba(40,40,40,0.8);
   text-align:center;
-  /*! padding:20px; */
   max-height: 400px;
   max-width: 500px;
+  min-width: 250px;
 }
 .about_img__inline{
   display: inline-block;
@@ -98,6 +98,10 @@ header{
   #content_body p:first-letter{
     font-size:1.5em;
   }
+  #content_body img{
+    float:none !important;
+    margin:10px auto !important;
+  }
 }
 
 /*
@@ -119,7 +123,7 @@ header{
   border:1px solid white ;  
   border-radius: 2px;
   display: block;
-  top:15vh;
+  top:130px;
   font-size:0.9em;
   width: 22vw;
   position: fixed;
@@ -155,7 +159,7 @@ header{
   font-weight: bold;
   font-size: 0.9em;
   font-family: inherit;
-  top:15vh;
+  top:130px;
   right:-5px;    
   cursor: pointer;
   z-index: 1;
@@ -204,7 +208,7 @@ header{
 @media only screen and (max-width:600px){
    #content_body div{
     width:85%;
-     left:0;
+    left:0;
   }
   #about_TOC::before{
     display: none;
@@ -226,7 +230,7 @@ header{
   }
   #about_TOC{
     display: block;
-    left:50vw;
+    left:50%;
     top:50px;
     font-size:0.9em;
     margin: 0 0 0 -28vw;
@@ -244,22 +248,22 @@ header{
   }
   #about_TOC ul li{
     margin:0;
-    padding:2px 15px;
+    color:rgba(40,40,40,0.8);
+    padding:2px 0 2px 15px;
+    background-color:lightgrey;
+    border-top:1px solid white;
   }
   #about_TOC ul li:hover{
-    padding-left:20px;
+    padding: 2px 0 2px 20px;
     border-left:3px solid rgba(50,150,255,0.8);
   }
   #to-top{
-    top:25vh;
+    top:20vh;
   }
 }
 @media only screen and (max-height:450px){
   #about_TOC{
     font-size:1em;
-  }
-  #about_TOC ul li{
-    padding: 2px 15px;
   }
 }
 /*
@@ -316,11 +320,10 @@ header{
   font-size:1em;
 }
 #about_lost-sheep p a{  
-  text-decoration: underline;
   transition:0.15s ease-in-out;
 }
 #about_lost-sheep p a:hover{  
-  color:rgba(50,150,255,0.8);
+  color:orangered;
 }
 #about_lost-sheep h3{
   margin:90px 0 10px 0;
@@ -339,10 +342,11 @@ header{
 }
 #about_works-cited ul li > p{
   font-size:1.3em !important;
-  letter-spacing: 0px;
-  word-spacing: 1px;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
   line-height: 18px;
   margin: 0 0 10px 10px;
+  text-align: left;
 }
 @media only screen and (max-width:550px){
   #about_works-cited ul li{
@@ -394,6 +398,7 @@ header{
   width:100%;
 }
 #about_special-thanks ul li p{
-  text-align: left;
+  text-align: justify;
   margin:10px 0;
+  line-height: 17px;
 }

@@ -55,12 +55,15 @@ function populateModalImages(book){
 
 function populateModalContent(book){
   let content = ""
-  Object.keys(CURRENT_BOOK).forEach( attr =>{
-    if(CURRENT_BOOK[attr]){
-      if(attr == "internet_link"){
-        content += '<a href="' + CURRENT_BOOK.internet_link + '" target="_break"><p id="modal_content__link">' + CURRENT_BOOK.internet_link + '</p></a>';
+  Object.keys(book).forEach( attr =>{
+    if(book[attr]){
+      if(attr == 'book_id'){
+        if(book.folder_name && BOOK_TO_FOLDER[book.folder_name] && !book.permissions){
+          content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Permissions:</span> Courtesy of McGill Library</p>";
+        }
+        content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Catalogue ID:</span>"+ book[attr] + "</p>";
       }else{
-        content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>" + attr.replace("_"," ") +":</span>"+ CURRENT_BOOK[attr] + "</p>";
+        content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>" + attr.replace("_"," ") +":</span>"+ book[attr] + "</p>";
       }
     }
   });
@@ -90,16 +93,6 @@ function populateModal(bookID) {
 
   // Grab book data
   walkCaseLayout(bookID);
-
-  /* For walking through -case_data.js
-  CURRENT_BOOK = data.filter( book =>{
-    if(book.id == bookID) return book;
-  });
-  
-  // use first element of filtered array
-  CURRENT_BOOK = CURRENT_BOOK[0];
-  
-  */
 
   MODAL_IMAGES.innerHTML = populateModalImages(CURRENT_BOOK);
   MODAL_CONTENT.innerHTML = populateModalContent(CURRENT_BOOK);
@@ -188,14 +181,6 @@ function changeImageViewerImage(direction) {
         break;
       }
   }
-  
-  //Empty images list and repopulate
-  /* Turned off switching of image position
-  document.getElementById('modal_images__list').innerHTML = "";
-  images_list.forEach(img => {
-    document.getElementById('modal_images__list').innerHTML += "<li>" + img.outerHTML + "</li>";
-  });
-  */
 }
 
 function nextBook() {

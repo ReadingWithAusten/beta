@@ -1,0 +1,111 @@
+/* Goes into style.css*/
+
+.font__lusitana:before,
+.font__baskerville:before,
+.font__times:before,
+.font__serif:before{
+  font-size:1em;
+  background-color:rgba(255,255,255,0.9);
+  z-index: 10;
+  position: fixed;
+  opacity: 1;
+  top:0%;
+  left:0%;
+  border:1px solid grey;
+  padding:0.5em;
+  color:rgb(80,80,80);
+  border-radius: 2px;
+}
+.font__lusitana:before{
+  content:"Font: Lusitana";
+}
+.font__baskerville:before{
+  content:"Font: Baskerville";
+}
+.font__times:before{
+  content:"Font: Times New Roman";
+}
+.font__serif:before{
+  content:"Font: Georgia";
+}
+.font__lusitana{
+  font-family: 'Lusitana', serif !important;
+}
+.font__baskerville{
+  font-family: 'Libre Baskerville', serif !important;
+}
+.font__times{
+  font-family: Times New Roman !important;
+}
+.font__serif{
+  font-family: Georgia !important;
+}
+
+
+/*
+.has_folder{
+  background-color:rgba(50,100,255,0.7) !important;
+}
+
+.no_folder{
+  
+}
+
+.no_volumes{
+  background-color:rgba(255,40,240,0.7) !important;
+  width:5px !important;
+}
+*/
+
+/*
+.format_12mo{           border:2px solid yellowgreen !important; }
+.format_8vo{            border:2px solid orangered !important; }
+
+.format_4to{            border:2px solid violet !important; }
+
+.format_folio,
+.format_fol\.{          border:2px solid yellow !important; }
+.format_folio .book,
+.format_fol\. .book{    height: 80px; }
+
+/* wall-view.css*/
+.format_8vo::before{  content:"8vo";  }
+.format_12mo::before{ content:"12mo"; }
+.format_4to::before{  content:"4to";  }
+.format_folio::before,
+.format_fol\.::before{content:"folio";}
+
+#column_container .column .shelf:hover{
+  box-shadow:inset -2px 5px 20px 2px rgba(50,150,255,0.3);
+}
+
+/* section-view.css */
+
+/*
+.has_folder{
+  border:0px solid aquamarine;
+  border-top:none;
+  box-shadow: inset 0 0px 20px 5px;
+}
+
+.no_folder{
+  box-shadow:inset 0 0 15px 5px black;
+}
+.no_folder img{
+  opacity: 0.4;
+}
+*/
+
+.format_wall-section__8vo::before{
+  content:"8vo";
+}
+.format_wall-section__12mo::before{
+  content:"12mo";
+}
+.format_wall-section__4to::before{
+  content:"4to";
+}
+.format_wall-section__folio::before,
+.format_wall-section__fol\.::before{
+  content:"folio";
+}

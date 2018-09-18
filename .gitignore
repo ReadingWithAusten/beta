@@ -6,3 +6,4 @@ folder_relations.txt
 javascripts/old/
 javascripts/new/
 .gitignore
+debug

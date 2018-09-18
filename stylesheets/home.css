@@ -1,10 +1,9 @@
 /*
 ** @section 
-** - define background image positioning and column container positioning
 */
 section#content_body{
   background-image: url(../images/backgrounds/landing2.jpg);
-  background-size: 1500px auto;     /* Define precise size of the background */
+  background-size: 1300px auto; 
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: ;
@@ -12,15 +11,19 @@ section#content_body{
   margin-top: 0px !important;
 }
 section#content_body #home__intro{
-  width:50vw;
-  max-width:550px;
-  margin:150px auto;
-  background-color:rgba(0,50,105,0.4);
-  color:rgba(255,255,255,1);
-  text-shadow: 2px 2px 2px black;
-  border-radius: 5px;
-  padding:3em 3em 0 3em;
+  text-align: center;
+  width:900px;
+  left:50%;
+  margin-left: -450px;
+  bottom:50px;
+  position: absolute;
+  background-color:rgba(240,240,240,0.8);
+  color:rgba(40,40,40,0.8);
+  text-shadow: 2px 2px 2px lightgrey;
+  border-radius: 2px;
+  padding:1em;
   border:1px solid transparent;
+  box-shadow: 3px 3px 5px -6px black;
 }
 section#content_body #home__intro h2{
   text-align: center;
@@ -28,23 +31,51 @@ section#content_body #home__intro h2{
   font-style: italic;
 }
 
-section#content_body #home__intro p{
+section#content_body #home__intro p,
+section#content_body #home__intro a{
   font-size:1.2em;
-  margin: 2em 0;
+  margin: 20px 20px;
   text-align: justify;
 }
+section#content_body #home__intro a{
+  background-color:rgba(50,150,255,0.8);
+  color:white;
+  text-shadow:none;
+  padding:5px 10px;
+  border-radius: 3px;
+  transition:0.2s ease-in-out;
+}
+section#content_body #home__intro a:hover{
+  background-color:rgba(50,150,255,1);
+}
 @media only screen and (max-width:1000px){
-  section#content_body{  background-size:1300px; background-position: center left;  }
-  section#content_body #home__intro{    width:100%;  }
+  section#content_body{  
+    background-size:1100px; 
+    background-position: center left;  
+  }
+  section#content_body #home__intro{    
+    width:90%; 
+    margin-left: -45%;  
+  }
   section#content_body #home__intro h2{ font-size:1.2em;  }
   section#content_body #home__intro p{  font-size:1em; }
 }
 @media only screen and (max-width:550px){
-  section#content_body{  background-size:1100px auto;  }
+  section#content_body{  
+    background-size:900px auto;  
+  }
   section#content_body #home__intro{    
-    width:90%;  
+    width:100%;  
+    margin-left: -50%;
+    bottom:5px;
     padding:20px 20px 0px 20px;
   }
   section#content_body #home__intro h2{ font-size:1.2em;  }
   section#content_body #home__intro p{  font-size:1em; }
+  section#content_body #home__intro a{  
+    display: block; 
+    width:180px;
+    text-align: center;
+    margin:10px auto;
+  }
 }
