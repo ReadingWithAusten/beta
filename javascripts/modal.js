@@ -59,7 +59,7 @@ function populateModalContent(book){
     if(book[attr]){
       if(attr == 'book_id'){
         if(book.folder_name && BOOK_TO_FOLDER[book.folder_name] && !book.permissions){
-          content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Permissions:</span> Courtesy of McGill Library</p>";
+          content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Permissions:</span> Courtesy of Chawton House</p>";
         }
         content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Catalogue ID:</span>"+ book[attr] + "</p>";
       }else{

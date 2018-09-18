@@ -2,7 +2,7 @@
       "Austen, Jane", "Shakespeare, William", "Homer", "Voltaire", "Swift, Jonathan", "Pope, Alexander"
   ];
   // Randomize text field placeholder
-  document.getElementById('query__input_text').placeholder = QUERY_INPUT_PLACEHOLDERS[Math.floor(Math.random()*QUERY_INPUT_PLACEHOLDERS.length)];
+  document.getElementById('query__input_text').value = QUERY_INPUT_PLACEHOLDERS[Math.floor(Math.random()*QUERY_INPUT_PLACEHOLDERS.length)];
 
   let RESULTS_CONTAINER = document.getElementById('query__output');
   let RESULTS_LIST = document.getElementById('query__results');

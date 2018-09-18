@@ -57,6 +57,17 @@ header{
   max-width: 500px;
   min-width: 250px;
 }
+.about__image-caption{
+  position: relative;
+}
+.about__image-caption::after{
+  content: attr(data-caption);
+  display:block;
+  position: absolute;
+  bottom:0;
+  font-size:0.7em;
+  text-align: center;
+}
 .about_img__inline{
   display: inline-block;
   float:left;
