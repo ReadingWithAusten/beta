@@ -122,13 +122,14 @@ footer > ul > li {
 #footer__logo img{
   transform:rotateY(180deg);
   width:70px;
+  z-index: 0;
 }
 #footer__logo h2{
   position: absolute;
   top:10px;
-  left:60px;
-  font-size:1.5em;
-  line-height: 20px;
+  left:52px;
+  font-size:2em;
+  line-height: 24px;
 }
 #footer__burney{
   text-align: right;

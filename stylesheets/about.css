@@ -10,7 +10,7 @@ header{
   transition:0.15s ease-in-out;
 }
 #content_body a:hover{
-  color: orangered;
+  color: rgb(231, 71, 71);
 }
 #content_body h1{
   font-size:2em;
@@ -20,10 +20,10 @@ header{
   white-space: pre-line;
   margin:10px 0;
   text-align: justify;
-  letter-spacing: 0.5px;
-  font-size: 1.05em;
+  letter-spacing: 1px;
+  font-size: 1.1em;
   line-height: 25px;
-  word-spacing: 2px;
+  word-spacing: 1px;
 }
 #content_body p:first-letter{
   font-size:3em;
@@ -56,22 +56,33 @@ header{
   max-height: 400px;
   max-width: 500px;
   min-width: 250px;
+  transition:all 0.3s ease-in-out;
 }
-.about__image-caption{
-  position: relative;
+
+.about_inline-images{
+  margin: -5px 0 -25px 0 !important;
+  padding: 0 !important;
+  text-align:center;
+  font-weight: bold;
+  font-size:0.9em;
 }
-.about__image-caption::after{
-  content: attr(data-caption);
-  display:block;
-  position: absolute;
-  bottom:0;
-  font-size:0.7em;
-  text-align: center;
-}
-.about_img__inline{
+.about_inline-images li{
   display: inline-block;
-  float:left;
-  margin: 10px 30px 0 0  !important;
+  width:46% !important;
+  vertical-align: top;
+  margin: 5px 1%;
+}
+.about_inline-images li img{
+  padding:0 !important;
+  width:100% !important;
+  min-width: auto !important;
+}
+.about_image-caption{
+  display: block;
+  font-size:0.9em;
+  font-weight: bold;
+  text-align: center;
+  width:100%;
 }
 @media only screen and (max-width:700px){
   #content_body div{
@@ -93,21 +104,21 @@ header{
 }
 @media only screen and (max-width:550px){
   #content_body div{
-    width:90%;
-    min-width:90%;
+    width:90% !important;
+    min-width:90% !important;
   }
   #content_body h2{
-    font-size:1.3em;
+    font-size:1.4em !important;
   }
   #content_body p{
     margin:0;
-    letter-spacing: 0.2px;
-    font-size: 1.1em;
-    line-height: 25px;
+    letter-spacing: 0.8px !important;
+    font-size: 1.2em !important;
+    line-height: 25px !important;
     word-spacing: inherit;
   }
   #content_body p:first-letter{
-    font-size:1.5em;
+    font-size:1.5em !important;
   }
   #content_body img{
     float:none !important;
@@ -334,7 +345,7 @@ header{
   transition:0.15s ease-in-out;
 }
 #about_lost-sheep p a:hover{  
-  color:orangered;
+  color:#e74747;
 }
 #about_lost-sheep h3{
   margin:90px 0 10px 0;
@@ -401,6 +412,10 @@ header{
   line-height: 1.2em;
   padding:0;
   margin:5px 0 30px 0;
+}
+#about_special-thanks ul li p:first-letter,
+#about_site-credits ul li p:first-letter{
+  font-size:inherit !important;
 }
 #about_special-thanks ul{
   padding:1em 0;
