@@ -1,29 +1,28 @@
-  let QUERY_INPUT_PLACEHOLDERS = [
+  var QUERY_INPUT_PLACEHOLDERS = [
       "Austen, Jane", "Shakespeare, William", "Homer", "Voltaire", "Swift, Jonathan", "Pope, Alexander"
   ];
   // Randomize text field placeholder
-  document.getElementById('query__input_text').value = QUERY_INPUT_PLACEHOLDERS[Math.floor(Math.random()*QUERY_INPUT_PLACEHOLDERS.length)];
+  document.getElementById('query__input_text').placeholder = QUERY_INPUT_PLACEHOLDERS[Math.floor(Math.random()*QUERY_INPUT_PLACEHOLDERS.length)];
 
-  let RESULTS_CONTAINER = document.getElementById('query__output');
-  let RESULTS_LIST = document.getElementById('query__results');
-  let NUMBER_RESULTS = document.getElementById('query__number-results_container');
-  let filter_images = false;
-  let total_results_shown = 0;
-  let number_displayed_results = 18;
-  let category = "";
-  let query = "";
-  let query_result = [];
+  var RESULTS_CONTAINER = document.getElementById('query__output');
+  var RESULTS_LIST = document.getElementById('query__results');
+  var NUMBER_RESULTS = document.getElementById('query__number-results_container');
+  var filter_images = false;
+  var total_results_shown = 0;
+  var number_displayed_results = 18;
+  var category = "";
+  var query = "";
+  var query_result = [];
 
-  document.addEventListener('keypress', (event) => {
-      event.key == "Enter" ? queryCatalogue() : "";
+  document.addEventListener('keypress', function(event){
+      if(event.key == "Enter"){ queryCatalogue(); } 
   });
 
   function getFilterImages(){
     if(filter_images && query_result.length > 0){
-      let resultWithImages = query_result.filter( bk =>{
+      var resultWithImages = query_result.filter(function(bk){
         return (bk.images && (bk.images == "yes"));
       });
-      console.log(resultWithImages)
       renderQuery(resultWithImages, query);
     }else if(!filter_images && query_result.length > 0){
       renderQuery(query_result,query);
@@ -34,8 +33,8 @@
 
   // Return first instance found
   function checkBookAttributes(book, r) {
-      let keys = Object.keys(COMPLETE_DATA[book]);
-      for (let i = 0; i < keys.length; i++) {
+      var keys = Object.keys(COMPLETE_DATA[book]);
+      for (var i = 0; i < keys.length; i++) {
           if (COMPLETE_DATA[book][keys[i]]) {
               if(keys[i] == "date_published"){
                 return queryDatePublished(COMPLETE_DATA[book], query);
@@ -51,18 +50,17 @@
       category = document.getElementsByName('category')[0].value;
       query = document.getElementsByName('query')[0].value;
       filter_images = document.getElementById('query__check_filterImages').checked;
-      console.log(category + " " + query);
       query_result = [];
       if (category == "all") {
-          Object.keys(COMPLETE_DATA).forEach(book => {
-              checkBookAttributes(book) ? query_result.push(COMPLETE_DATA[book]) : "";
+          Object.keys(COMPLETE_DATA).forEach(function(book){
+              if(checkBookAttributes(book)) query_result.push(COMPLETE_DATA[book]);
           });
       } else {
-          Object.keys(COMPLETE_DATA).forEach(book => {
-              Object.keys(COMPLETE_DATA[book]).forEach(key => {
+          Object.keys(COMPLETE_DATA).forEach(function(book){
+              Object.keys(COMPLETE_DATA[book]).forEach(function(key){
                   if (key.toString() == category) {
                       if(category == "date_published"){
-                        queryDatePublished(COMPLETE_DATA[book], query) ? query_result.push(COMPLETE_DATA[book]) : "";
+                        if(queryDatePublished(COMPLETE_DATA[book], query)) query_result.push(COMPLETE_DATA[book]);
                       }else if (COMPLETE_DATA[book][key]) {
                           if (COMPLETE_DATA[book][key].toString().toLowerCase().indexOf(query.toLowerCase()) > -1) {
                               query_result.push(COMPLETE_DATA[book]);
@@ -72,20 +70,13 @@
               });
           });
       }
-      //console.log(query_result);
-      
-      // removes duplicates
-      query_result = query_result.filter((thing, index, self) =>
-        index === self.findIndex((t) => (
-          t.book_id === thing.book_id
-        ))
-      );
-
       //sort by book id
-      query_result.sort((a,b)=>{
+      query_result.sort(function(a,b){
         return a.book_id - b.book_id;
       });
-      filter_images ? getFilterImages() : renderQuery(query_result, query);
+
+      if(filter_images){ getFilterImages(); }
+      else{ renderQuery(query_result, query)}; 
   }
 
   // Output results of query to DOM
@@ -106,11 +97,11 @@
           if (number_displayed_results > result.length) {
               number_displayed_results = result.length;
           }
-          for (let i = 0; i < number_displayed_results; i++) {
+          for (var i = 0; i < number_displayed_results; i++) {
               total_results_shown++;
-              let bk = result[i];
-              let bookInfo = "";
-              Object.keys(bk).forEach(attr => {
+              var bk = result[i];
+              var bookInfo = "";
+              Object.keys(bk).forEach(function(attr){
                   if (bk[attr]) {
                       if (category == "all") {
                           bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + attr.replace("_", " ") + "</span>: " + highlightQuery(bk[attr], query) + "</p>";
@@ -122,9 +113,9 @@
                   }
               });
 
-              let link = makeBookViewInLibraryAnchor(bk);
-              let output = "<li class='query__result_item'>" + bookInfo + "</li>";
-              let wall_link = "<a href='" + link + "#bookID-" + bk.book_id + "'>" + output + "</a>";
+              var link = makeBookViewInLibraryAnchor(bk);
+              var output = "<li class='query__result_item'>" + bookInfo + "</li>";
+              var wall_link = "<a href='" + link + "#bookID-" + bk.book_id + "'>" + output + "</a>";
               RESULTS_LIST.innerHTML += wall_link;
           }
           if (total_results_shown < result.length) {
@@ -140,22 +131,22 @@
   }
 
   function highlightQuery(string, query) {
-      let regex = new RegExp(query, "gi");
+      var regex = new RegExp(query, "gi");
       return string.toString().replace(regex, '<span class="query__highlight">' + query + '</span>');
   }
   function showMoreResults() {
-      let count = total_results_shown + number_displayed_results;
+      var count = total_results_shown + number_displayed_results;
       if (count > query_result.length) {
           count = query_result.length;
       }
       console.log("Total: " + total_results_shown + " Displayed: " + number_displayed_results + " Query Length: " + query_result.length + " count: " + count);
       RESULTS_CONTAINER.classList.add('query_hide-output');
       setTimeout(function() {
-          for (let i = total_results_shown; i < count; i++) {
+          for (var i = total_results_shown; i < count; i++) {
               total_results_shown++;
-              let bk = query_result[i];
-              let bookInfo = "";
-              Object.keys(bk).forEach(attr => {
+              var bk = query_result[i];
+              var bookInfo = "";
+              Object.keys(bk).forEach(function(attr){
                   if (bk[attr]) {
                       if (category == "all") {
                           bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + attr.replace("_", " ") + "</span>: " + highlightQuery(bk[attr], query) + "</p>";
@@ -167,9 +158,9 @@
                   }
               });
 
-              let link = makeBookViewInLibraryAnchor(bk);
-              let output = "<li class='query__result_item'>" + bookInfo + "</li>";
-              let wall_link = "<a href='" + link + "#bookID-" + bk.book_id + "'>" + output + "</a>";
+              var link = makeBookViewInLibraryAnchor(bk);
+              var output = "<li class='query__result_item'>" + bookInfo + "</li>";
+              var wall_link = "<a href='" + link + "#bookID-" + bk.book_id + "'>" + output + "</a>";
               RESULTS_LIST.innerHTML += wall_link;
           }
           if (total_results_shown < query_result.length) {
@@ -188,22 +179,17 @@
   function findDateRange(date_string){
     if(date_string){
       if(date_string.indexOf('-') > -1){
-        //console.log("Orig: "+date_string);
-        //console.log("Is ranged: "+date_string.split('-'));
         return {
           type : "ranged",
           dates : date_string.split('-') 
         };
       }else if(date_string.indexOf(',') > -1){
-        //console.log("Orig: "+date_string);
-        //console.log("Has mult:" + date_string.split(','));
         return {
           type :"multipleDates",
           dates : date_string
         };
       }else{
-        let regex = /\d+/g;
-        //console.log( "\t\tParsed: "+parseInt(date_string.substring(date_string.search(regex))) );
+        var regex = /\d+/g;
         return {
           type : "normal",
           dates : parseInt(date_string.substring(date_string.search(regex)))
@@ -217,8 +203,7 @@
     }
   }
   function queryDatePublished(bk,dateQuery){
-    let parsed_date = findDateRange(bk.date_published);
-    //console.log(parsed_date.type+": "+parsed_date.dates);  
+    var parsed_date = findDateRange(bk.date_published);
     switch(parsed_date.type){
       case "ranged": 
         if(dateQuery >= parsed_date.dates[0] && dateQuery <= parsed_date.dates[1]) return true;
@@ -230,16 +215,6 @@
         if(parsed_date.dates == dateQuery) return true;
         break;
       default:
-        console.log("\tdefault: "+parsed_date.dates);
         return false;
     }
   }
-  /*
-  let dateQuery = 1794;
-  Object.keys(COMPLETE_DATA).forEach(bk=>{
-    //console.log("\t"+bk+" || "+COMPLETE_DATA[bk].book_id+" || "+COMPLETE_DATA[bk].location);
-    if(queryDatePublished(COMPLETE_DATA[bk], dateQuery)){
-      console.log("True: "+COMPLETE_DATA[bk].date_published+" Query:"+dateQuery);
-    }
-  })
-  */

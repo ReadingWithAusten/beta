@@ -3,19 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reading with Austen | Catalogue</title>
     <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/header.css">
     <link rel="stylesheet" href="stylesheets/catalogue.css">
 </head>
-
+<span id="spinner">
+  <img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt=""><img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt="">
+</span>
 <body>
     <header>
     <nav id="nav_primary__container">
       <ul>
         <a class="header__link" href="index.html"><li>Home</li></a>
-        <a class="header__link" href="south-wall.html"><li>Library</li></a>
+        <a class="header__link" href="library.html"><li>Library</li></a>
         <a class="header__link" href="index.html"><li id="header__title">Reading With Austen</li></a>
         <a class="header__link" href="catalogue.html"><li class="header__current-page">Catalogue</li></a>
         <a class="header__link" href="about.html"><li>About</li></a>
@@ -30,16 +34,14 @@
         <div id="query__input">
             <select name="category">
                 <option value="all">All Categories</option>}
-                <option value="book_id">Book ID</option>
+                <option value="book_id">Catalogue ID</option>
                 <option value="title">Title</option>
                 <option value="author" selected>Author</option>
                 <option value="publisher">Publisher</option>
                 <option value="place_published">Place Published</option>
                 <option value="date_published">Date Published</option>
-                <option value="language">Language</option>
-                <option value="subject">Subject</option>
             </select>
-            <input id="query__input_text" type="text" name="query" placeholder="Austen, Jane">
+            <input id="query__input_text" type="text" name="query">
             <label for="query__check_filterImages">Only show results with images <input type="checkbox" name="check_filterImages" id="query__check_filterImages" onclick="queryCatalogue()"></label>
             <button id="query__button_submit" value="Search" onclick="queryCatalogue();">Search</button>
         </div>
@@ -53,12 +55,22 @@
     <footer>
         <ul>
             <li id="footer__logo">
-                <img src="images/navigation_arrow.png" alt="">
+                <img src="images/navigation_arrow.png" alt="Reading With Austen Logo">
                 <h2>Reading With Austen</h2>
             </li>
             <li id="footer__burney">
-                <img id="footer_mcgill" src="images/mcgill.svg" alt="">
-                <p>Burney Centre</p></li>
+                <ul>
+                    <li>
+                        <a href="https://www.mcgill.ca/burneycentre/">
+                            <p>Burney Centre</p>
+                            <img id="footer_mcgill" src="images/mcgill.svg" alt="McGill University Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://chawtonhouse.org/"><img id="footer_chawtam" src="images/Chawton-Logo.png" alt="Chawton House Logo"></a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </footer>
 </body>

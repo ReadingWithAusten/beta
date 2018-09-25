@@ -58,22 +58,20 @@ header nav ul{
 }
 #nav_primary__container #header__title{
   color: #fafafa;  
-  font-size: 1.6em;
+  font-family: 'fell',sans-serif;
+  font-size: 1.8em;
   width:16em;
-  padding:0.3em 0;
+  padding:0;
   letter-spacing: 5px;
-  border-bottom:  3px solid transparent;
-  border-top:     3px solid transparent;
+  border-bottom:  0px solid transparent;
+  border-top:     0px solid transparent;
   border-left:    3px solid whitesmoke;
   border-right:   3px solid whitesmoke;
   transition:all 0.5s ease-in-out,border-top 0.8s ease-in-out,border-bottom 0.8s ease-in-out;
 }
 #nav_primary__container #header__title:hover{
-  border-bottom:  3px solid whitesmoke;
-  border-top:     3px solid whitesmoke;
-  border-left:    3px solid transparent;
-  border-right:   3px solid transparent;
-  transition:all 0.5s ease-in-out,border-right 0.8s ease-in-out,border-left 0.8s ease-in-out;
+    border:none;
+    color:rgba(150,200,255,0.9);
 }
 @media only screen and (max-width:1060px){
   #nav_primary__container ul li{
@@ -94,13 +92,13 @@ header nav ul{
     box-shadow:none;
   }
   #nav_primary__container ul li{
-    width:7em;
+    width:20%;
     font-size:1em;
     margin: -15px -5px 0 -5px;
     border-radius: 2px;
     padding: 20px 0 5px 0;
     background-color: rgba(40,40,40,1);
-    box-shadow:0px 3px 5px -3px black;
+    box-shadow:0px 2px 5px -4px black;
   }
   #nav_primary__container #header__title{
     box-shadow:none;
@@ -110,26 +108,27 @@ header nav ul{
     top:0;
     width:100%;  
     margin:0;
+    padding:5px 0;
     position: absolute;
     border:none;
   }
-  #nav_primary__container #header__title:hover{
-    border:none;
-    color:rgba(150,200,255,0.9);
-  }
 }
 @media only screen and (max-width:500px){
-  .font__lusitana:before{display: none; }
+  #nav_primary__container{
+    background-color: rgba(40,40,40,1);
+    width:100%;
+  }
   #nav_primary__container ul li{
-    width:auto;
-    padding: 20px 8px 5px 8px;
+    padding: 20px 2% 5px 2%;
     font-size:1em;
+    width:auto;
   }
   #nav_primary__container #header__title{
     background-color: #33658a;
     font-size:1.1em;
   }
 }
+
 /*
 ** @navigation @secondary
 */
@@ -166,6 +165,38 @@ header nav ul{
 #nav_secondary__container .header__current-page:hover{
   border-bottom: 3px solid transparent !important;
 }
+@media only screen and (max-width:1060px){
+  #nav_secondary__container{
+    width:470px;
+  }
+  #nav_secondary__container ul li{
+    font-size:0.8em;
+    padding: 0.5em 1em;
+  }
+}
+@media only screen and (max-width:790px){
+  #nav_secondary__container{
+    width:400px;
+  }
+  #nav_secondary__container ul li{
+    padding: 0.3em;
+  }
+}
+@media only screen and (max-width:500px){
+  #nav_secondary__container{
+    width:100%;
+    border-radius: 0;
+  }
+  #nav_secondary__container:hover ~ #nav_tertiary__container{
+    max-height: 200px;
+    overflow: visible;
+  }
+  #nav_secondary__container ul li{
+    padding: 0.3em;
+    margin:0 1%;
+    width:auto;
+  }
+}
 
 
 /*
@@ -182,7 +213,7 @@ header nav ul{
   border-bottom-right-radius:5px;
   position: relative;
   box-shadow: 0px 5px 10px -5px #141414;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out, max-height 0.5s ease-in-out;
 }
 #nav_tertiary__container li{
   padding: 0.4em 1.5em;
@@ -195,7 +226,41 @@ header nav ul{
   border-bottom: 3px solid #86baa1 !important;
   color: #86baa1;
 }
-
+@media only screen and (max-width:1060px){
+  #nav_tertiary__container{
+    width:400px;
+  }
+  #nav_tertiary__container ul li{
+    font-size:0.8em;
+    padding: 0.4em 1em;
+  }
+}
+@media only screen and (max-width:790px){
+  #nav_tertiary__container{
+    width:350px;
+  }
+  #nav_tertiary__container ul li{
+    font-size:0.8em;
+    padding: 0.2em;
+  }
+}
+@media only screen and (max-width:500px){
+  #nav_tertiary__container{
+    width:80%;
+    max-height:0;
+    overflow:hidden;
+  }
+  #nav_tertiary__container:hover{
+    max-height: 200px;
+    overflow:visible;
+  }
+  #nav_tertiary__container ul li{
+    font-size:0.8em;
+    padding: 0.2em;
+    margin:0 5%;
+    width:auto;
+  }
+}
 /*
 ** @column @next @prev navigator
 */
@@ -250,7 +315,9 @@ header nav ul{
 #col_nav__container #col_nav__nextPage{
   right:0;
 }
-
+@media only screen and (max-width:950px){
+  #col_nav__container{ display: none;}
+}
 
 /*
 ** @animation @accessability
@@ -261,6 +328,7 @@ header nav ul{
   top:80px;
   left:10%;
   cursor: pointer;
+  display:none;
 }
 
 #nav_acccessability_container img{

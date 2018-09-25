@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  transition:all 0.3s ease-in-out;
-}
 html {
   background-color: #fff;
 }
@@ -16,7 +10,11 @@ html {
 .column li {
   list-style: none;
 }
-
+@media only screen and (max-width:1230px){
+  #col_nav__container{
+    display: none;
+  }  
+}
 /*
 ** @shelf
 */
@@ -70,20 +68,6 @@ html {
   color:rgba(255,255,255,0.7);
   text-shadow: 2px 2px 1px rgba(40,40,40,0.9);
   z-index: 1;
-}
-
-.format_wall-section__8vo::before{
-  content:"8vo";
-}
-.format_wall-section__12mo::before{
-  content:"12mo";
-}
-.format_wall-section__4to::before{
-  content:"4to";
-}
-.format_wall-section__folio::before,
-.format_wall-section__fol\.::before{
-  content:"folio";
 }
 
 /*

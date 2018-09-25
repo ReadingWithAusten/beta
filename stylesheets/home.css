@@ -3,20 +3,62 @@
 */
 section#content_body{
   background-image: url(../images/backgrounds/landing2.jpg);
-  background-size: 1300px auto; 
-  background-position: center center;
+  background-size: 1300px 700px; 
+  background-position: center 30px;
   background-repeat: no-repeat;
-  background-attachment: ;
+  background-attachment:;
   padding:0;
-  margin-top: 0px !important;
+  width:1300px;
+  height:100vh;
+  min-height:980px;
+  margin:0 auto;
+  overflow-x:visible;
+  overflow-y:visible;
+}
+section #link_container{
+  height:640px;
+}
+
+section #library_link{
+  border:15px solid transparent;
+  display:block;
+  width:400px;
+  height: 355px;
+  position: absolute;
+  margin-top:145px;
+  margin-left:450px;
+  border-radius: 5px;
+  cursor: zoom-in;
+  transition:all 0.5s ease-in-out;
+}
+section #library_link:hover{
+  border:3px solid rgba(50,150,255,0.8);
+  border-bottom-color: transparent;
+  background-color:rgba(255,255,255,0.4);
+}
+
+section #jane_link{
+  border:10px solid transparent;
+  display:block;
+  width:120px;
+  height: 170px;
+  position: absolute;
+  margin-top:390px;
+  margin-left:70px;
+  border-radius: 50%;
+  cursor: zoom-in;
+  transition:all 0.5s ease-in-out;
+}
+section #jane_link:hover{
+  border:3px solid rgba(50,150,255,0.8);
+  background-color:rgba(255,255,255,0.3);
 }
 section#content_body #home__intro{
+  display: block;
   text-align: center;
   width:900px;
-  left:50%;
-  margin-left: -450px;
-  bottom:50px;
-  position: absolute;
+  margin:0 auto 0 auto;;
+  position: relative;
   background-color:rgba(240,240,240,0.8);
   color:rgba(40,40,40,0.8);
   text-shadow: 2px 2px 2px lightgrey;
@@ -28,7 +70,7 @@ section#content_body #home__intro{
 section#content_body #home__intro h2{
   text-align: center;
   font-size: 1.5em;
-  font-style: italic;
+  font-family: 'austen', serif;
 }
 
 section#content_body #home__intro p,
@@ -48,27 +90,37 @@ section#content_body #home__intro a{
 section#content_body #home__intro a:hover{
   background-color:rgba(50,150,255,1);
 }
+
 @media only screen and (max-width:1000px){
-  section#content_body{  
-    background-size:1100px; 
-    background-position: center left;  
-  }
-  section#content_body #home__intro{    
-    width:90%; 
-    margin-left: -45%;  
+  section#content_body #home__intro{      
+    position: fixed;
+    width:80%;
+    left:50%;
+    bottom:200px;
+    margin:0 auto 0 -40%;
   }
   section#content_body #home__intro h2{ font-size:1.2em;  }
   section#content_body #home__intro p{  font-size:1em; }
 }
 @media only screen and (max-width:550px){
-  section#content_body{  
-    background-size:900px auto;  
+  section#content_body #home__intro::before{
+    content:"View More";
+    font-family: 'fell', serif;
+    text-decoration:underline;
   }
   section#content_body #home__intro{    
+    overflow: hidden;
+    max-height: 50px;
     width:100%;  
     margin-left: -50%;
-    bottom:5px;
-    padding:20px 20px 0px 20px;
+    bottom:120px;
+    padding:10px 20px 0px 20px;
+    transition:0.8s ease-in-out;
+  }
+  section#content_body #home__intro:hover{
+    overflow: auto;
+    max-height: 250px;
+    bottom:130px;
   }
   section#content_body #home__intro h2{ font-size:1.2em;  }
   section#content_body #home__intro p{  font-size:1em; }
@@ -77,5 +129,14 @@ section#content_body #home__intro a:hover{
     width:180px;
     text-align: center;
     margin:10px auto;
+  }
+}
+
+/*
+** @foooter
+*/
+@media only screen and (max-width:1300px){
+  footer{
+    position: fixed;
   }
 }

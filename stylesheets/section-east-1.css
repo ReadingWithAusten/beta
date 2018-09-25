@@ -7,7 +7,6 @@ section {
   background-size: 1650px 2715px;     /* Define precise size of the background */
   background-position: top center;
   background-repeat: no-repeat;
-  margin-top:90px;
   display: flex;
   height: 2715px;
   min-height: 2715px;

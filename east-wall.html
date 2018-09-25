@@ -3,28 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reading with Austen | East Wall</title>
   <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="stylesheets/header.css">
   <link rel="stylesheet" href="stylesheets/wall-view.css">
   <link rel="stylesheet" href="stylesheets/wall-east.css">
 </head>
-
+<span id="spinner">
+  <img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt=""><img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt="">
+</span>
 <body>
   <div id="col_nav__container">
     <div id="col_nav__nextPage">
       <a href="south-wall.html"><p>To<br>South Wall</p><img src="images/navigation_arrow.png"></a>
     </div>
   </div>
-  <!-- 
-  HEADER
-  -->
   <header>
     <nav id="nav_primary__container">
       <ul>
         <a class="header__link" href="index.html"><li>Home</li></a>
-        <a class="header__link" href="south-wall.html"><li class="header__current-page">Library</li></a>
+        <a class="header__link" href="library.html"><li class="header__current-page">Library</li></a>
         <a class="header__link" href="index.html"><li id="header__title">Reading With Austen</li></a>
         <a class="header__link" href="catalogue.html"><li>Catalogue</li></a>
         <a class="header__link" href="about.html"><li>About</li></a>
@@ -39,9 +40,9 @@
     </nav>
     <nav id="nav_tertiary__container">
       <ul>
-        <a class="header__link" href="east-section-1.html"><li>Left</li></a>
-        <a class="header__link" href="east-section-2.html"><li>Centre</li></a>
-        <a class="header__link" href="east-section-3.html"><li>Right</li></a>
+        <a class="header__link" href="east-wall-left.html"><li>Left</li></a>
+        <a class="header__link" href="east-wall-centre.html"><li>Centre</li></a>
+        <a class="header__link" href="east-wall-right.html"><li>Right</li></a>
       </ul>
     </nav>
     <div id="nav_acccessability_container" onclick="toggleAnimation()">
@@ -49,26 +50,28 @@
       <img id="nav_accessability__pause" src="images/pause-animation.svg">
     </div>
   </header>
-
-  <!--
-  SECTION
-  -->
   <section id="content_body">
     <ul id="column_container"></ul>
   </section>
-
-  <!-- 
-  FOOTER
-  -->
     <footer>
         <ul>
             <li id="footer__logo">
-                <img src="images/navigation_arrow.png" alt="">
+                <img src="images/navigation_arrow.png" alt="Reading With Austen Logo">
                 <h2>Reading With Austen</h2>
             </li>
             <li id="footer__burney">
-                <img id="footer_mcgill" src="images/mcgill.svg" alt="">
-                <p>Burney Centre</p></li>
+                <ul>
+                    <li>
+                        <a href="https://www.mcgill.ca/burneycentre/">
+                            <p>Burney Centre</p>
+                            <img id="footer_mcgill" src="images/mcgill.svg" alt="McGill University Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://chawtonhouse.org/"><img id="footer_chawtam" src="images/Chawton-Logo.png" alt="Chawton House Logo"></a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </footer>
 </body>

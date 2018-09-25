@@ -3,53 +3,60 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reading With Austen | Home</title>
   <link rel="shortcut icon" href="images/favicon.png" />
-  <!-- Note Cascading -->
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="stylesheets/header.css">
   <link rel="stylesheet" href="stylesheets/home.css">
 </head>
 
+<span id="spinner">
+  <img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt=""><img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt="">
+</span>
 <body>
-  <!-- 
-  HEADER
-  -->
   <header>
     <nav id="nav_primary__container">
       <ul>
         <a class="header__link" href="index.html"><li class="header__current-page">Home</li></a>
-        <a class="header__link" href="south-wall.html"><li>Library</li></a>
+        <a class="header__link" href="library.html"><li>Library</li></a>
         <a class="header__link" href="index.html"><li id="header__title">Reading With Austen</li></a>
         <a class="header__link" href="catalogue.html"><li>Catalogue</li></a>
         <a class="header__link" href="about.html"><li>About</li></a>
       </ul>
     </nav>
   </header>
-
-  <!--
-  SECTION
-  -->
   <section id="content_body">
+    <div id="link_container">
+      <a href="library.html" id="library_link"></a>
+      <a href="about.html#about_library-jane" id="jane_link"></a>  
+    </div>    
     <div id="home__intro">
       <h2>"I am now alone in the Library, Mistress of all I survey." </h2>
       <p>Welcome to the Library of Godmersham Park, the estate of Jane Austen's brother Edward Austen Knight. Explore the shelves to see the books as Jane would have seen them, and read the works she would have handled—to skim or peruse, to discuss or borrow—on her visits to her brother.</p>
       <a href="south-wall.html">Explore the Library</a><a href="about.html">Read More</a>
     </div>
   </section>
-
-  <!-- 
-  FOOTER
-  -->
     <footer>
         <ul>
             <li id="footer__logo">
-                <img src="images/navigation_arrow.png" alt="">
+                <img src="images/navigation_arrow.png" alt="Reading With Austen Logo">
                 <h2>Reading With Austen</h2>
             </li>
             <li id="footer__burney">
-                <img id="footer_mcgill" src="images/mcgill.svg" alt="">
-                <p>Burney Centre</p></li>
+                <ul>
+                    <li>
+                        <a href="https://www.mcgill.ca/burneycentre/">
+                            <p>Burney Centre</p>
+                            <img id="footer_mcgill" src="images/mcgill.svg" alt="McGill University Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://chawtonhouse.org/"><img id="footer_chawtam" src="images/Chawton-Logo.png" alt="Chawton House Logo"></a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </footer>
 </body>

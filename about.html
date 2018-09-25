@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Reading with Austen | About</title>
     <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/header.css">
     <link rel="stylesheet" href="stylesheets/about.css">
 </head>
-
+<span id="spinner">
+  <img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt=""><img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt="">
+</span>
 <body>
     <header>
         <nav id="nav_primary__container">
@@ -37,6 +41,7 @@
     </a>
     <div id="about_TOC">
         <ul>
+            <li><a href="#about_popup">Introduction</a></li>
             <li><a href="#about_edward">Edward Austen Knight</a></li>
             <li><a href="#about_history-godmersham">History of Godmersham Park</a></li>
             <li><a href="#about_history-library">History of the Library</a></li>
@@ -155,7 +160,7 @@
 
             Some mysteries remained, however, such as what was meant by the “slips,” which were listed in the catalogue either before or after the columns of each case—or, in the case of the first slip of the south case, at the very end of the catalogue. The usage in the catalogue seemed to imply that slips are similar to shelf columns, but we could never determine with certainty what they were. In the end, based on photos of other library shelves of the period, we decided to treat slips as narrower columns. 
 
-            To provide consistency across the slips in all three bookcases, we placed them on either side of the central column. In the catalogue, the books listed in the slips were always smaller sizes, so we imaged their shelves would generally be shorter as well. Finally, to avoid the visual awkwardness of a gaping hole at the top of each slip, we assigned empty shelves instead. 
+            To provide consistency across the slips in all three bookcases, we placed them on either side of the central column. In the catalogue, the books listed in the slips were always smaller sizes, so we imagined their shelves would generally be shorter as well. Finally, to avoid the visual awkwardness of a gaping hole at the top of each slip, we assigned empty shelves instead. 
 
             After collecting a series of descriptions and reference images and calculating the size of our imagined shelves, we turned to an artist and web developer to create the aesthetic and technical elements of the <a href="#about_site-credits">project</a>. 
 
@@ -271,7 +276,6 @@
                     <p>Worsley, Lucy. <em>Jane Austen at Home.</em> New York: St. Martin’s Press, 2017.</p>
                 </li>
             </ul>
-            </li>
         </div>
         <div id="about_site-credits">
             <h2>Credits</h2>
@@ -307,14 +311,14 @@
                     </p>
                 </li>
                 <li>
-                    <p>Gillian Dow, Director of Chawton House, and Darren Bevin, Librarian of Chawton House, who facilitated the book photography.
+                    <p>The University of Southampton’s Gillian Dow, Director of Chawton House, and Darren Bevin, Librarian of Chawton House, who facilitated the book photography.
                     </p>
                 </li>
                 <li>
                     <p>Volunteer photographers Teresa Trout, Joseph Hone, Stephen Clarke, and particularly Paquita Lamacraft, who took the majority of the book photos at Chawton House.</p>
                 </li>
                 <li>
-                    <p>Deborah Bygrave and Hugh Mackay, under the direction of Stephen Bending and Stephen Bygrave, who compiled a spreadsheet of the catalogue which formed a starting point for our own data.</p>
+                    <p>Deborah Bygrave and Hugh Mackay, under the direction of the University of Southampton’s Stephen Bending and Stephen Bygrave, who compiled a spreadsheet of the catalogue which formed a starting point for our own data.</p>
                 </li>
                 <li>
                     <p>Janine Barchas, Deborah Barnum, Linda Dennery, Richard Knight, and Peter Sabor, who bought and donated Lost Sheep, books from the original catalogue that had been separated from the collection and were discovered for sale elsewhere in the world.</p>
@@ -340,23 +344,24 @@
     <footer>
         <ul>
             <li id="footer__logo">
-                <img src="images/navigation_arrow.png" alt="">
+                <img src="images/navigation_arrow.png" alt="Reading With Austen Logo">
                 <h2>Reading With Austen</h2>
             </li>
             <li id="footer__burney">
-                <img id="footer_mcgill" src="images/mcgill.svg" alt="">
-                <p>Burney Centre</p>
+                <ul>
+                    <li>
+                        <a href="https://www.mcgill.ca/burneycentre/">
+                            <p>Burney Centre</p>
+                            <img id="footer_mcgill" src="images/mcgill.svg" alt="McGill University Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://chawtonhouse.org/"><img id="footer_chawtam" src="images/Chawton-Logo.png" alt="Chawton House Logo"></a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </footer>
 </body>
 <script src="javascripts/functions.js" type="text/javascript" charset="utf-8"></script>
-<script>
-window.onscroll = function(e) {
-    let scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
-    if (scrollPos > 550) document.getElementById('to-top').classList.remove('about_hide-button');
-    else if (scrollPos < 550) document.getElementById('to-top').classList.add('about_hide-button');
-};
-</script>
-
 </html>

@@ -94,7 +94,6 @@
   border-left:1px solid rgba(40,40,40,1);
   position:relative;
   align-self: flex-end;
-  
 }
 #column_container .column .shelf .book .book_spine{
   height: 100%;
@@ -133,8 +132,8 @@
   left:50px;
   margin: -15px 0 0 0px;
   padding:10px;
-  width:300px;
-  font-size:0.7em;
+  width:350px;
+  font-size:0.9em;
   border:1px solid grey;
   border-left:5px solid rgba(50,150,255,0.8);
   box-shadow:5px 5px 5px -5px black;

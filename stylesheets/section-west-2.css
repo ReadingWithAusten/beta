@@ -1,6 +1,7 @@
-#modal{
-  padding-top:5.5em;
+#modal_nav_container{
+  margin: 50px auto 0 auto;
 }
+
 /*
 ** @section 
 ** - define background image positioning and column container positioning
@@ -14,7 +15,6 @@ section#content_body{
   height: 2050px;
   min-height: 2050px;
   max-height: 2050px;
-  margin-top: 70px;
 }
 
 section #column_container {

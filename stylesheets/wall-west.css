@@ -10,7 +10,6 @@ section#content_body{
   min-height: 961px;
   max-height: 961px;
   height: 961px;
-  width:100vw;
 }
 section #column_container{
   border:5px solid transparent;

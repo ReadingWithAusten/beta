@@ -23,12 +23,10 @@ section#content_body{
   background-position: top center;
   background-repeat: no-repeat;
   display: flex;
-  margin-top: 80px !important;
   height: 2050px;
   min-height: 2050px;
   max-height: 2050px;
 }
-
 
 section #column_container {
   display: flex;

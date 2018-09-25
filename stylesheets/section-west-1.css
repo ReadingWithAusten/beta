@@ -1,6 +1,3 @@
-#modal{
-  padding-top:8em;
-}
 /*
 ** @section 
 ** - define background image positioning and column container positioning
@@ -13,7 +10,6 @@ section#content_body{
   margin-top:90px;
   display: flex;
   height: 2100px;
-  margin-top: 32px !important;
   min-height: 2100px;
   max-height: 2100px;
 }

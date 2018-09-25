@@ -1,3 +1,6 @@
+#modal_nav_container{
+  margin: 50px auto 0 auto;
+}
 /*
 ** @section 
 ** - define background image positioning and column container positioning
@@ -9,7 +12,6 @@ section {
   background-repeat: no-repeat;
   display: flex;
   height: 2650px;
-  margin-top: 80px;
   min-height: 2650px;
   max-height: 2650px;
 }

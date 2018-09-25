@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading with Austen | South Wall, Right Section</title>
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/header.css">
+  <link rel="stylesheet" href="stylesheets/modal.css">
+  <link rel="stylesheet" href="stylesheets/section-view.css">
+  <link rel="stylesheet" href="stylesheets/section-south-3.css">
+</head>
+<span id="spinner">
+  <img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt=""><img src="images/spinner/1.jpg" alt=""><img src="images/spinner/2.jpg" alt=""><img src="images/spinner/3.jpg" alt=""><img src="images/spinner/4.jpg" alt=""><img src="images/spinner/5.jpg" alt="">
+</span>
+<body>
+  <modal id="modal" class="modal__hide">
+    <nav id="modal_nav_container">
+      <ul>
+        <li id="modal_nav_prev" class="modal_nav__button" onclick="changeBook('prev')">Previous</li>
+        <li id="modal_nav_close" class="modal_nav__button" onclick="closeModal('close')">x</li>
+        <li id="modal_nav_next" class="modal_nav__button" onclick="changeBook('next')">Next</li>
+      </ul>
+    </nav>
+    <div id="modal_content_container">
+      <div id="modal_images">
+        <div id="modal_images__featured"></div>
+        <ul id="modal_images__list"></ul>
+      </div>
+      <div id="modal_content">
+        <h2 id="modal_content__title"></h2>
+        <ul id="modal_content__list"></ul>
+      </div>
+    </div>
+    <div id="modal_imgViewer" class="modal__hide">
+      <div id="modal_imgViewer__content">
+        <img src="" alt="">
+        <div id="modal_imgViewer__text"></div>
+      </div>
+      <ul id="modal_imgViewer_nav">
+        <li onclick='changeImageViewerImage("prev")'>
+          <</li>
+            <li onclick='closeImageViewer()'>x</li>
+            <li onclick='changeImageViewerImage("next")'>></li>
+      </ul>
+    </div>
+  </modal>
+  <div id="col_nav__container">
+    <div id="col_nav__prevPage">
+      <a href="south-wall-centre.html"><p>To<br>South Wall<br>Centre Section</p><img src="images/navigation_arrow.png"></a>
+    </div>
+  </div>
+<header>
+    <nav id="nav_primary__container">
+      <ul>
+        <a class="header__link" href="index.html"><li>Home</li></a>
+        <a class="header__link" href="libray.html"><li class="header__current-page">Library</li></a>
+        <a class="header__link" href="index.html"><li id="header__title">Reading With Austen</li></a>
+        <a class="header__link" href="catalogue.html"><li>Catalogue</li></a>
+        <a class="header__link" href="about.html"><li>About</li></a>
+      </ul>
+    </nav>
+    <nav id="nav_secondary__container">
+     <ul>
+        <a class="header__link" href="east-wall.html"><li>East Wall</li></a>
+        <a class="header__link" href="south-wall.html"><li class="header__current-page">South Wall</li></a>
+        <a class="header__link" href="west-wall.html"><li>West Wall</li></a>
+      </ul>
+    </nav>
+    <nav id="nav_tertiary__container">
+      <ul>
+        <a class="header__link" href="south-wall-left.html"><li>Left</li></a>
+        <a class="header__link" href="south-wall-centre.html"><li>Centre</li></a>
+        <a class="header__link" href="south-wall-right.html"><li class="header__current-page">Right</li></a>
+      </ul>
+    </nav>
+    <div id="nav_acccessability_container" onclick="toggleAnimation()">
+      <img id="nav_accessability__play" src="images/play-animation.svg" class="nav_acccessability__hide">
+      <img id="nav_accessability__pause" src="images/pause-animation.svg">
+    </div>    
+  </header>
+  <section id="content_body">
+    <ul id="column_container">
+
+    </ul>
+  </section>
+    <footer>
+        <ul>
+            <li id="footer__logo">
+                <img src="images/navigation_arrow.png" alt="Reading With Austen Logo">
+                <h2>Reading With Austen</h2>
+            </li>
+            <li id="footer__burney">
+                <ul>
+                    <li>
+                        <a href="https://www.mcgill.ca/burneycentre/">
+                            <p>Burney Centre</p>
+                            <img id="footer_mcgill" src="images/mcgill.svg" alt="McGill University Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://chawtonhouse.org/"><img id="footer_chawtam" src="images/Chawton-Logo.png" alt="Chawton House Logo"></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+</body>
+<script src="javascripts/functions.js"></script>
+<script src="javascripts/modal.js"></script>
+<script src="javascripts/southcase.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/book_folder_relation.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+  function makeWall(LAYOUT = SOUTHCASE_LAYOUT, ELEMENT = 'column_container') {
+    let WALL = document.getElementById(ELEMENT);
+    let col_num = 1;
+    Object.keys(LAYOUT).forEach(col => {
+      if (col == 'Column-5' || col == 'Column-4') {
+        console.log('populating: '+col)
+        let column = "";
+        let shelf_num = 1;
+        Object.keys(LAYOUT[col]).forEach(sh => {
+          let shelf = "<ul class='shelf format_wall-section__"+LAYOUT[col][sh][0].format+"' id='shelf-" + shelf_num + "'>";
+          Object.keys(LAYOUT[col][sh]).forEach(book => {
+            let bk = LAYOUT[col][sh][book];
+            //console.log(col+" "+sh+" "+book);
+            let folder_class = "no_folder";
+            if (bk.folder_name) {
+              folder_class = "has_folder";
+            }
+            let title = "N/A",
+              author = "N/A";
+            if (bk.title) title = cropString(bk.title, 10);
+            if (bk.author) author = cropString(bk.author, 5);
+
+           //Set styles based on number of volumes
+            let standard_bk_width = 17;
+            let spineWidth = standard_bk_width * parseInt(bk.volumes);
+            if(!spineWidth) spineWidth = standard_bk_width;
+            let toolTipWidth = spineWidth+30;
+
+            // Set spine image
+            let spine = "images\\spines\\heylyn-theological-1749_spine-crop.png";     //default spine
+            if(bk.spine == 'y'){
+              spine = "images\\spines\\" + bk.folder_name + "_spine-crop.png";
+            }else{
+              let num_volumes = bk.volumes <= 20? bk.volumes : 20;
+              let stock = stock_spines[num_volumes];
+              spine = "images\\spines\\stock_spines\\" + stock;
+              folder_class += " book__stock book__stock-"+bk.volumes;
+            }
+            
+            // Select info for 'hover' tooltip here
+            let tool_tip = "<div class='toolTip' style='left:" + toolTipWidth + "px;'><p class='toolTip_title'>" + cropString(bk.title,10) + "</p><p class='toolTip_author'>" + bk.author + "</p><p class='toolTip_date'>Published: " + bk.date_published + "</p><i>Catalogue ID: "+bk.book_id+"</i></div>";
+
+            // Final Book Element - identified by bk.id
+            shelf += "<li onclick='populateModal(" + bk.id + ");' class='book " + folder_class + "' id='bookID-" + bk.id + "' data-id='" + bk.id + "' style='width:"+spineWidth+"px'><img src='" + spine + "' class='book_spine'>" + tool_tip + "</li>";
+          });
+          shelf_num++;
+          shelf += "</ul>";
+          column = shelf + column;
+        });
+        col_num++;
+        let col_out = "<li class='column' id='" + col + "'>"+column+"</li>";
+        WALL.innerHTML += col_out;
+      }
+    });
+  }
+  makeWall();
+</script>
+</html>

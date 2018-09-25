@@ -30,6 +30,7 @@ header{
 }
 #content_body h2{
   text-align: center;
+  font-family: 'fell', serif;
   font-size:2em;
   border-bottom:1px solid lightgrey;
   padding:5px;
@@ -145,13 +146,13 @@ header{
   border:1px solid white ;  
   border-radius: 2px;
   display: block;
-  top:130px;
+  top:100px;
   font-size:0.9em;
   width: 22vw;
   position: fixed;
   background-color:rgba(255,255,255,0.97);
   padding:0px 15px 15px 15px;
-  z-index: 2;
+  z-index: 5;
   border:1px solid lightgrey;
   transition:0.8s ease-in-out;
 }
@@ -181,7 +182,7 @@ header{
   font-weight: bold;
   font-size: 0.9em;
   font-family: inherit;
-  top:130px;
+  top:100px;
   right:-5px;    
   cursor: pointer;
   z-index: 1;
@@ -294,10 +295,8 @@ header{
 
 
 /* @popup */
-#about_popup{
-  
-}
 #about_popup h2{
+  font-family: 'austen', serif;
   font-weight: normal;
   font-style: italic;
   font-size: 1.4em;
@@ -309,14 +308,12 @@ header{
   border-radius: 2px;
 }
 #about_popup h2 span{
+  font-family: 'fell', serif;
   text-align: right;
   display: block;
   font-size: 0.7em;
   font-weight: normal;
   margin: 10px;
-}
-#about_popup p{
-  
 }
 
 /* @book plates*/
@@ -351,11 +348,6 @@ header{
   margin:90px 0 10px 0;
   text-decoration: underline;
 }
-
-
-/* @making */
-
-
 
 /* @works cited */
 #about_works-cited ul li{
