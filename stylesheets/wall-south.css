@@ -8,9 +8,8 @@ section#content_body{
   background-repeat: no-repeat;
   padding-top:90px;
   margin: 0px auto;
-  min-height: 1000px;
-  max-height: 1000px;
-  height: 1000px;
+  width:1550px;
+  height:1160px;
 }
 
 section #column_container{

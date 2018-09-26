@@ -12,8 +12,8 @@ section {
   background-repeat: no-repeat;
   display: flex;
   height: 2650px;
-  min-height: 2650px;
-  max-height: 2650px;
+  width:1600px;
+  margin:0 auto;
 }
 
 

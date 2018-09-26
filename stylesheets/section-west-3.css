@@ -24,8 +24,8 @@ section#content_body{
   background-repeat: no-repeat;
   display: flex;
   height: 2050px;
-  min-height: 2050px;
-  max-height: 2050px;
+  width:1030px;
+  margin:90px auto 0 auto;
 }
 
 section #column_container {

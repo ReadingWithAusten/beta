@@ -192,27 +192,32 @@ footer li:hover{
     width:45%;
     margin: 0;
   }
+  #footer__logo{
+    text-align: center;
+    position: relative;
+  }
+  #footer__logo img{
+    display:inline-block;
+    width: 18%;
+    max-width:50px;
+  }
+  #footer__logo h2{
+    display: inline-block;
+    vertical-align: top;
+    width:80%;
+    max-width:240px;
+    position:relative;
+    top:0;
+    left:0;
+    margin:20px 0 0 -20px;
+  }
 }
 @media only screen and (max-width:500px){
-  footer{
-    padding:2%;
-  }
   footer > ul > li {
     margin:0 auto 5px auto;
     display: block;
     width:80% !important;
     text-align: center;
-  }
-  #footer__logo img{
-    display: inline-block;
-    width:30px;
-    margin:0 0 0 20px;
-  }
-  #footer__logo h2{
-    top:5px;
-    left:45px;
-    font-size: 1.2em;
-    line-height: 28px;
   }
   #footer__burney p{
     font-size:1em;
@@ -222,5 +227,11 @@ footer li:hover{
   }
   #footer_chawtam{
     border:none;
+  }
+}
+@media only screen and (max-width:400px){
+  #footer__logo h2{
+    font-size:1.2em;
+    width:190px;
   }
 }

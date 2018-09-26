@@ -10,8 +10,9 @@ section {
   background-repeat: no-repeat;
   display: flex;
   height: 2600px;
-  min-height: 2600px;
-  max-height: 2600px;
+  width:1800px;
+  margin:0 auto;
+
 }
 
 section #column_container {

@@ -7,9 +7,9 @@ section#content_body{
   background-position: center -30px;
   background-repeat: no-repeat;
   margin-top: 80px !important;
-  min-height: 961px;
-  max-height: 961px;
+  width:1200px;
   height: 961px;
+  margin:0 auto;
 }
 section #column_container{
   border:5px solid transparent;

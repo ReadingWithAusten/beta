@@ -6,14 +6,12 @@ section#content_body{
   background-size: 1300px 700px; 
   background-position: center 30px;
   background-repeat: no-repeat;
-  background-attachment:;
   padding:0;
   width:1300px;
   height:100vh;
-  min-height:980px;
+  min-height:900px;
   margin:0 auto;
-  overflow-x:visible;
-  overflow-y:visible;
+  overflow:hidden;
 }
 section #link_container{
   height:640px;
@@ -92,31 +90,47 @@ section#content_body #home__intro a:hover{
     position: fixed;
     width:80%;
     left:50%;
-    bottom:200px;
+    bottom:0px;
     margin:0 auto 0 -40%;
   }
   section#content_body #home__intro h2{ font-size:1.2em;  }
   section#content_body #home__intro p{  font-size:1em; }
 }
 @media only screen and (max-width:550px){
+  section#content_body{
+    width:100vw;
+    height:auto;
+    min-height:750px;
+    overflow: hidden;
+  }
+  #link_container{
+    height:95vh !important;
+  }
+  .link_button{
+    display: none !important;;
+  }
   section#content_body #home__intro::before{
-    content:"View More";
+    content:"Welcome";
+    position: absolute;
+    text-align: center;
+    display: block;
+    left:50%;
+    width:100%;
+    margin:-25px 0 0 -50%;
     font-family: 'fell', serif;
     text-decoration:underline;
   }
   section#content_body #home__intro{    
+    height:auto;
+    width:100vw;
+    padding: 30px  0;
+    margin: 0;
+    left:0;
+    bottom:0;
     overflow: hidden;
-    max-height: 50px;
-    width:100%;  
-    margin-left: -50%;
-    bottom:120px;
-    padding:10px 20px 0px 20px;
+    position: relative;
+    box-shadow:0 -5px 10px -5px black;
     transition:0.8s ease-in-out;
-  }
-  section#content_body #home__intro:hover{
-    overflow: auto;
-    max-height: 250px;
-    bottom:130px;
   }
   section#content_body #home__intro h2{ font-size:1.2em;  }
   section#content_body #home__intro p{  font-size:1em; }
@@ -126,13 +140,13 @@ section#content_body #home__intro a:hover{
     text-align: center;
     margin:10px auto;
   }
+  footer{
+    height:200px;
+    position: relative;
+  }
 }
 
 /*
 ** @foooter
 */
-@media only screen and (max-width:1300px){
-  footer{
-    position: fixed;
-  }
-}
+

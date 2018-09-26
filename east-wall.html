@@ -151,7 +151,7 @@
         });
         col_num++;
         //column += "</li>";
-        let href = col.indexOf('Column') > -1 ? col.replace('Column','section').replace(2,1).replace(3,2).replace(4,3).replace(5,3) : col.replace('Slip','section').replace(1,2);
+         let href = col.indexOf('Column') > -1 ? col.replace('Column','wall').replace(1,'left').replace(2,'left').replace(3,'centre').replace(4,'right').replace(5,'right') : col.replace('Slip','wall').replace(1,'centre').replace(2,'centre');
         let col_out = "<li class='column' id='" + col + "'><a class='column_capstone' href='east-"+href+".html' id='column_capstone-" + col + "'></a>" + column + "</li>";
         WALL.innerHTML += col_out;
     });

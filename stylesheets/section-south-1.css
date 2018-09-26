@@ -21,11 +21,11 @@ section {
   background-size: 1230px 2250px;     /* Define precise size of the background */
   background-position: top center;
   background-repeat: no-repeat;
-  margin-top:90px;
   display: flex;
   height: 2250px;
-  min-height: 2250px;
-  max-height: 2250px;
+  width:1230px;
+  margin:90px auto 0 auto;
+
 }
 section #column_container {
   display: flex;

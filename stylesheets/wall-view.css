@@ -158,3 +158,11 @@
   z-index: 2 !important;
   margin:0px 0 0 0px;
 }
+
+/* Footer */
+@media only screen and (max-width:500px){
+  footer{
+    position: fixed;
+    padding:2% 0;
+  }
+}

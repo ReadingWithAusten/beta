@@ -9,8 +9,8 @@ section {
   background-repeat: no-repeat;
   display: flex;
   height: 2715px;
-  min-height: 2715px;
-  max-height: 2715px;
+  width:1650px;
+  margin:0 auto;
 }
 section #column_container {
   display: flex;

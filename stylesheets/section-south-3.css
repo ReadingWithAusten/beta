@@ -23,10 +23,9 @@ section {
   background-position: top center;
   background-repeat: no-repeat;
   display: flex;
-  margin-top:70px !important;
   height: 2570px;
-  min-height: 2570px;
-  max-height: 2570px;
+  width:1395px;
+  margin:70px auto 0 auto;
 }
 
 
