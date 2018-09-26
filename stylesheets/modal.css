@@ -349,7 +349,7 @@ li {
   height: 100%;
   width: 100%;
   max-height:65vh !important;
-  max-width:70vw !important;
+  max-width:900px !important;
 }
 #modal_imgViewer #modal_imgViewer_nav {
   display: block;
@@ -428,7 +428,7 @@ li {
 }
 @media only screen and (max-width:900px){
   #modal_imgViewer img{
-    max-height: auto;
+    max-height: auto !important;
     max-width:95vw !important;
   }
 }
