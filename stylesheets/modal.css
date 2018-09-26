@@ -280,10 +280,16 @@ li {
 #modal_content__images,
 #modal_content__folder_name,
 #modal_content__transcript,
-#modal_content__volumes,
 #modal_content__author_type,
 #modal_content__subject,
 #modal_content__spine{
+  display: none;
+}
+#modal_content__volumes::before{
+  content:"Number of Volumes: ";
+  font-weight: bold;
+}
+#modal_content__volumes .modal_content__header{
   display: none;
 }
 #modal_content p{

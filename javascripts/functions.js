@@ -22,7 +22,7 @@
       var wall = bk["location"].toLowerCase().substring(0, bk["location"].toLowerCase().search(" case:")).replace(" ", "-");
       var section = bk["location"].substring(bk["location"].search(",") - 1, bk["location"].search(","));
       if (bk["location"].toLowerCase().search('slip') > -1) {
-          section = 2;
+          section = "centre";
       } else if (bk["location"].toLowerCase().search('column') > -1) {
           if (section == 1 || section == 2) section = 'left';
           if (section == 3) section = 'centre';
