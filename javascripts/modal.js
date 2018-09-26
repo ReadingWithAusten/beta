@@ -226,7 +226,8 @@ function changeBook(direction){
 function updateImageViewer(){
   image_viewer_list = Array.from(document.getElementById('modal_images').getElementsByTagName('img'));
   var title = "<h2>" + cropString(CURRENT_BOOK.title,20) + "</h2>";
-  var author = "<p>" + CURRENT_BOOK.author + "</p>";
+  var author = "<p></p>";
+  if(CURRENT_BOOK.author) author = "<p>" + CURRENT_BOOK.author + "</p>";
   IMAGE_VIEWER_TEXT.innerHTML = title + author;
 }
 
