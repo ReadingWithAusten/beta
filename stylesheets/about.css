@@ -420,3 +420,12 @@ header{
   margin:10px 0;
   line-height: 17px;
 }
+#about_contact{
+  margin-bottom: 100px !important;
+}
+#about_contact p{
+  text-align: center;
+}
+#about_contact p:first-letter{
+  font-size:inherit;
+}

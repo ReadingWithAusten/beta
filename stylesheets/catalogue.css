@@ -197,6 +197,17 @@ input:focus:-moz-placeholder{
 #query__results-shown{
   margin:20px 0;
 }
+.query_result__spine,
+.query_result__folder_name{
+  display: none;
+}
+.query_result__book_id span{
+  display:none;
+}
+.query_result__book_id::before{
+  content:"Catalogue ID";
+  font-weight: bold;
+}
 @media only screen and (max-width:1000px){
   #query__results li{
     width:45%;

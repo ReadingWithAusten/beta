@@ -25,7 +25,7 @@ var image_viewer_current = 0;
 
 /* Keyboard Events */
 document.addEventListener('keypress', function(event){
-    const k = event.key;
+    var k = event.key;
     if(k == ',' || k == 'ArrowLeft'){
       if(IS_IMAGE_VIEWER_OPEN){ changeImageViewerImage('prev'); }
       else if(IS_MODAL_OPEN){ changeBook('prev'); }
@@ -97,7 +97,9 @@ function populateModalContent(book){
         }
         content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Catalogue ID:</span>"+ book[attr] + "</p>";
       }else if(attr == 'internet_link' || attr == 'facsimile_link'){
-        content += "<p class='modal_content__link' id='modal_content__" + attr + "'><span class='modal_content__header'>" + attr.replace("_"," ") +":</span><a href='"+book[attr]+"' target='_blank'>"+ book[attr] + "</p></a>";
+        if(book[attr] != 'n/a'){
+          content += "<p class='modal_content__link' id='modal_content__" + attr + "'><span class='modal_content__header'>" + attr.replace("_"," ") +":</span><a href='"+book[attr]+"' target='_blank'>"+ book[attr] + "</p></a>";
+        } 
       }else{
         content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>" + attr.replace("_"," ") +":</span>"+ book[attr] + "</p>";
       }

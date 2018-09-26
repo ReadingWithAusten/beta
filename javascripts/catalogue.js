@@ -32,17 +32,17 @@
   }
 
   // Return first instance found
-  function checkBookAttributes(book, r) {
+  function checkBookAttributes(book) {
       var keys = Object.keys(COMPLETE_DATA[book]);
-      for (var i = 0; i < keys.length; i++) {
-          if (COMPLETE_DATA[book][keys[i]]) {
-              if(keys[i] == "date_published"){
-                return queryDatePublished(COMPLETE_DATA[book], query);
-              }else if (COMPLETE_DATA[book][keys[i]].toString().toLowerCase().indexOf(query.toLowerCase()) > -1) {
-                  return true;
-              }
-          }
-      }
+      var result = false;
+      keys.forEach(function(k){
+        if(k == "date_published"){
+          result = queryDatePublished(COMPLETE_DATA[book], query);
+        }else if (COMPLETE_DATA[book][k].toString().toLowerCase().indexOf(query.toLowerCase()) > -1) {
+          result =  true;
+        }
+      });
+      return result;
   }
 
   function queryCatalogue() {

@@ -20,7 +20,6 @@ section #link_container{
 }
 
 section #library_link{
-  border:15px solid transparent;
   display:block;
   width:400px;
   height: 355px;
@@ -32,13 +31,11 @@ section #library_link{
   transition:all 0.5s ease-in-out;
 }
 section #library_link:hover{
-  border:3px solid rgba(50,150,255,0.8);
   border-bottom-color: transparent;
   background-color:rgba(255,255,255,0.4);
 }
 
 section #jane_link{
-  border:10px solid transparent;
   display:block;
   width:120px;
   height: 170px;
@@ -50,7 +47,6 @@ section #jane_link{
   transition:all 0.5s ease-in-out;
 }
 section #jane_link:hover{
-  border:3px solid rgba(50,150,255,0.8);
   background-color:rgba(255,255,255,0.3);
 }
 section#content_body #home__intro{

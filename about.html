@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126405462-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126405462-1');
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Reading with Austen | About</title>
@@ -168,15 +177,18 @@
         </div>
         <div id="about_data-description">
             <h2>Data Description</h2>
-            <p>Our data is derived from a spreadsheet, created by Deborah Bygrave and revised by Hugh Mackay under the direction of Stephen Bending and Stephen Bygrave, which was based on the <a href="#about_catalogue">catalogue</a>. Working with their spreadsheet, we added obliterated entries, corrected transcription errors, and assigned an identification number to each entry based on its shelf location. If an entry was obliterated and entered again later in the physical catalogue, we included only the later entry (with its shelf location) in our data. If an entry was obliterated, without any repetitions, then we included that obliterated entry. 
+            <p>Our data is derived from a spreadsheet, created by Deborah Bygrave and revised by Hugh Mackay under the direction of Stephen Bending and Stephen Bygrave, which included transcriptions of the catalogue,[link to catalogue section]  speculation about matching volumes, and other notes such as location at Chawton House. 
 
-            We then matched these catalogue entries to photographs taken of works identified as part of the library, a process complicated by various elements of eighteenth-century printing, such as multiple title pages and unnumbered and/or undated editions. Once we established which catalogue entry matched each physical work (sometimes a single volume, sometimes a set), we transcribed the title page’s metadata, collecting information about the title, author, and publication, and noting any significant marginalia such as Edward Austen Knight’s signatures. 
+            Building extensively on the original spreadsheet, we added obliterated entries, corrected transcription errors, and assigned an identification number to each entry based on its shelf location. If an entry was obliterated and entered again later in the physical catalogue, we included only the later entry (with its shelf location) in our data. If an entry was obliterated, without any repetitions, then we included that obliterated entry. We modified the base transcription in other ways, as well. We filled in “Ditto” and “...” to match the entry above. Some entries, especially European works, did not have a place or date of publication; after matching the entry to a published work, we included that metadata in square brackets. 
+            [image: transcript-example.png]
 
-            Because less than half of the books are extant, however, we had several hundred entries identified by a few words derived from the spine of the work, along with place and date of publication. Some descriptions were very specific, such as “Weld's Travels in America 2 vols London 1800,” while others, such as “Miscellanies London 1788,” were significantly more vague. 
+            We then matched these catalogue entries to photographs taken of works identified as part of the library, a process complicated by various elements of eighteenth-century printing, such as multiple title pages and unnumbered and/or undated editions. Once we established which catalogue entry matched each physical work (sometimes a single volume, sometimes a set), we transcribed the title page’s metadata, collecting information about the title, author, and publication, and noting any significant marginalia such as Edward Austen Knight’s signatures. Although we transcribed French characters, we removed macrons.
 
-            For these works, we found the closest match possible, relying on resources such as the English Short Title Catalogue and the Copac catalogue. For all of our entries, we also tried to find links to online editions. We prioritized publicly available resources such as Google Books, Archive.org, and HathiTrust, but if we could not find an item available freely online, we turned to resources such as Early English Books Online and Eighteenth Century Collections Online. Again, we aimed for the closest possible match for each work. For some books, we could not find online versions at all. 
+            Because less than half of the books are extant, we had several hundred entries identified by a few words derived from the spine of the work, along with place and date of publication. Some descriptions were very specific, such as “Weld's Travels in America 2 vols London 1800,” while others, such as “Miscellanies London 1788,” were significantly more vague. For these works, we found the closest match possible, relying on resources such as the English Short Title Catalogue and the Copac catalogue. 
 
-            We are currently working on a clean dataset that will be released under a Creative Commons licence, useful for anyone with more questions about the collection: what were the most common words in the book titles? When were most of the books published? Is the collection dominated by a certain genre, or author, or publishing house? 
+            For all of our entries, we also tried to find links to online editions. We prioritized publicly available resources such as Google Books, Archive.org, and HathiTrust, but if we could not find an item available freely online, we turned to resources such as Early English Books Online and Eighteenth Century Collections Online. Again, we aimed for the closest possible match for each work. For some books, we could not find online versions at all.
+
+            We are currently working on a clean dataset that will be released under a Creative Commons licence, useful for anyone with more questions about the collection: what were the most common words in the book titles? When were most of the books published? Is the collection dominated by a certain genre, or author, or publishing house?  
 
             We hope that this website and its data will be of interest not only to lovers of Jane Austen, but also to bibliophiles, antiquarians, and anyone engaged with print culture and digital humanities.</p>
         </div>
@@ -335,10 +347,12 @@
                     <p>Albert and Shirley Small Special Collections Library, University of Virginia; Amherst College Library; Arader Galleries; Beinecke Rare Book and Manuscript Library, Yale University; Bernard Quaritch Ltd.; British Library; Chawton House; Getty Research Institute Library; Gildings Auctioneers; Godmersham Park Heritage Centre; Harry Ransom Centre Book Collections, University of Texas Libraries; Library Company of Philadelphia; McGill University Library, Rare Books and Special Collections; National Gallery of Art Library; Stanford University Library; University of Melbourne; William Andrews Clark Memorial Library (UCLA); Young Library, Smith College.
                     </p>
                 </li>
-                <li>
-                    <p></p>
-                </li>
             </ul>
+        </div>
+        <div id="about_contact">
+            <h2>Contact</h2>
+            <p>For any queries, please contact the <a href="https://www.mcgill.ca/burneycentre/" target="_blank">Burney Centre</a> at <a href='&#109;ailt&#111;&#58;b&#117;r&#110;&#101;y&#46;ce%6Etr&#101;%40&#37;&#54;D%63&#103;i%6C%6C&#46;&#99;%61'>&#98;urney&#46;ce&#110;tr&#101;&#64;mcg&#105;ll&#46;ca</a>, or fill out our <a href="https://goo.gl/forms/8ZyaG4HTXHwWrRio2" target="_blank">contact form</a>.  
+            </p>
         </div>
     </section>
     <footer>
@@ -364,4 +378,11 @@
     </footer>
 </body>
 <script src="javascripts/functions.js" type="text/javascript" charset="utf-8"></script>
+<script>
+window.onscroll = function(e) {
+    var scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+    if (scrollPos > 550) document.getElementById('to-top').classList.remove('about_hide-button');
+    else if (scrollPos < 550) document.getElementById('to-top').classList.add('about_hide-button');
+};
+</script>
 </html>

@@ -73,6 +73,8 @@ section #column_container {
 
 #modal{padding-top:5.5em;}
 
+#Column-3 #shelf-1 .book__stock-1{ width: 18px !important;}
+#Column-3 #shelf-1 .book__stock-2{ width: 25px !important;}
 /*
 ** @book individual
 */
@@ -92,13 +94,22 @@ section #column_container {
 .format_wall-section__fol\. .book__stock-3{ width: 44px !important;}
 .format_wall-section__fol\. .book__stock-4{ width: 60px !important;}
 
-#bookID-376{  width:30px !important; }
+#bookID-112{  width:35px !important; }
+#bookID-121{  width:35px !important; }
+#bookID-128{  width:35px !important; }
+#bookID-129{  width:35px !important; }
+#bookID-140{  width:35px !important; }
+#bookID-143{  width:35px !important; }
+#bookID-146{  width:90px !important; }
 #bookID-149{  width:400px !important; box-shadow:none;}
 #bookID-150{  width:70px !important; }
-#bookID-160{  width:100px !important; }
 #bookID-155{  width:45px !important; }
 #bookID-156{  width:80px !important; }
+#bookID-160{  width:100px !important;}
+#bookID-162{  width:35px !important;}
 #bookID-179{  width:60px !important; }
+#bookID-183{  width:35px !important; }
+#bookID-376{  width:30px !important; }
 #bookID-381{  width:35px !important; }
 #bookID-382{  width:40px !important; }
 #bookID-397{  width:30px !important; }

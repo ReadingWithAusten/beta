@@ -20,15 +20,15 @@
   // Create link to section, opens book modal
   function makeBookViewInLibraryAnchor(bk) {
       var wall = bk["location"].toLowerCase().substring(0, bk["location"].toLowerCase().search(" case:")).replace(" ", "-");
-      var number = bk["location"].substring(bk["location"].search(",") - 1, bk["location"].search(","));
+      var section = bk["location"].substring(bk["location"].search(",") - 1, bk["location"].search(","));
       if (bk["location"].toLowerCase().search('slip') > -1) {
-          number = 2;
+          section = 2;
       } else if (bk["location"].toLowerCase().search('column') > -1) {
-          if (number == 1 || number == 2) number = 1;
-          if (number == 3) number = 2;
-          if (number == 4 || number == 5) number = 3;
+          if (section == 1 || section == 2) section = 'left';
+          if (section == 3) section = 'centre';
+          if (section == 4 || section == 5) section = 'right';
       }
-      return wall + "-section-" + number + ".html?book-id=" + bk["book_id"];
+      return wall + "-wall-" + section + ".html?book-id=" + bk["book_id"];
   }
 
   // Reduce size of string
@@ -89,10 +89,3 @@
       document.getElementById('nav_accessability__pause').classList.toggle('nav_acccessability__hide');
       document.getElementById('nav_accessability__play').classList.toggle('nav_acccessability__hide');
   }
-
-  //About page scroll detection
-window.onscroll = function(e) {
-    var scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
-    if (scrollPos > 550) document.getElementById('to-top').classList.remove('about_hide-button');
-    else if (scrollPos < 550) document.getElementById('to-top').classList.add('about_hide-button');
-};

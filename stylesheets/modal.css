@@ -299,8 +299,8 @@ li {
 .modal_content__link{
   position: relative;
 }
-.modal_content__link:hover::after {
-  content: "Open in new tab";
+.modal_content__link::after{
+  content: "Read Online";
   display: inline-block;
   background-color: white;
   border-left: 3px solid rgba(50,150,255,0.8);
@@ -308,11 +308,16 @@ li {
   padding: 2px 5px;
   border-radius: 2px;
   position: absolute;
-  left:0;
+  left:5px;
   bottom:-20px;
+  opacity:0;
+  z-index: 2;
+  transition: 0.3s ease-in-out;
 }
-
-
+.modal_content__link:hover::after{
+  opacity: 1;
+  left:0;
+}
 
 /* 
 ** @MODAL @VIEWER 

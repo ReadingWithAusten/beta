@@ -57,9 +57,19 @@ section #column_container {
 #Column-2 > #shelf-2{height:321px;margin-top:17px;}
 #Column-2 > #shelf-1{height:321px;margin-top:16px;}
 
+#Column-1 #shelf-6 .book__stock-1{ width: 11px !important; }
+#Column-1 #shelf-6 .book__stock-2{ width: 20px !important; }
+
 /*
 ** @book individual
 */
 #bookID-934,#bookID-935{ width: 40px !important; }
 #bookID-938{ width: 90px !important; }
 #bookID-939{ width: 120px !important;}
+#bookID-980{ width: 80px !important;}
+#bookID-982{ width: 25px !important;}
+#bookID-983{ width: 40px !important;}
+#bookID-991{ width: 90px !important; }
+#bookID-992{ width: 90px !important; }
+#bookID-1002{ width: 150px !important; }
+#bookID-1009{ width: 50px !important; }

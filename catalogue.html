@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126405462-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126405462-1');
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reading with Austen | Catalogue</title>
@@ -28,8 +37,7 @@
     </header>
     <section id="content_body">
         <div id="query__info">
-            <p>Trying to find books written by Maria Edgeworth or published in 1768?<br>Search the catalogue below.<br><br>
-            For more information about our transcription of the catalogue, metadata entry, and editorial guidelines, see <a href="about.html#about_data-description">Data Description</a> on the About page.</p>
+            <p>Trying to find books written by Maria Edgeworth or published in 1768? Search the catalogue below.<br>Right now, word order matters: search “Edgeworth” or “Edgeworth, Maria” rather than “Maria Edgeworth.”<br><br>A full release of the catalogue is forthcoming. <br><br>For more information about our transcription of the catalogue, metadata entry, and editorial guidelines, see <a href="about.html#about_data-description">Data Description</a> on the About page.
         </div>
         <div id="query__input">
             <select name="category">
@@ -40,6 +48,8 @@
                 <option value="publisher">Publisher</option>
                 <option value="place_published">Place Published</option>
                 <option value="date_published">Date Published</option>
+                <option value="current_location">Current Location</option>
+                <option value="format">Format</option>
             </select>
             <input id="query__input_text" type="text" name="query">
             <label for="query__check_filterImages">Only show results with images <input type="checkbox" name="check_filterImages" id="query__check_filterImages" onclick="queryCatalogue()"></label>
@@ -77,5 +87,4 @@
 <script src="javascripts/functions.js"  type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/complete-data.js"  type="text/javascript" charset="utf-8"></script>
 <script src="javascripts/catalogue.js" type="text/javascript" charset="utf-8"></script>
-
 </html>

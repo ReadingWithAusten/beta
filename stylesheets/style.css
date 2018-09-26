@@ -98,8 +98,8 @@ ul li {
 #spinner img:nth-child(6){animation-delay: 1.6s}
 #spinner img:nth-child(7){animation-delay: 1.9s}
 #spinner img:nth-child(8){animation-delay: 2.2s}
-#spinner img:nth-child(9){animation-delay: 2.5s}
-#spinner img:nth-child(10){animation-delay: 2.8s}
+#spinner img:nth-child(9){animation-delay: 2.5s; transform: rotate(-5deg)}
+#spinner img:nth-child(10){animation-delay: 2.8s; transform: rotate(-10deg) translateX(3px);}
 
 @keyframes spin{
   0%{opacity: 1;}
