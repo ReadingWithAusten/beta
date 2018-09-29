@@ -143,15 +143,14 @@ header{
   border-radius: 2px;  
 }
 #about_TOC{
-  border:1px solid white ;  
   border-radius: 2px;
   display: block;
   top:100px;
   font-size:0.9em;
   width: 22vw;
-  position: fixed;
+  position: fixed !important;
   background-color:rgba(255,255,255,0.97);
-  padding:0px 15px 15px 15px;
+  padding:0px 15px 15px 15px !important;
   z-index: 5;
   border:1px solid lightgrey;
   transition:0.8s ease-in-out;
@@ -351,7 +350,6 @@ header{
 
 /* @works cited */
 #about_works-cited ul li{
-  list-style: decimal;
   font-size:0.7em;
 }
 #about_works-cited ul li > p{

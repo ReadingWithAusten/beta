@@ -123,17 +123,17 @@
 <script src="javascripts/book_folder_relation.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
-  function makeWall(LAYOUT = WESTCASE_LAYOUT, ELEMENT = 'column_container') {
+  function makeWall(LAYOUT, ELEMENT) {
     let WALL = document.getElementById(ELEMENT);
     let col_num = 1;
-    Object.keys(LAYOUT).forEach(col => {
+    Object.keys(LAYOUT).forEach(function(col){
       if (col == 'Column-1' || col == 'Column-2') {
         console.log('populating: '+col)
         let column = "<li class='column' id='" + col + "'>";
         let shelf_num = 1;
-        Object.keys(LAYOUT[col]).forEach(sh => {
+        Object.keys(LAYOUT[col]).forEach(function(sh){
           let shelf = "<ul class='shelf format_wall-section__"+LAYOUT[col][sh][0].format+"' id='shelf-" + shelf_num + "'>";
-          Object.keys(LAYOUT[col][sh]).forEach(book => {
+          Object.keys(LAYOUT[col][sh]).forEach(function(book){
             let bk = LAYOUT[col][sh][book];
             //console.log(col+" "+sh+" "+book);
             let folder_class = "no_folder";
@@ -179,6 +179,6 @@
       }
     });
   }
-  makeWall();
+  makeWall(data,'column_container');
 </script>
 </html>

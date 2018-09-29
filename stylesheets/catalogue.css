@@ -21,9 +21,10 @@ input:focus:-moz-placeholder{
 ** @info
 */
 #query__info{
-  width:40vw;
+  width:70vw;
+  max-width:900px;
   font-size: 0.9em;
-  text-align: justify;
+  text-align: center;
   margin:0 auto;
   padding:1.5vw 3vw;
   border-left:3px solid rgba(50,150,255,0.8);
@@ -200,13 +201,6 @@ input:focus:-moz-placeholder{
 .query_result__spine,
 .query_result__folder_name{
   display: none;
-}
-.query_result__book_id span{
-  display:none;
-}
-.query_result__book_id::before{
-  content:"Catalogue ID";
-  font-weight: bold;
 }
 @media only screen and (max-width:1000px){
   #query__results li{

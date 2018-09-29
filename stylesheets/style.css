@@ -166,6 +166,7 @@ footer li:hover{
   left:40px;
   font-size:1.5em;
   line-height: 24px;
+  cursor:default;
 }
 #footer__burney{
   width:400px;

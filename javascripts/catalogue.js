@@ -51,6 +51,7 @@
       query = document.getElementsByName('query')[0].value;
       filter_images = document.getElementById('query__check_filterImages').checked;
       query_result = [];
+      console.log()
       if (category == "all") {
           Object.keys(COMPLETE_DATA).forEach(function(book){
               if(checkBookAttributes(book)) query_result.push(COMPLETE_DATA[book]);
@@ -106,7 +107,11 @@
                       if (category == "all") {
                           bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + attr.replace("_", " ") + "</span>: " + highlightQuery(bk[attr], query) + "</p>";
                       } else if (category == attr) {
-                          bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category query__highlight-category'>" + attr.replace("_", " ") + "</span>: " + highlightQuery(bk[attr], query) + "</p>";
+                          if(category == 'book_id'){
+                            bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category query__highlight-category'>Catalogue ID</span>: " + highlightQuery(bk[attr], query) + "</p>";
+                          }else{
+                            bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category query__highlight-category'>" + attr.replace("_", " ") + "</span>: " + highlightQuery(bk[attr], query) + "</p>";
+                          }
                       } else {
                           bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + attr.replace("_", " ") + "</span>: " + bk[attr] + "</p>";
                       }
