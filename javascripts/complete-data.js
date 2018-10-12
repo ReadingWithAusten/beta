@@ -18697,6 +18697,7 @@ var COMPLETE_DATA = [
     "transcript": "Northanger Abbey & Persuasion 4 vols 1 5 London 1818",
     "format": "8vo",
     "volumes": "4",
+    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 5",
     "internet_link": "https://catalog.hathitrust.org/Record/100073191",
     "book_id": 1208
@@ -18749,6 +18750,7 @@ var COMPLETE_DATA = [
     "transcript": "Sense & Sensibility 3 vols 1 6 London 1811",
     "format": "8vo",
     "volumes": "3",
+    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
     "internet_link": "https://books.google.com/books?id=eqdbAAAAQAAJ",
     "book_id": 1211
@@ -18763,6 +18765,7 @@ var COMPLETE_DATA = [
     "transcript": "Pride & Prejudice 3 vols 1 6 London 1813 ",
     "format": "8vo",
     "volumes": "3",
+    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
     "internet_link": "n/a",
     "book_id": 1212
@@ -18777,6 +18780,7 @@ var COMPLETE_DATA = [
     "transcript": "Mansfield Park 3 vols 1 6 London 1814 ",
     "format": "8vo",
     "volumes": "3",
+    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
     "internet_link": "https://books.google.com/books?id=FC8JAAAAQAAJ",
     "book_id": 1213
@@ -18791,6 +18795,7 @@ var COMPLETE_DATA = [
     "transcript": "Emma 3 vols 1 6 London 1816 ",
     "format": "8vo",
     "volumes": "3",
+    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
     "internet_link": "https://books.google.com/books?id=YbINAAAAQAAJ",
     "book_id": 1214
