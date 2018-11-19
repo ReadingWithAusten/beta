@@ -762,9 +762,14 @@ var SOUTHCASE_LAYOUT = {
         "format": "8vo",
         "volumes": "1",
         "location": "South Case: column 1, shelf 3",
+        "current_location":"Private Collection of Martha F. Bowden",
+        "permissions":"Courtesy of Martha F. Bowden",
         "internet_link": "n/a",
         "facsimile_link": "http://find.galegroup.com.proxy3.library.mcgill.ca/ecco/infomark.do?&source=gale&prodId=ECCO&userGroupName=crepuq_mcgill&tabID=T001&docId=CW3311674970&type=multipage&contentSet=ECCOArticles&version=1.0&docLevel=FASCIMILE",
-        "book_id": 470
+        "book_id": 470,
+        "folder_name": "esop-fables-1761",
+        "images": "yes",
+        "spine": "y"
       },
       {
         "id": 471,

@@ -7076,6 +7076,7 @@ var COMPLETE_DATA = [
     "book_id": 469
   },
   {
+    "id": 470,
     "title": "Select fables of Esop and other fabulists. In three books. [Epigraph on title page]",
     "author": "Aesop (ca. 620 BC - ca. 560 BC)",
     "date_published": "1761",
@@ -7085,9 +7086,14 @@ var COMPLETE_DATA = [
     "format": "8vo",
     "volumes": "1",
     "location": "South Case: column 1, shelf 3",
+    "current_location":"Private Collection of Martha F. Bowden",
+    "permissions":"Courtesy of Martha F. Bowden",
     "internet_link": "n/a",
     "facsimile_link": "http://find.galegroup.com.proxy3.library.mcgill.ca/ecco/infomark.do?&source=gale&prodId=ECCO&userGroupName=crepuq_mcgill&tabID=T001&docId=CW3311674970&type=multipage&contentSet=ECCOArticles&version=1.0&docLevel=FASCIMILE",
-    "book_id": 470
+    "book_id": 470,
+    "folder_name": "esop-fables-1761",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "The revolutionary Plutarch: Exhibiting the most distinguished characters, literary, military, and political in the recent annals of the French Republic; the greater part from the original information of a gentleman resident at Paris. To which, as an appendix, is reprinted entire, the celebrated pamphlet of “Killing no Murder.'",
