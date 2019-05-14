@@ -4662,9 +4662,14 @@ var COMPLETE_DATA = [
     "format": "8vo",
     "volumes": "1",
     "location": "East Case: column 5, shelf 7",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight",
     "notes": "Transcript: Interlinear addition",
     "internet_link": "https://books.google.ca/books?id=JtMIAAAAQAAJ",
-    "book_id": 307
+    "book_id": 307,
+    "folder_name": "cicero-scriptores-1813",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "The elements of Greek grammar, with notes for the use of those who have made some progress in the language.",
@@ -5636,8 +5641,13 @@ var COMPLETE_DATA = [
     "format": "8vo",
     "volumes": "2",
     "location": "East Case: slip 1, shelf 5",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight",
     "facsimile_link": "http://tinyurl.galegroup.com/tinyurl/73s568",
-    "book_id": 373
+    "book_id": 373,
+    "folder_name": "boyer-telemachus-1778",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "The Peruvian Letters, Translated from the French. With An additional original Volume. By R. Roberts, translator of select tales from Marmontel, author of Sermons by a Lady, and translator of The History of France, from the Abbé Millot.",
@@ -6357,8 +6367,13 @@ var COMPLETE_DATA = [
     "format": "12mo",
     "volumes": "1",
     "location": "East Case: slip 2, shelf 5",
+    "current_location": "In private collection",
+    "permissions": "Courtesy of Jeremy and Carol Knight.",
     "internet_link": "https://books.google.ca/books?id=H5tD5wO708IC",
-    "book_id": 423
+    "book_id": 423,
+    "folder_name": "minellius-sallustius-1695",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "The Right Honourable the Earl of Arlington's letters to Sir W. Temple, Bar. From July 1665. Being the first of his Employments abroad, To September 1670. when he was recall'd. Giving a perfect and exact Account of the treaties of Munster, Breda, Aix la Chapelle, and the Tripe Alliance; Together with The particular Instructions to Sir William Temple, the Earl of Carlingford and Mr. Van Beuningen: With other Papers relating to those Treaties. As also a particular Relation of the Death of Madam by a Person of Quality then actually upon the Spot. All Printed from the Originals and never berfore Publish'd. By Tho. Bebington, of Grays-Inn, Gent.",
@@ -7566,7 +7581,10 @@ var COMPLETE_DATA = [
     "current_location": "Beinecke Rare Book and Manuscript Library, Yale University",
     "permissions": "Courtesy of Beinecke Rare Book and Manuscript Library, Yale University",
     "internet_link": "https://catalog.hathitrust.org/Record/009038215",
-    "book_id": 500
+    "book_id": 500,
+    "folder_name": "cumberland-anecdotes-1782",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "An accurate and descriptive catalogue of the several paintings in the King of Spain's palace at Madrid; With some account of the pictures in the Buen-Retiro. By Richard Cumberland, Author of The Anecdotes of Eminent Painters in Spain.",
@@ -14206,8 +14224,13 @@ var COMPLETE_DATA = [
     "format": "8vo",
     "volumes": "4",
     "location": "West case: slip 1, shelf 4",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight.",
     "internet_link": "https://books.google.ca/books?id=PCIHAAAAQAAJ",
-    "book_id": 914
+    "book_id": 914,
+    "folder_name": "seed-discourses-1757",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "Free and Candid Disquisitions Relating to the Church of England, and the Means of advancing Religion therein. Addressed to the Governing Powers in Church and State; And more immediately directed to the Two Houses of Convocation. The Second Edition, revised and improved. [Epigraphs on title page]",
@@ -14849,8 +14872,13 @@ var COMPLETE_DATA = [
     "format": "4to",
     "volumes": "2",
     "location": "West case: column 1, shelf 4",
+    "current_location": "Chawton House, purchased and returned by GLOSS (see About page)",
+    "permissions": "Courtesy of Chawton House",
     "internet_link": "https://books.google.ca/books?id=k21BAAAAcAAJ",
-    "book_id": 955
+    "book_id": 955,
+    "folder_name": "hanway-travels-1754",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "Voyages and Travels of an Indian Interpreter and Trader, describing The Manners and Customs of the North American Indians; with An Account of the Posts situated on The River Saint Laurence, Lake Ontario, &c. To which is added, A Vocabulary of The Chippeway Language. Names of Furs and Skins, in English and French. A List of Words in the Iroquois, Mohegan, Shawanee, and Esquimeaux Tongues, and a table, shewing The Analogy between the Algonkin and Chippeway Languages. By J. Long.",
@@ -17457,8 +17485,13 @@ var COMPLETE_DATA = [
     "format": "8vo",
     "volumes": "1",
     "location": "West case: column 5, shelf 5",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight.",
     "facsimile_link": " http://find.galegroup.com/ecco/infomark.do?docType=ECCOArticles&docLevel=FASCIMILE&prodId=ECCO&tabID=T001&type=multipage&version=1.0&userGroupName=crepuq_mcgill&docId=CW3306278837&contentSet=ECCOArticles&relevancePageBatch=CW106278836&source=gale ",
-    "book_id": 1124
+    "book_id": 1124,
+    "folder_name": "kennett-antiquities-1737",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "The History of the Rebellion, 1745 and 1746. Containing, A full Account of its Rise, Progress and Extinction; The Character of the Highlanders, and their Chieftains; All the Declarations of the Pretender, and the Journal of his Marches through England, as published by himself: with Observations. Likewise, A particular Description of all the Battles, Skirmishes and Sieges, with many Incidents hitherto not made public. By an Impartial Hand, who was an Eye-witness to most of the Facts. The Second Edition Revised and Corrected.",
@@ -18703,10 +18736,14 @@ var COMPLETE_DATA = [
     "transcript": "Northanger Abbey & Persuasion 4 vols 1 5 London 1818",
     "format": "8vo",
     "volumes": "4",
-    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 5",
+    "current_location": "Jane Austen's House Museum",
+    "permissions": "Courtesy of Jane Austen's House Museum",
     "internet_link": "https://catalog.hathitrust.org/Record/100073191",
-    "book_id": 1208
+    "book_id": 1208,
+    "folder_name": "austen-northanger-1818",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "The Wanderer; or, Female Difficulties. By the author of Evelina; Cecilia; and Camilla. In five volumes.",
@@ -18756,10 +18793,14 @@ var COMPLETE_DATA = [
     "transcript": "Sense & Sensibility 3 vols 1 6 London 1811",
     "format": "8vo",
     "volumes": "3",
-    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
+    "current_location": "Jane Austen's House Museum",
+    "permissions": "Courtesy of Jane Austen's House Museum",
     "internet_link": "https://books.google.com/books?id=eqdbAAAAQAAJ",
-    "book_id": 1211
+    "book_id": 1211,
+    "folder_name": "austen-sense-1811",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "Pride and prejudice: a novel. In three volumes. By the author of 'Sense and sensibility.'",
@@ -18771,10 +18812,14 @@ var COMPLETE_DATA = [
     "transcript": "Pride & Prejudice 3 vols 1 6 London 1813 ",
     "format": "8vo",
     "volumes": "3",
-    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
+    "current_location": "Jane Austen's House Museum",
+    "permissions": "Courtesy of Jane Austen's House Museum",
     "internet_link": "n/a",
-    "book_id": 1212
+    "book_id": 1212,
+    "folder_name": "austen-pride-1813",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "Mansfield Park: a novel. In three volumes. By the author of 'Sense and sensibility,' and 'Pride and prejudice.'",
@@ -18786,10 +18831,14 @@ var COMPLETE_DATA = [
     "transcript": "Mansfield Park 3 vols 1 6 London 1814 ",
     "format": "8vo",
     "volumes": "3",
-    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
+    "current_location": "Jane Austen's House Museum",
+    "permissions": "Courtesy of Jane Austen's House Museum",
     "internet_link": "https://books.google.com/books?id=FC8JAAAAQAAJ",
-    "book_id": 1213
+    "book_id": 1213,
+    "folder_name": "austen-mansfield-1814",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "Emma: a novel. In three volumes. By the author of 'Pride and prejudice,' &c. &c.",
@@ -18801,10 +18850,14 @@ var COMPLETE_DATA = [
     "transcript": "Emma 3 vols 1 6 London 1816 ",
     "format": "8vo",
     "volumes": "3",
-    "notes": "Images forthcoming from Jane Austen's House Museum",
     "location": "South Case: slip 1, shelf 6",
+    "current_location": "Jane Austen's House Museum",
+    "permissions": "Courtesy of Jane Austen's House Museum",
     "internet_link": "https://books.google.com/books?id=YbINAAAAQAAJ",
-    "book_id": 1214
+    "book_id": 1214,
+    "folder_name": "austen-emma-1816",
+    "images": "yes",
+    "spine": "y"
   },
   {
     "title": "Thinks-I-to-myself. A serio-ludicro, tragico-comico tale, written by Thinks-I-to-myself who? In two volumes. Sixth edition.",

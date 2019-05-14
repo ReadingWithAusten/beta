@@ -2396,8 +2396,13 @@ var EASTCASE_LAYOUT = {
         "format": "8vo",
         "volumes": "2",
         "location": "East Case: slip 1, shelf 5",
+        "current_location": "In private collection.",
+        "permissions": "Courtesy of Jeremy and Carol Knight",
         "facsimile_link": "http://tinyurl.galegroup.com/tinyurl/73s568",
-        "book_id": 373
+        "book_id": 373,
+        "folder_name": "boyer-telemachus-1778",
+        "images": "yes",
+        "spine": "y"
       },
       {
         "id": 374,
@@ -4417,8 +4422,13 @@ var EASTCASE_LAYOUT = {
         "format": "12mo",
         "volumes": "1",
         "location": "East Case: slip 2, shelf 5",
+        "current_location": "In private collection",
+        "permissions": "Courtesy of Jeremy and Carol Knight.",
         "internet_link": "https://books.google.ca/books?id=H5tD5wO708IC",
-        "book_id": 423
+        "book_id": 423,
+        "folder_name": "minellius-sallustius-1695",
+        "images": "yes",
+        "spine": "y"
       }
     ]
   },
@@ -6390,9 +6400,14 @@ var EASTCASE_LAYOUT = {
         "format": "8vo",
         "volumes": "1",
         "location": "East Case: column 5, shelf 7",
+        "current_location": "In private collection.",
+        "permissions": "Courtesy of Jeremy and Carol Knight",        
         "notes": "Transcript: Interlinear addition",
         "internet_link": "https://books.google.ca/books?id=JtMIAAAAQAAJ",
-        "book_id": 307
+        "book_id": 307,
+        "folder_name": "cicero-scriptores-1813",
+        "images": "yes",
+        "spine": "y"
       },
       {
         "id": 308,

@@ -439,6 +439,11 @@ let westcase_data = [{
     "location": "West case: slip 1, shelf 4",
     "internet_link": "https://books.google.ca/books?id=PCIHAAAAQAAJ",
     "book_id": 914,
+    "folder_name": "seed-discourses-1757",
+    "images": "yes",
+    "spine": "y",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight."
 }, {
     "id": 915,
     "title": "Free and Candid Disquisitions Relating to the Church of England, and the Means of advancing Religion therein. Addressed to the Governing Powers in Church and State; And more immediately directed to the Two Houses of Convocation. The Second Edition, revised and improved. [Epigraphs on title page]",
@@ -1081,6 +1086,11 @@ let westcase_data = [{
     "location": "West case: column 1, shelf 4",
     "internet_link": "https://books.google.ca/books?id=k21BAAAAcAAJ",
     "book_id": 955,
+    "folder_name": "hanway-travels-1754",
+    "images": "yes",
+    "spine": "y",
+    "current_location": "Chawton House, purchased and returned by GLOSS (see About page)",
+    "permissions": "Courtesy of Chawton House",
 }, {
     "id": 956,
     "title": "Voyages and Travels of an Indian Interpreter and Trader, describing The Manners and Customs of the North American Indians; with An Account of the Posts situated on The River Saint Laurence, Lake Ontario, &c. To which is added, A Vocabulary of The Chippeway Language. Names of Furs and Skins, in English and French. A List of Words in the Iroquois, Mohegan, Shawanee, and Esquimeaux Tongues, and a table, shewing The Analogy between the Algonkin and Chippeway Languages. By J. Long.",
@@ -3667,6 +3677,11 @@ let westcase_data = [{
     "location": "West case: column 5, shelf 5",
     "facsimile_link": " http://find.galegroup.com/ecco/infomark.do?docType=ECCOArticles&docLevel=FASCIMILE&prodId=ECCO&tabID=T001&type=multipage&version=1.0&userGroupName=crepuq_mcgill&docId=CW3306278837&contentSet=ECCOArticles&relevancePageBatch=CW106278836&source=gale ",
     "book_id": 1124,
+    "folder_name": "kennett-antiquities-1737",
+    "images": "yes",
+    "spine": "y",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight."
 }, {
     "id": 1125,
     "title": "The History of the Rebellion, 1745 and 1746. Containing, A full Account of its Rise, Progress and Extinction; The Character of the Highlanders, and their Chieftains; All the Declarations of the Pretender, and the Journal of his Marches through England, as published by himself: with Observations. Likewise, A particular Description of all the Battles, Skirmishes and Sieges, with many Incidents hitherto not made public. By an Impartial Hand, who was an Eye-witness to most of the Facts. The Second Edition Revised and Corrected.",

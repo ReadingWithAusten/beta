@@ -4639,6 +4639,11 @@ let eastcase_data = [{
     "notes": "Transcript: Interlinear addition",
     "internet_link": "https://books.google.ca/books?id=JtMIAAAAQAAJ",
     "book_id": 307,
+    "folder_name": "cicero-scriptores-1813",
+    "images": "yes",
+    "spine": "y",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight"
 }, {
     "id": 308,
     "title": "The elements of Greek grammar, with notes for the use of those who have made some progress in the language.",
@@ -5612,6 +5617,11 @@ let eastcase_data = [{
     "location": "East Case: slip 1, shelf 5",
     "facsimile_link": "http://tinyurl.galegroup.com/tinyurl/73s568",
     "book_id": 373,
+    "folder_name": "boyer-telemachus-1778",
+    "images": "yes",
+    "spine": "y",
+    "current_location": "In private collection.",
+    "permissions": "Courtesy of Jeremy and Carol Knight"
 }, {
     "id": 374,
     "title": "The Peruvian Letters, Translated from the French. With An additional original Volume. By R. Roberts, translator of select tales from Marmontel, author of Sermons by a Lady, and translator of The History of France, from the Abbé Millot.",
@@ -6298,4 +6308,9 @@ let eastcase_data = [{
     "location": "East Case: slip 2, shelf 5",
     "internet_link": "https://books.google.ca/books?id=H5tD5wO708IC",
     "book_id": 423,
+    "folder_name": "minellius-sallustius-1695",
+    "images": "yes",
+    "spine": "y",
+    "current_location": "In private collection",
+    "permissions": "Courtesy of Jeremy and Carol Knight."
 }];

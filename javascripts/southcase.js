@@ -1310,7 +1310,10 @@ var SOUTHCASE_LAYOUT = {
         "current_location": "Beinecke Rare Book and Manuscript Library, Yale University",
         "permissions": "Courtesy of Beinecke Rare Book and Manuscript Library, Yale University",
         "internet_link": "https://catalog.hathitrust.org/Record/009038215",
-        "book_id": 500
+        "book_id": 500,
+        "folder_name": "cumberland-anecdotes-1782",
+        "images": "yes",
+        "spine": "y",
       },
       {
         "id": 501,
@@ -3544,11 +3547,15 @@ var SOUTHCASE_LAYOUT = {
         "edition": "1st ed.",
         "transcript": "Northanger Abbey & Persuasion 4 vols 1 5 London 1818",
         "format": "8vo",
-        "volumes": "4",
-        "notes": "Images forthcoming from Jane Austen's House Museum",
+        "volumes": "4",        
         "location": "South Case: slip 1, shelf 5",
+        "current_location": "Jane Austen's House Museum",
+        "permissions": "Courtesy of Jane Austen's House Museum",
         "internet_link": "https://catalog.hathitrust.org/Record/100073191",
-        "book_id": 1208
+        "book_id": 1208,
+        "folder_name": "austen-northanger-1818",
+        "images":"yes",
+        "spine":"y",
       },
       {
         "id": 1209,
@@ -3618,10 +3625,14 @@ var SOUTHCASE_LAYOUT = {
         "transcript": "Sense & Sensibility 3 vols 1 6 London 1811",
         "format": "8vo",
         "volumes": "3",
-        "notes": "Images forthcoming from Jane Austen's House Museum",
         "location": "South Case: slip 1, shelf 6",
+        "current_location": "Jane Austen's House Museum",
+        "permissions": "Courtesy of Jane Austen's House Museum",
         "internet_link": "https://books.google.com/books?id=eqdbAAAAQAAJ",
-        "book_id": 1211
+        "book_id": 1211,
+        "folder_name":"austen-sense-1811",
+        "images":"yes",
+        "spine":"y",
       },
       {
         "id": 1212,
@@ -3634,10 +3645,14 @@ var SOUTHCASE_LAYOUT = {
         "transcript": "Pride & Prejudice 3 vols 1 6 London 1813 ",
         "format": "8vo",
         "volumes": "3",
-        "notes": "Images forthcoming from Jane Austen's House Museum",
         "location": "South Case: slip 1, shelf 6",
+        "current_location": "Jane Austen's House Museum",
+        "permissions": "Courtesy of Jane Austen's House Museum",
         "internet_link": "n/a",
-        "book_id": 1212
+        "book_id": 1212,
+        "folder_name": "austen-pride-1813",
+        "images":"yes",
+        "spine":"y",
       },
       {
         "id": 1213,
@@ -3650,10 +3665,14 @@ var SOUTHCASE_LAYOUT = {
         "transcript": "Mansfield Park 3 vols 1 6 London 1814 ",
         "format": "8vo",
         "volumes": "3",
-        "notes": "Images forthcoming from Jane Austen's House Museum",
         "location": "South Case: slip 1, shelf 6",
+        "current_location": "Jane Austen's House Museum",
+        "permissions": "Courtesy of Jane Austen's House Museum",
         "internet_link": "https://books.google.com/books?id=FC8JAAAAQAAJ",
-        "book_id": 1213
+        "book_id": 1213,
+        "folder_name": "austen-mansfield-1814",
+        "images":"yes",
+        "spine":"y",
       },
       {
         "id": 1214,
@@ -3666,10 +3685,14 @@ var SOUTHCASE_LAYOUT = {
         "transcript": "Emma 3 vols 1 6 London 1816 ",
         "format": "8vo",
         "volumes": "3",
-        "notes": "Images forthcoming from Jane Austen's House Museum",
         "location": "South Case: slip 1, shelf 6",
+        "current_location": "Jane Austen's House Museum",
+        "permissions": "Courtesy of Jane Austen's House Museum",
         "internet_link": "https://books.google.com/books?id=YbINAAAAQAAJ",
-        "book_id": 1214
+        "book_id": 1214,
+        "folder_name": "austen-emma-1816",
+        "images":"yes",
+        "spine":"y"
       },
       {
         "id": 1215,
