@@ -1,3 +1,7 @@
+#column_container::before{
+  top:8rem;
+}
+
 /*
 ** @section 
 */
@@ -9,6 +13,7 @@ section#content_body{
   padding-top:90px;
   margin: 0px auto;
   height:1160px;
+  min-width: 775px;
 }
 
 section #column_container{

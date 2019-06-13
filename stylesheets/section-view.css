@@ -2,6 +2,25 @@ html {
   background-color: #fff;
 }
 /*
+*  footer
+*/
+@media only screen and (max-width:500px){
+  footer{
+    position:fixed;
+    opacity: 0.75;
+    transition:opacity 0.2s ease-in-out;
+  }
+  footer:hover{
+    opacity: 1;
+  }  
+}
+@media only screen and (max-height:430px) and (min-width: 700px){
+  footer{
+    width:100%;
+    max-width: 100%;
+  }
+}
+/*
 ** @columns
 */
 #content_body #column_container{
@@ -88,7 +107,6 @@ html {
   z-index:1;
   box-shadow: 0 0 0 black;
   background-color:rgba(50,50,50,0.8);
-  border:1px solid transparent; /* Testing only */
 }
 .book img{
   height:100%;
@@ -121,20 +139,6 @@ html {
 }
 
 /*
-.has_folder{
-  border:0px solid aquamarine;
-  border-top:none;
-  box-shadow: inset 0 0px 20px 5px;
-}
-
-.no_folder{
-  box-shadow:inset 0 0 15px 5px black;
-}
-.no_folder img{
-  opacity: 0.4;
-}
-*/
-/*
 ** @tool tip
 */
 .book .toolTip{
@@ -160,14 +164,66 @@ html {
 .book .toolTip .toolTip_title{
   border-bottom:1px solid lightgrey;
 }
-.book .toolTip .toolTip_author{
-  
-}
-.book .toolTip .toolTip_date{
-
-}
 .book:hover > .toolTip{
   opacity: 1 !important;
   z-index: 2 !important;
   margin:0px 0 0 0px;
+}
+@media only screen and (max-width:500px){
+  #column_container::before{
+    content:'Scroll to Explore';
+    position: absolute;
+    top:40%;
+    left:0;
+    border:1px solid lightgrey;
+    border-left:3px solid rgba(50,150,255,0.8);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(250,250,250,0.7);
+    padding:5px 10px;
+  }
+  #column_container .column .shelf .book .toolTip{
+    position: fixed;
+    top:7.8rem !important;
+    left:0 !important;
+    border:none;
+    padding:0;
+    width:100%;
+    max-width:100%;
+    max-height: 0;
+    overflow: hidden;
+    margin: -5px 0 0 0;
+    box-shadow:none;
+    z-index: -10;
+    transition:opacity 0.2s ease-in-out;
+   
+  }
+  #column_container .column .shelf .book .toolTip > p{
+    font-size:0.8rem;
+    padding:0;
+    margin:0;
+    z-index: -10;
+  } 
+  #column_container .column .shelf .book:hover >.toolTip{
+    border:1px solid grey;
+    border-top:3px solid rgba(50,150,255,0.8);
+    padding:10px;
+    max-height: 500px;
+    overflow: visible;
+  }
+  .book,.book > img{
+    transition:0.15s ease-in-out;
+    opacity: 0.9;
+  }
+  .book:hover{
+    background-color:rgba(40,40,40);
+    box-shadow:none;
+  }
+  .book:hover > img{
+    transform: none;
+    background-color:rgba(50,150,255,1);
+    box-shadow: inherit !important;
+    border:2px solid rgba(50,150,255);
+    opacity: 0.7;
+  }
 }

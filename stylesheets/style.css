@@ -215,24 +215,29 @@ footer li:hover{
 }
 @media only screen and (max-width:500px){
   footer > ul > li {
-    margin:0 auto 5px auto;
+    margin:0 auto 0px auto;
     display: block;
     width:80% !important;
     text-align: center;
   }
   #footer__burney p{
-    font-size:1em;
+    font-size:0.7em;
   }
   #footer__burney img{
-    max-width:100px;
+    max-width:90px;
   }
   #footer_chawtam{
     border:none;
   }
 }
 @media only screen and (max-width:400px){
+  #footer__logo img{
+    width: 100%;
+    max-width:40px;
+  }
   #footer__logo h2{
-    font-size:1.2em;
-    width:190px;
+    font-size:0.9em;
+    width:180px;
+    line-height: 10px;
   }
 }

@@ -251,27 +251,29 @@ header{
     cursor: pointer;
   }
   #about_TOC{
+    box-shadow:0 0 7px -2px black;
+    opacity: 0.95;
     display: block;
     left:50%;
-    top:50px;
-    font-size:0.9em;
-    margin: 0 0 0 -28vw;
-    width: 56vw;
-    min-width: inherit;
+    top:60px;
+    font-size:0.8rem;
+    letter-spacing: 0.5px;
+    margin: -5px 0 0 -30vw;
+    width:60vw;
+    min-width:50vw;
     position: fixed;
-    padding:15px 0 35px 0;
+    padding:0px 0 35px 0 !important;
     max-height: 40px;
     border:none;
     overflow:hidden;
   }
   #about_TOC:hover{
     max-height: 550px;
-    margin: 0 0 0 -28vw;
   }
   #about_TOC ul li{
     margin:0;
     color:rgba(40,40,40,0.8);
-    padding:2px 0 2px 15px;
+    padding:3px 15px;
     background-color:lightgrey;
     border-top:1px solid white;
   }
@@ -279,13 +281,28 @@ header{
     padding: 2px 0 2px 20px;
     border-left:3px solid rgba(50,150,255,0.8);
   }
+  #about_TOC ul li:first-child{
+    padding-top:15px;
+  }
+  #about_TOC ul li:last-child{
+    padding-bottom:5px;
+  }
   #to-top{
     top:20vh;
   }
 }
-@media only screen and (max-height:450px){
+/* Landscape Galaxy S9 740x360*/
+@media only screen and (max-height:430px) and (min-width: 700px){
   #about_TOC{
-    font-size:1em;
+    top:22vh !important;
+    width: 35vw;
+    height: 70vh !important;
+    overflow-y: auto; 
+  }
+  #about_TOC ul li{
+    padding: 1.5%;
+    font-size:0.8rem;
+    letter-spacing: 0.5px;
   }
 }
 /*
