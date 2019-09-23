@@ -145,12 +145,12 @@ header{
 #about_TOC{
   border-radius: 2px;
   display: block;
-  top:100px;
+  top:70px;
   font-size:0.9em;
   width: 22vw;
   position: fixed !important;
   background-color:rgba(255,255,255,0.97);
-  padding:0px 15px 15px 15px !important;
+  padding:0px 15px 10px 15px !important;
   z-index: 5;
   border:1px solid lightgrey;
   transition:0.8s ease-in-out;
@@ -159,7 +159,7 @@ header{
   border-left: 3px solid transparent;
   border-bottom:1px solid lightgrey;
   margin:0 0 10px 0;
-  padding:2px 5px;
+  padding:1px 5px;
   transition:0.2s ease-in-out;
 }
 #about_TOC ul li:hover{
@@ -181,7 +181,7 @@ header{
   font-weight: bold;
   font-size: 0.9em;
   font-family: inherit;
-  top:100px;
+  top:70px;
   right:-5px;    
   cursor: pointer;
   z-index: 1;
