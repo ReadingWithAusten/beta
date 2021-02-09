@@ -1,10 +1,16 @@
 images/books - Copy
 images/book-spines
+images/spines/webp
 folder_relations.py
 walk.py
 folder_relations.txt
 javascripts/old/
 javascripts/new/
+processing/new-images/*
+processing/production-files/*
+processing/__pycache__
 add_spines/
 .gitignore
 debug
+surge-deploy
+TODO.txt
