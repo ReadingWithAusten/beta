@@ -178,6 +178,14 @@ input:focus:-moz-placeholder{
 #query__results li p{
   margin: 10px 0;
 }
+.query_result__link-text{
+  text-decoration: underline;
+}
+.query_result__link-text:hover{
+  color: rgba(43, 115, 192, 0.8);
+  text-decoration: underline;
+  transition: color 0.25s ease-in-out;
+}
 .query_result__title{
   font-style: italic;
 }

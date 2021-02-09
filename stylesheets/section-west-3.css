@@ -24,7 +24,6 @@ section#content_body{
   background-repeat: no-repeat;
   display: flex;
   height: 2050px;
-  width:1030px;
   margin:90px auto 0 auto;
 }
 
@@ -75,4 +74,27 @@ section #column_container {
 /*
 ** @book
 */
+#Column-4 #shelf-4 li{
+  min-width: 20px;
+}
+
+#bookID-1074{ width:30px !important; }
 #bookID-1077{ width:80px !important; }
+#bookID-1080{ width:60px !important; }
+#bookID-1082{ width:180px !important; }
+#bookID-1098{ width:30px !important; }
+#bookID-1100{ width:30px !important; }
+#bookID-1101{ width:30px !important; }
+#bookID-1102{ width:60px !important; }
+#bookID-1103{ width:220px !important; }
+#bookID-1104{ width:30px !important; }
+#bookID-1105{ width:30px !important; }
+#bookID-1119{ width:60px !important; }
+#bookID-1120{ width:20px !important; }
+#bookID-1121{ width:40px !important; }
+#bookID-1122{ width:40px !important; }
+#bookID-1123{ width:40px !important; }
+#bookID-1105{ width:30px !important; }
+#bookID-1141{ width:20px !important; }
+#bookID-1142{ width:20px !important; }
+#bookID-1147{ width:20px !important; }

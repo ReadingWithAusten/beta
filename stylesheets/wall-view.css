@@ -142,7 +142,7 @@
 }
 #column_container #Column-5 .shelf .book .toolTip,
 #column_container #Column-4 .shelf .book .toolTip{
-    left:-350px;
+    left:-380px;
     border-left:0px solid rgba(50,150,255,0.8);
     border-right:5px solid rgba(50,150,255,0.8);
 }

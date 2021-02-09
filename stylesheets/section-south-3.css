@@ -24,7 +24,6 @@ section {
   background-repeat: no-repeat;
   display: flex;
   height: 2570px;
-  width:1395px;
   margin:70px auto 0 auto;
 }
 
@@ -94,6 +93,10 @@ section #column_container {
 #bookID-722{  width:300px !important;}
 #bookID-724{  width:220px !important;}
 #bookID-725{  width:50px !important;}
+#bookID-733{  width:50px !important;}
+#bookID-735{  width:20px !important;}
+#bookID-739{  width:100px !important;}
+#bookID-743{  width:80px !important;}
 #bookID-755{  width:130px !important;}
 #bookID-757{  width:40px !important;}
 #bookID-804{  width:20px !important;}
@@ -101,4 +104,20 @@ section #column_container {
 #bookID-808{  width:60px !important;}
 #bookID-809{  width:190px !important;}
 #bookID-810{  width:40px !important;}
+#bookID-813{  width:250px !important;}
+#bookID-814{  width:60px !important;}
+#bookID-815{  width:80px !important;}
+#bookID-816{  width:50px !important;}
+#bookID-819{  width:150px !important;}
+#bookID-820{  width:300px !important;}
+#bookID-843{  width:20px !important;}
+#bookID-845{  width:60px !important;}
+#bookID-846{  width:100px !important;}
+#bookID-849{  width:100px !important;}
+#bookID-850{  width:100px !important;}
+#bookID-851{  width:60px !important;}
+#bookID-863{  width:150px !important;}
+#bookID-864{  width:80px !important;}
+#bookID-867{  width:60px !important;}
+
 

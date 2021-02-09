@@ -9,7 +9,6 @@ section {
   background-repeat: no-repeat;
   display: flex;
   height: 2450px;
-  width:1530px;
   margin:0 auto;
 }
 
@@ -69,14 +68,48 @@ section #column_container {
 #Slip-2 > #shelf-2{height:200px;margin-top:21px;}
 #Slip-2 > #shelf-1{height:422px;margin:20px 0 0 2px;}
 
+
 #bookID-620{  width:60px !important;}
+#bookID-621{  width:80px !important;}
+#bookID-625{  width:60px !important;}
+#bookID-623{  width:30px !important;}
 #bookID-635{  width:100px !important;}
 #bookID-636{  width:130px !important;}
 #bookID-637{  width:140px !important;}
+#bookID-638{  width:80px !important;}
+#bookID-640{  width:50px !important;}
+#bookID-644{  width:70px !important;}
 #bookID-655{  width:20px !important;}
 #bookID-656{  width:50px !important;}
+#bookID-671{  width:40px !important;}
+#bookID-675{  width:40px !important;}
 #bookID-676{  width:50px !important;}
+#bookID-679{  width:40px !important;}
+#bookID-690{  width:25px !important;}
+#bookID-691{  width:80px !important;}
+#bookID-692{  width:300px !important;}
+#bookID-694{  width:80px !important;}
+#bookID-706{  width:40px !important;}
+#bookID-707{  width:40px !important;}
+#bookID-708{  width:50px !important;}
+#bookID-709{  width:80px !important;}
+#bookID-710{  width:150px !important;}
+#bookID-711{  width:100px !important;}
+#bookID-712{  width:150px !important;}
+#bookID-713{  width:30px !important;}
 #bookID-868{  width:140px !important;}
+#bookID-872{  width:30px !important;}
+#bookID-873{  width:50px !important;}
+#bookID-875{  width:80px !important;}
+#bookID-882{  width:50px !important;}
+#bookID-1197{  width:100px !important;}
+#bookID-1198{  width:80px !important;}
+#bookID-1200{  width:110px !important;}
+#bookID-1201{  width:25px !important;}
+#bookID-1202{  width:100px !important;}
+#bookID-1203{  width:200px !important;}
+#bookID-1206{  width:120px !important;}
+#bookID-1207{  width:50px !important;}
 
 /*
 ** @toolTip

@@ -200,9 +200,10 @@ li {
 #modal_images #modal_images__featured img {
   display: block;
   margin: 5% auto;
-  background-color: lightskyblue;
   max-width: 75%;
   min-height: 200px;
+  max-height: 350px;
+  min-width: 130px;
 }
 #modal_images #modal_images__list {
   width: 90%;
@@ -210,7 +211,7 @@ li {
   margin: 0px auto 20px auto;
 }
 #modal_images #modal_images__list li {
-  background-color: aquamarine;
+  background-color: lightgrey;
   border-radius: 5px;
   display: inline-block;
   margin: 1%;
@@ -218,7 +219,7 @@ li {
 #modal_images #modal_images__list img {
   height: 80px;
   display: block;
-  min-width: 40px;
+  min-width: 80px;
 }
 /* If book.folder_name == null */
 .modal_noImages{
@@ -276,15 +277,17 @@ li {
   text-align: left;
   padding: 2%;
 }
+
 #modal_content__id,
 #modal_content__images,
-#modal_content__folder_name,
+#modal_content__folder,
 #modal_content__transcript,
 #modal_content__author_type,
 #modal_content__subject,
 #modal_content__spine{
   display: none;
 }
+
 #modal_content__volumes::before{
   content:"Number of Volumes: ";
   font-weight: bold;

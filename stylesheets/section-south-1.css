@@ -23,7 +23,6 @@ section {
   background-repeat: no-repeat;
   display: flex;
   height: 2250px;
-  width:1230px;
   margin:90px auto 0 auto;
 
 }
@@ -81,17 +80,46 @@ section #column_container {
 /*
 ** @books
 */
+#shelf-1 li{
+  min-width: 20px;
+}
 
-#bookID-434{  width:40px !important;  }
-#bookID-433{  width:65px !important;  }
+#bookID-432{  width:80px !important;  }
+#bookID-434{  width:50px !important;  }
+#bookID-435{  width:100px !important;  }
+#bookID-433{  width:50px !important;  }
 #bookID-440{  width:65px !important;  }
 #bookID-471{  width:17px !important;  }
 #bookID-472{  width:17px !important;  }
 #bookID-478{  width:17px !important;  }
 #bookID-480{  width:17px !important;  }
-#bookID-482{  width:90px !important;  }
+#bookID-482{  width:50px !important;  }
+#bookID-483{  width:150px !important;  }
+#bookID-492{  width:50px !important;  }
+#bookID-500{  width:50px !important;  }
+#bookID-514{  width:60px !important;  }
+#bookID-517{  width:20px !important;  }
+#bookID-520{  width:100px !important;  }
+#bookID-523{  width:40px !important;  }
+#bookID-524{  width:320px !important;  }
 #bookID-525{  width:35px !important;  }
+#bookID-540{  width:120px !important;  }
+#bookID-550{  width:40px !important;  }
+#bookID-551{  width:50px !important;  }
+#bookID-553{  width:70px !important;  }
+#bookID-559{  width:25px !important;  }
+#bookID-563{  width:350px !important; }
+#bookID-562{  width:25px !important; }
+#bookID-565{  width:50px !important; }
 #bookID-576{  width:40px !important;  }
+#bookID-582{  width:100px !important;  }
+#bookID-583{  width:50px !important;  }
+#bookID-584{  width:100px !important;  }
+#bookID-586{  width:100px !important;  }
+#bookID-602{  width:190px !important;  }
+#bookID-603{  width:80px !important;  }
+#bookID-607{  width:70px !important;  }
+#bookID-612{  width:40px !important;  }
 
 /*
 ** @tooltip

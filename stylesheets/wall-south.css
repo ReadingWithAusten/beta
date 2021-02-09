@@ -102,92 +102,96 @@ section #column_container{
 #column_container #Column-5 #shelf-1{ margin:5px 0 0 0; height: 56px;}
 
 /* 
-** @book individual styles 
+** @book shelf 
 */
+.book { min-width: 6px; }
+
 .book__stock-1{   width:5px !important;  }
-.book__stock-2{   width:6px !important; }
-.book__stock-3{   width:15px !important;  }
+.book__stock-2{   width:10px !important; }
+.book__stock-3{   width:13px !important;  }
 .book__stock-4{   width:20px !important;  }
-.book__stock-5{   width:22px !important;  }
-.book__stock-6{   width:28px !important;  }
-.book__stock-7{   width:28px !important;  }
+.book__stock-5{   width:30px !important;  }
+.book__stock-6{   width:30px !important;  }
+.book__stock-7{   width:30px !important;  }
 .book__stock-9{   width:35px !important;  }
 .book__stock-20{   width:85px !important;  }
 .book__stock-22{  width:85px !important;  }
-.book__stock-25{   width:100px !important;  }
+.book__stock-25{   width:110px !important;  }
 .book__stock .book_spine{  max-width:100% !important; }
 
-/* column 1, shelf 2*/
-#bookID-440{  width:12px !important;  }
+#Column-1 #shelf-1 .book {min-width:6px;}
+#Column-1 #shelf-4 .book {min-width:10px;}
+#Column-1 #shelf-5 .book {min-width:4px;}
 
-/* column 1, shelf 3*/
-#bookID-456{  width:15px !important;  }
+#Column-2 #shelf-1 .book{ min-width:5px;}
+#Column-2 #shelf-3 .book{ min-width:13px;}
+#Column-2 #shelf-5 .book{ min-width:4px;}
 
-/* column 1, shelf 4*/
-#bookID-483{  width:30px !important;  }
+#Slip-1 #shelf-2 .book__stock-5 { width: 35px !important; }
 
-/* column 1, shelf 5*/
-#bookID-491,#bookID-497{  max-width:4px;  }
+#Column-3 #shelf-1 .book{  min-width:8px; }
+#Column-3 #shelf-1 .book__stock-2{  width:10px !important; }
+#Column-3 #shelf-1 .book__stock-3{  width:15px !important; }
+#Column-3 #shelf-1 .book__stock-4{  width:20px !important; }
+#Column-3 #shelf-2 .book__stock-1{  width:8px !important; }
+#Column-3 #shelf-2 .book__stock-2{  width:12px !important; }
+#Column-3 #shelf-2 .book__stock-3{  width:16px !important; }
 
-/* column 2, shelf 5*/
-#bookID-598{  max-width:3px;  }
-#Column-2 #shelf-5 .book__stock-1{ max-width:4px;}
-
-/* column 2, shelf 6*/
-#bookID-602{  width:30px !important;  }
-
-/* slip 1, shelf 4 */
-#bookID-1205,#bookID-1206,#bookID-1207{  max-width:13px;  }
-
-/* slip 1, shelf 4 */
-#bookID-1208,#bookID-1209{  max-width:12px; }
-
-/* slip 1, shelf 6 */
-#bookID-1204,#bookID-1211,#bookID-1212,
-#bookID-1213,#bookID-1214,#bookID-1215{  max-width:5px; }
-
-/* column 3, shelf 5*/
-#bookID-635,#bookID-636,#bookID-637{  width:20px !important;  }
-
-/* column 3, shelf 10*/
-#bookID-709{  width:10px !important;  }
-
-/* column 4, shelf 1*/
 #Column-4 #shelf-1 .book{  width:10px !important; }
+#Column-4 #shelf-4 .book{  min-width:10px !important; }
+#Column-4 #shelf-4 .book__stock-2{  width:16px !important;  }
+#Column-4 #shelf-5 .book{  min-width:8px;  }
+#Column-4 #shelf-7 .book{  min-width:5px;  }
 
-/* column 4, shelf 2*/
+#Column-5 #shelf-4 .book{  min-width:8px;  }
+#Column-5 #shelf-10 .book__stock-1{  width:8px !important;  }
+#Column-5 #shelf-10 .book__stock-9{  width:55px !important;  }
+
+/*
+** @book individual styles
+*/
+
+#bookID-440{  width:12px !important;  }
+#bookID-456{  width:15px !important;  }
+#bookID-483{  width:30px !important;  }
+#bookID-491,#bookID-497{  max-width:4px;  }
+#bookID-520{  width:40px !important; }
+#bookID-524{  width:100px !important; }
+#bookID-598{  max-width:3px;  }
+#bookID-602{  width:30px !important;  }
+#bookID-620{  width:15px !important;  }
+#bookID-635,#bookID-636,#bookID-637{  width:27px !important;  }
+#bookID-690{  width:8px !important;  }
+#bookID-691{  width:25px !important;  }
+#bookID-692{  width:90px !important;  }
+#bookID-708{  width:15px !important;  }
+#bookID-709{  width:25px !important;  }
+#bookID-710{  width:45px !important;  }
+#bookID-711{  width:15px !important;  }
+#bookID-712{  width:45px !important;  }
+#bookID-713{  width:12px !important;  }
 #bookID-722{  width:50px !important;  }
-
-/* column 4, shelf 3*/
 #bookID-724{  width:55px !important;  }
-
-/* column 4, shelf 7*/
+#bookID-725{  width:20px !important;  }
+#bookID-728{  width:16px !important;  }
+#bookID-733{  width:16px !important;  }
 #bookID-735{  width:5px !important;  }
-
-/* column 4, shelf 8*/
 #bookID-742,#bookID-743{  width:5px !important;  }
-
-/* column 5, shelf 1*/
 #bookID-755{  width:35px !important;  }
-
-/* column 5, shelf 5*/
 #bookID-804{  width:8px !important;  }
 #bookID-807{  width:32px !important;  }
 #bookID-809{  width:50px !important;  }
-
-/* column 5, shelf 6*/
-#bookID-813{  width:65px !important;  }
+#bookID-813{  width:80px !important;  }
 #bookID-814{  width:18px !important;  }
-
-/* column 5, shelf 7*/
-#bookID-819{  width:40px !important;  }
-#bookID-820{  width:60px !important;  }
-
-/* column 5, shelf 8*/
+#bookID-816{  width:16px !important;  }
+#bookID-819{  width:50px !important;  }
+#bookID-820{  width:70px !important;  }
 #bookID-846{  width:20px !important;  }
-
-/* column 5, shelf 9*/
 #bookID-850{  width:25px !important;  }
-
-/* column 5, shelf 10*/
-#bookID-864,#bookID-867{  width:20px !important;  }
+#bookID-864,#bookID-867{  width:25px !important;  }
+#bookID-868{  width:35px !important;  }
+#bookID-882{  width:15px !important;  }
+#bookID-1205,#bookID-1206,#bookID-1207{  max-width:13px;  }
+#bookID-1208,#bookID-1209{  max-width:12px; }
+#bookID-1204,#bookID-1211,#bookID-1212,
+#bookID-1213,#bookID-1214,#bookID-1215{  max-width:5px; }

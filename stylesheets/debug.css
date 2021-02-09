@@ -109,3 +109,55 @@
 .format_wall-section__fol\.::before{
   content:"folio";
 }
+
+/* 
+ * Highlights spines in wall view to show images
+ * check modal.js for support
+*/
+/* .inModal::after{
+  background-color:white;
+  content: "";
+  display:block;
+  height: 100%;
+  position: absolute;
+  top:0;
+  width: 100%;
+}
+.hasImages{
+  border-top: 10px solid green !important;
+}
+.hasSpine{
+  border-bottom:10px solid blue !important;
+}
+.hasFolder{
+  border-left: 2px solid yellow !important;
+  border-right: 2px solid yellow !important;
+}
+
+#modal_content_container{
+  opacity: 0.6;
+}
+#modal_content__pub_loc,
+#modal_content__transcript,
+#modal_content__format,
+#modal_content__volumes,
+#modal_content__edition,
+#modal_content__current_loc,
+#modal_content__in_1908,
+#modal_content__permissions,
+#modal_content__EEBO,
+#modal_content__ESTC,
+#modal_content__missing,
+#modal_content__Gale,
+#modal_content__publisher,
+#modal_content__permissions,
+#modal_content__link{
+  display:none;
+}
+#modal_content__shelf,
+#modal_content__id,
+#modal_content__spine,
+#modal_content__folder,
+#modal_content__images{
+  display:block;
+} */
