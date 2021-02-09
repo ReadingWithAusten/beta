@@ -16,7 +16,7 @@ var IS_IMAGE_VIEWER_OPEN = false;
 
 // Book object
 var CURRENT_BOOK = new Object();
-var CURRENT_BOOK_LOCATION = {};
+var CURRENT_BOOK_LOCATION = {};     // Tracks book on shelf for next/prev actions
 
 // variables
 var image_viewer_list = [];
@@ -53,29 +53,33 @@ document.addEventListener('keypress', function(event){
 ** @MODAL FUNCTIONS 
 */
 function openModal(book) {
-  BODY.classList.toggle('no-scroll');
-  MODAL.classList.toggle('modal__hide');
-  MODAL.classList.toggle('modal__display');
-  IS_MODAL_OPEN = true;
+  if(!IS_MODAL_OPEN){
+    BODY.classList.toggle('no-scroll');
+    MODAL.classList.toggle('modal__hide');
+    MODAL.classList.toggle('modal__display');
+    IS_MODAL_OPEN = true;
+  }
 }
 
 function closeModal(book) {
-  BODY.classList.toggle('no-scroll');
-  MODAL.classList.toggle('modal__hide');
-  MODAL.classList.toggle('modal__display');
-  IS_MODAL_OPEN = false;
+  if(IS_MODAL_OPEN){
+    BODY.classList.toggle('no-scroll');
+    MODAL.classList.toggle('modal__hide');
+    MODAL.classList.toggle('modal__display');
+    IS_MODAL_OPEN = false;
+  }
 }
 
 function populateModalImages(book){
   // Check relation for images
-  if(book.folder_name && BOOK_TO_FOLDER[book.folder_name]){ // book_to_folder_relation.js
-    var folderImages = BOOK_TO_FOLDER[book.folder_name];
-    var featuredImage = '<div id="modal_images__featured"><img src="images/books/' + book.folder_name + '/' + folderImages[0] + '" alt="" onclick="openImageViewer(this)"></div>';
+  if(book.folder && BOOK_TO_FOLDER[book.folder]){ // book_to_folder_relation.js
+    var folderImages = BOOK_TO_FOLDER[book.folder];
+    var featuredImage = '<div id="modal_images__featured"><img src="images/books/' + book.folder + '/' + book.folder + folderImages[0] + '" alt="" onclick="openImageViewer(this)"></div>';
     var imagesList = "";
     var count = 1;
     // Displayed by array order
     for (var image = 1; image < folderImages.length; image++){
-      imagesList += '<li><img src="images/books/' + book.folder_name + '/' + folderImages[image] +'" alt="" data-image-id="' + count + '" onclick="openImageViewer(this)"/></li>';
+      imagesList += '<li><img src="images/books/' + book.folder + '/' + book.folder + folderImages[image] +'" alt="" data-image-id="' + count + '" onclick="openImageViewer(this)"/></li>';
       count++;
     }
     var imagesListContainer = '<ul id="modal_images__list">' + imagesList + '</ul>';
@@ -87,50 +91,50 @@ function populateModalImages(book){
 }
 
 function populateModalContent(book){
-  var content = ""
+  let content = ""
   Object.keys(book).forEach( function(attr){
     if(book[attr]){
       // Edit below for Nuanced bood data presentation
-      if(attr == 'book_id'){
-        if(book.folder_name && BOOK_TO_FOLDER[book.folder_name] && !book.permissions){
+      if(attr === 'id'){
+        if(book.folder && BOOK_TO_FOLDER[book.folder] && !book.permissions){
           content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Permissions:</span> Courtesy of Chawton House</p>";
         }
         content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>Catalogue ID:</span>"+ book[attr] + "</p>";
-      }else if(attr == 'internet_link' || attr == 'facsimile_link'){
-        if(book[attr] != 'n/a'){
-          content += "<p class='modal_content__link' id='modal_content__" + attr + "'><span class='modal_content__header'>" + attr.replace("_"," ") +":</span><a href='"+book[attr]+"' target='_blank'>"+ book[attr] + "</p></a>";
+      }else if(attr === 'link'){
+        if(book[attr] !== 'n/a'){
+          content += "<p class='modal_content__link' id='modal_content__" + attr + "'><span class='modal_content__header'>" + FORMAT_ATTR_NAME[attr] +":</span><a href='"+book[attr]+"' target='_blank'>"+ book[attr] + "</p></a>";
         } 
       }else{
-        content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>" + attr.replace("_"," ") +":</span>"+ book[attr] + "</p>";
+        let book_attribute = book[attr] === true ? "Yes" : book[attr];
+        content += "<p id='modal_content__" + attr + "'><span class='modal_content__header'>" + FORMAT_ATTR_NAME[attr] +":</span>"+ book_attribute + "</p>";
       }
     }
   });
   return content;
 }
 
-// Discover current book and discover location on wall
-function walkCaseLayout(bookID){
-  Object.keys(data).forEach( function(column){
-    Object.keys(data[column]).forEach( function(shelf){
-      Object.keys(data[column][shelf]).forEach( function(book){
-        if(data[column][shelf][book].book_id == bookID){
-          CURRENT_BOOK = data[column][shelf][book];
-          CURRENT_BOOK_LOCATION[0] = column;
-          CURRENT_BOOK_LOCATION[1] = shelf;
-          CURRENT_BOOK_LOCATION[2] = book;
-          return;
-        };
-      });
-    });
-  });
+// DEBUG
+function highlightInWall(bookID){
+  if(!CURRENT_BOOK.id){
+    CURRENT_BOOK = COMPLETE_DATA[bookID];
+    CURRENT_BOOK.id = bookID;
+  }
+  // Has added benefit of stopping next/prev book against columns
+  // function erros out when element isn't found...
+  document.querySelector(`#bookID-${bookID}`).classList.add("inModal");
+  document.querySelector(`#bookID-${CURRENT_BOOK.id}`).classList.remove("inModal");
 }
 
 // Fills modal with relevant information from element onclick
 function populateModal(bookID) {
   console.log("Populating modal: "+bookID);
 
+  // DEBUG
+  highlightInWall(bookID);
+
   // Grab book data
-  walkCaseLayout(bookID);
+  CURRENT_BOOK = COMPLETE_DATA[bookID];
+  CURRENT_BOOK.id = parseInt(bookID);
 
   MODAL_IMAGES.innerHTML = populateModalImages(CURRENT_BOOK);
   MODAL_CONTENT.innerHTML = populateModalContent(CURRENT_BOOK);
@@ -141,83 +145,23 @@ function populateModal(bookID) {
   openModal();
 }
 
+// TODO:: switch to/from slips
+// Bug/Feature, next book buttom stops when end of column instead of going through whole catalogue
 function changeBook(direction){
-  // Current book location
-  var col = CURRENT_BOOK_LOCATION[0];
-  var sh = CURRENT_BOOK_LOCATION[1];
-  var bk = CURRENT_BOOK_LOCATION[2];
-
-  // Index of current book in data
-  var column_index = Object.keys(data).indexOf(col);
-  var shelf_index = Object.keys(data[col]).indexOf(sh);
-  var book_index = Object.keys(data[col][sh]).indexOf(bk);
-  
-  // Items in of column/shelf
-  var column_length = Object.keys(data).length;
-  var shelf_length = Object.keys(data[col]).length;
-  var book_length = Object.keys(data[col][sh]).length;
-
+  let newBookID = CURRENT_BOOK.id;
+  // get adjacent books on columns
   switch(direction){
-    case 'next':{
-      if((book_index + 1) < book_length){
-        book_index++;
-      }else{
-        book_index = 0;
-        if((shelf_index + 1) < shelf_length){
-          shelf_index++;
-        }else{
-          shelf_index = 0;
-          if((column_index + 1) < column_length){
-            column_index++;
-          }else{
-            column_index = column_length;
-            shelf_index = shelf_length;
-            book_index = book_length;
-          }
-        }
-      }
+    case "next":
+      newBookID++;
       break;
-    };
-    case 'prev':{
-      if((book_index - 1) >= 0){
-        book_index--;
-      }else{
-        if((shelf_index - 1) >= 0){
-          shelf_index--;
-          var c = Object.keys(data)[column_index];
-          var s = Object.keys(data[c])[shelf_index];
-          book_index = Object.keys(data[c][s]).length - 1;
-        }else{
-          if((column_index - 1) >= 0){
-            column_index--;
-            var c = Object.keys(data)[column_index];
-            shelf_index = Object.keys(data[c]).length - 1;
-
-            var s = Object.keys(data[c])[shelf_index];
-            book_index = Object.keys(data[c][s]).length - 1;
-          }
-          else{
-            // First book
-            book_index = shelf_index = column_index = 0;
-          }
-        }
-      }
+    case "prev":
+      newBookID--;
       break;
-    };
-  }  
+    default:
+      break;
+  }
 
-  col = Object.keys(data)[column_index];
-  sh = Object.keys(data[col])[shelf_index];
-  bk = Object.keys(data[col][sh])[book_index];
-  
-  CURRENT_BOOK_LOCATION[0] = col;
-  CURRENT_BOOK_LOCATION[1] = sh;
-  CURRENT_BOOK_LOCATION[2] = bk;
-
-  CURRENT_BOOK = data[col][sh][bk];
-  MODAL_IMAGES.innerHTML = populateModalImages(CURRENT_BOOK);
-  MODAL_CONTENT.innerHTML = populateModalContent(CURRENT_BOOK);
-  updateImageViewer();
+  populateModal(newBookID);
 }
 
 /*
