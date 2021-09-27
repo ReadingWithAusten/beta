@@ -65,14 +65,18 @@ function checkBookAttributes(book, id) {
 function tokenizeQuery(){
   if(query[0] == "\"" && query[query.length -1] == "\""){
       query_tokens.push(query.replace(new RegExp("\"",'g'),""));  //remove quotes
-    }else{
-      query_tokens = query.split(' ');        
-      query_tokens.push(query);
-      for(var i = 0; i < query_tokens.length; i++){
-        query_tokens[i] = query_tokens[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\\]/g,"");   // remove special characters
-        query_tokens[i] = query_tokens[i].replace(/\s{2,}/g," "); // ?
-      }
+  }else{
+    query_tokens = query.split(' ');        
+    query_tokens.push(query);
+    for(var i = 0; i < query_tokens.length; i++){
+      query_tokens[i] = query_tokens[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\\]/g,"");   // remove special characters
+      query_tokens[i] = query_tokens[i].replace(/\s{2,}/g," "); // ?
     }
+  }
+  // If yes is searched, true is also relevant
+  if(query_tokens.indexOf("yes") > -1){
+    query_tokens.push("true")
+  }
 }
 
 // TODO:: redo and optimize
@@ -171,7 +175,8 @@ function renderQuery() {
                         let external_link = `<a class="query_result__link-text" href="${bk[attr]}" target="_blank">${highlightQuery(bk[attr])}</a>`
                         bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " +external_link + "</p>";
                       }else{
-                        bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + highlightQuery(bk[attr]) + "</p>";
+                        let temp = (bk[attr] === true || bk[attr] == "yes") ? "Yes" : bk[attr];
+                        bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + highlightQuery(temp) + "</p>";
                       }
                   } else if (category == attr) {
                       bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category query__highlight-category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + highlightQuery(bk[attr]) + "</p>";
@@ -226,14 +231,15 @@ function showMoreResults() {
             Object.keys(bk).forEach(function(attr){
                 if (attr != "folder" && bk[attr]) {
                   if (category == "all") {
-                    bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + highlightQuery(bk[attr]) + "</p>";
+                    let temp = (bk[attr] === true || bk[attr] == "yes") ? "Yes" : bk[attr];
+                    bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + highlightQuery(temp) + "</p>";
                   } else if (category == attr) {
                     bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category query__highlight-category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + highlightQuery(bk[attr]) + "</p>";
                   } else if(attr == "link"){
                     let external_link = `<a class="query_result__link-text" href="${bk[attr]}" target="_blank">${bk[attr]}</a>`
                     bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + external_link + "</p>";
                   } else {
-                    var temp = (bk[attr] === true || bk[attr] == "yes") ? "Yes" : bk[attr];
+                    let temp = (bk[attr] === true || bk[attr] == "yes") ? "Yes" : bk[attr];
                     bookInfo += "<p class='query_result__" + attr + "'><span class='query_result__category'>" + FORMAT_ATTR_NAME[attr] + "</span>: " + temp + "</p>";
                   }
                 }
