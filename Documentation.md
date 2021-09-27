@@ -192,6 +192,19 @@ For simplicity:
 - run `main.py`
 - replace the newly generated production files and the updated images/books folder with the production ones
 
+Update Sept 2021
+- Updating CSV and running scripts created unessessary `layout.js`
+- `processing/catalogue.csv` is version controlled so can view diffs
+- note `"` as a delimiter, can mess up rows
+- Column order matters!
+- complete-data should be a representation of csv if csv is checked then this file should be ok
+- adding images
+  - add spine to spines
+  - turn high def PNG to jpg and compress (max width 800px, reduce to 100kb)
+  - add `images: true`, `spine: y` to book
+  - note folder name, add to `book_folder_relation` with names of images
+
+
 **The current repo Spreadsheet and catalogue.csv are used in production but can be viewed as sample versions for future updates**
 
 **Checklist**
@@ -277,5 +290,10 @@ Simply, Github will host the app for free if it doesn't require anything servers
 Alternatives could be a deployment on a SaaS platform as a node app. Or using node as an entryway. This could also benefit from storing/updating the data in a serverside database but would require a bunch of work to accomplish.
 
 Finally, if you want to test the deployment you can use tools like: [Surge.sh](https://surge.sh/)
-Surge is a CL tool that will upload the project like a git repo and deploy as a static site.
+Surge is a CL tool that will upload the project like a git repo and deploy as a static site. As of Sept 2021, the test deployments are not successful using Surge.
 
+https://github.com/ReadingWithAusten/dev should hold the development repo for the project. This branch should only contain the updates from processing the data and none of the extraneous stuff.
+(In reality the published, aka. GitPages version should contain this)
+
+Currently Netlify is connected to the dev repository and [deploys the static dev build there](https://thirsty-bose-d8e15d.netlify.app/)
+This deployment should be used to validate updates before they're pushed on the main repo.
