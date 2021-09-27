@@ -2515,7 +2515,7 @@ var COMPLETE_DATA = {
     "Gale": "CW117033672",
     "images": "processing",
     "permissions": "Courtesy of Chawton House",
-    "folder": "johnson-ramber-1756",
+    "folder": "johnson-rambler-1756",
     "spine": "true"
   },
   "158": {
