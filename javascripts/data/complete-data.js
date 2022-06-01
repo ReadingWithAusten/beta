@@ -573,7 +573,6 @@ var COMPLETE_DATA = {
     "images": "yes",
     "permissions": "© Shakespeare Birthplace Trust",
     "folder": "miller-kalendar-1732",
-    "spine": "true"
   },
   "35": {
     "title": "Memoirs Concerning the Affairs of Scotland, from Queen Anne's Accession to the Throne, to the Commencement of the Union of the Two Kingdoms of Scotland and England, In May, 1707. With an Account of the Origine and Progress of the Design'd Invasion from France, in March, 1708. And some Reflections on the Ancient State of Scotland. To which is prefix'd an Introduction, shewing the Reason for Publishing, these Memoirs at this Juncture. The Third Edition. To which is added an Appendix.",
@@ -2802,7 +2801,12 @@ var COMPLETE_DATA = {
     "volumes": "1",
     "in_1908": true,
     "ESTC": "T135427",
-    "Gale": "CW102794906"
+    "Gale": "CW102794906",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "jones-history-1702",
+    "spine": "true"
   },
   "176": {
     "title": "A Father's Legacy to His Daughters. By the late Dr. Gregory of Edinburgh. A New Edition.",
@@ -3800,7 +3804,12 @@ var COMPLETE_DATA = {
     "format": "8vo",
     "volumes": "1",
     "in_1908": true,
-    "link": "https://books.google.ca/books?id=gcAOAAAAYAAJ"
+    "link": "https://books.google.ca/books?id=gcAOAAAAYAAJ",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "clarke-ovid-1752",
+    "spine": "true"
   },
   "242": {
     "title": "Epicteti Manuale, Cebetis Thebani Tabula, Prodici Hercules, et Theophrasti Characteres Ethici, Græce et Latine, In Usum Tyronum accommodati. Græca cum MSS. collata castigavit, Versionem fidam, nec barbaram adjunxit, Annotationibus omnium Doctissimorum selectis, necnon suis, in quibus verba, sententiæ, dogmata, moresque antiqui explicantur, illustravit Josephus Simpson, A. M. Coll. Reg. Oxon. Socius. Editio Tertia.",
@@ -4341,7 +4350,12 @@ var COMPLETE_DATA = {
     "format": "12mo",
     "volumes": "3",
     "in_1908": true,
-    "link": "https://books.google.ca/books?id=lbMf599Rme8C"
+    "link": "https://books.google.ca/books?id=lbMf599Rme8C",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "unlisted-musarum-1714",
+    "spine": "true"
   },
   "275": {
     "title": "Pharmacopoeia Collegii Regii Medicorum Edinburgensis.",
@@ -4819,7 +4833,12 @@ var COMPLETE_DATA = {
     "transcript": "Brunck's Sophocles 2 vols 5 7 Oxford 1808",
     "format": "8vo",
     "volumes": "2",
-    "link": "https://catalog.hathitrust.org/Record/008910447"
+    "link": "https://catalog.hathitrust.org/Record/008910447",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "brunck-sophocles-1808",
+    "spine": "true"
   },
   "304": {
     "title": "Tractatus Pacis & Amicitiæ inter Serenissimam ac Potentissimam Principem Annem, Dei Gratiâ, Magnæ Britanniæ, Franciæ, & Hibernæ, Reginam, & Serenissimum ac Potentissimum Principem Ludovicum XIV. Dei Gratiâ, Regem Christianissimum, Conclusus Trajecti ad Rhenum die 31 Martii/11 Aprilis Anno 1713. Treaty of Peace and Friendship between The most Serene and most Potent Princess Anne, by the Grace of God, Queen of Great Britain, France, and Ireland, and the most Serene and most Potent Prince Lewis the XIVth, the most Christian King, Concluded at Utrecht the 31 Day of March/11 Day of April 1713. By her Majesties special Command.",
@@ -4831,7 +4850,12 @@ var COMPLETE_DATA = {
     "transcript": "Treaty of Utrecht Lat. Fr. & Eng. 5 7 London 1713",
     "format": "8vo",
     "volumes": "1",
-    "link": "https://catalog.hathitrust.org/Record/100258873"
+    "link": "https://catalog.hathitrust.org/Record/100258873",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "unlisted-treaty-1713",
+    "spine": "true"
   },
   "305": {
     "title": "D. Junii Juvenalis Aquinatis Satiræ XVI. Ad optimorum exemplarium fidem recensitæ, Perpetuo Commentario illustratæ, atque Prooemio et Argumentis Instructæ, a Georgio Alex. Ruperti. Secundum Editionem Gottingensem. Accedit Index Copiosissimus.",
@@ -5305,7 +5329,12 @@ var COMPLETE_DATA = {
     "volumes": "1",
     "in_1908": true,
     "ESTC": "R214565",
-    "EEBO": "O682"
+    "EEBO": "O682",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "crispin-ovid-1696",
+    "spine": "true"
   },
   "336": {
     "title": "The History and Topographical Survey of the County of Kent. Containing the Antient and Present State of It, civil and ecclesiastical; Collected from Public Records, and other authorities: Illustrated with Maps, Views, Antiquities, &c. The Second Edition, improved, corrected, and continued to the present time. By Edward Hasted, Esq. F.R.S. and S.A. Late of Canterbury. [Epigraph on title page]",
@@ -6781,7 +6810,6 @@ var COMPLETE_DATA = {
     "images": "yes",
     "permissions": "Courtesy of Chawton House",
     "folder": "delany-revelation-1733",
-    "spine": "true"
   },
   "434": {
     "title": "Fables. By the late Mr. Gay. The Sixth Edition.",
@@ -6980,11 +7008,13 @@ var COMPLETE_DATA = {
     "transcript": "Lords Protests 1 2 London 1747",
     "format": "8vo",
     "volumes": "1",
-    "current_loc": "Knight Collection, on loan to Chawton House",
     "in_1908": true,
     "link": "https://books.google.ca/books?vid=xX8DAAAAQAAJ",
-    "images": "forthcoming",
-    "permissions": "Courtesy of Chawton House"
+    "permissions": "Courtesy of Chawton House",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "folder": "lords-protests-1747",
+    "spine": "true"
   },
   "447": {
     "title": "Military memoirs and maxims of Marshal Turenne. Interspersed with Others, taken from the best Authors and Observation, with Remarks. Particularly of The Duty of a General. The March of an Army. Encampments, Retrenchments, Forage, Guards, Alarms and Partisan Parties. The Disposition of an Army. General Battles. Particular Battles, Ambuseades, Skirmishes and Surprizes. Attacks of Lines or Intrenchments. Artillery, Ammunition, Guides, Spies, &c. Fortified Places, Rules of Fortification, Magazines. The Attack of a Place. Sieges, Trenches, Approaches. Batteries, Mines, Breaches &c. The Defence of a Place, before and during a Siege. Sallies, Counter-Batteries. Countermines, Succours, &c. By A. Williamson, Major-General. Aut nunquam tentes, aut perfice. The Second Edition.",
@@ -7564,7 +7594,6 @@ var COMPLETE_DATA = {
     "images": "yes",
     "permissions": "Courtesy of Chawton House",
     "folder": "collins-peerage-1779",
-    "spine": "true"
   },
   "483": {
     "title": "Spectacle de la Nature: or, Nature Display'd. Being Discourses On such Particulars of Natural History, As were thought most proper To Excite the Curiosity, and Form the Minds of Youth. Illustrated with Copper Plates. Translated from the Original French, By Mr. Humphreys. The Sixth Edition, Corrected.",
@@ -9656,9 +9685,6 @@ var COMPLETE_DATA = {
     "current_loc": "Chawton House, gift of Deborah Barnum",
     "in_1908": true,
     "link": "https://books.google.ca/books?id=2R60WBfhbKMC",
-    "images": "yes",
-    "folder": "butler-genuine-1759",
-    "spine": "true"
   },
   "612": {
     "title": "Coelebs In Search of a Wife. Comprehending Observations on domestic habits and manners, religion and morals. [Epigraph on title page] The Ninth Edition. In Two Volumes.",
@@ -12007,11 +12033,14 @@ var COMPLETE_DATA = {
     "transcript": "Memoirs du Duc de Simon 3 vols 5 1 London 1788",
     "format": "8vo",
     "volumes": "3",
-    "current_loc": "Knight Collection, on loan to Chawton House",
     "in_1908": true,
     "notes": "Another edition of this text was published in the same year (1788).",
     "link": "https://books.google.ca/books?vid=rgFAAAAAcAAJ",
-    "permissions": "Courtesy of Chawton House"
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "simon-memoires-1788",
+    "spine": "true"
   },
   "755": {
     "title": "Voyage du Jeune Anacharsis en Grèce, dans le milieu du quatrième siècle avant l’ère vulgaire. Troisième Edition.",
@@ -13600,7 +13629,7 @@ var COMPLETE_DATA = {
     "link": "https://catalog.hathitrust.org/Record/008682720",
     "images": "yes",
     "permissions": "Courtesy of Chawton House",
-    "folder": "frederick ii-oeuvres-1760",
+    "folder": "frederick-ii-oeuvres-1760",
     "spine": "true"
   },
   "853": {
@@ -13762,7 +13791,12 @@ var COMPLETE_DATA = {
     "transcript": "Journal des Etrangers 9 Toms 5 10 London 1777",
     "format": "8vo",
     "volumes": "9",
-    "link": "https://books.google.ca/books?id=Z2UGAAAAQAAJ"
+    "link": "https://books.google.ca/books?id=Z2UGAAAAQAAJ",
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "journal-etranger-1777",
+    "spine": "true"
   },
   "864": {
     "title": "Theatre complet de M. Mercier. Avec de tres-belles figures en taille douce. Nouvelle Edition.",
@@ -14534,11 +14568,13 @@ var COMPLETE_DATA = {
     "transcript": "Grounds of the Xtian Religion 1 4 London 1724",
     "format": "8vo",
     "volumes": "1",
-    "current_loc": "Knight Collection, on loan to Chawton House",
     "in_1908": true,
     "link": "https://catalog.hathitrust.org/Record/008682227",
-    "images": "forthcoming",
-    "permissions": "Courtesy of Chawton House"
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "collins-discourse-1724",
+    "spine": "true"
   },
   "912": {
     "title": "Select Offices of Private Devotion: Viz. I. An Office of Daily Devotion. II. An Office of Humiliation; to be used on our Days of Retirement, for the more solemn Exercise of Repentance. III. An Office for the Lord's Day. IV. An Office for the Holy Communion. With Large Collections out of the Holy Scriptures: Designed to excite Devotion in the Use of the Prayers; and to assist our daily Progress in Christian Knowledge and Virtue. By Richard Hele A.M. Master of the School belonging to the Church of Sarum. The Second Edition. [Epigraphs on title page]",
@@ -15311,7 +15347,11 @@ var COMPLETE_DATA = {
     "volumes": "1",
     "current_loc": "Chawton House Library",
     "in_1908": true,
-    "link": "https://catalog.hathitrust.org/Record/001868137"
+    "link": "https://catalog.hathitrust.org/Record/001868137",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "dirom-narrative-1793",
+    "spine": "true"
   },
   "960": {
     "title": "Travels in Greece: or, An Account of a Tour made at the expense Of the Society of Dilettanti. By Richard Chandler, D.D. Fellow of Magdalen College, and of the Society of Antiquaries. [Epigraph on title page]",
@@ -16284,7 +16324,12 @@ var COMPLETE_DATA = {
     "transcript": "Blairs Chronology Centre 1 London 1814",
     "format": "fol.",
     "volumes": "1",
-    "in_1908": true
+    "in_1908": true,
+    "current_loc": "Knight Collection, on loan to Chawton House",
+    "images": "yes",
+    "permissions": "Courtesy of Chawton House",
+    "folder": "blair-history-1814",
+    "spine": "true"
   },
   "1020": {
     "title": "A Dictionary of the English Language: in which The Words are deduced from their Originals, and Illustrated in their Different Significations by Examples from the best Writers. To which are prefixed, A History of the Language, and An English Grammar. By Samuel Johnson, A. M. In Two Volumes. [Epigraph on title page]",
@@ -16302,18 +16347,22 @@ var COMPLETE_DATA = {
     "link": "https://catalog.hathitrust.org/Record/009310086"
   },
   "1021": {
-    "title": "The Holy Bible Containing the Bookes of the Old & New Testament.",
-    "author": "Ogilby, John [illustrator] (1600-1676)",
+    "title": "The Book of Common Prayer, and Administration of the Sacraments: And other Rites and Ceremonies of the Church of England: With the Psalter, or Psalmes of David.",
+    "author": "Church of England",
     "pub_date": "1660",
-    "publisher": "Printed by John Field, Printer to the Universitie. And illustrated wth. Chorographical Sculps by J. Ogilby",
-    "pub_loc": "Cambridge",
+    "publisher": "[S.N.]",
+    "pub_loc": "[S.I.]",
     "shelf": "West case: column 3, shelf 2",
     "transcript": "Holy Bible 2 vols Centre 2 [blank] 1660",
     "format": "fol.",
     "volumes": "2",
     "in_1908": true,
-    "ESTC": "R17044",
-    "EEBO": "B2258"
+    "ESTC": "R31596",
+    "EEBO": "B3619",
+    "current_loc": "Bernard Quaritch Ltd. Rare Books, London, United Kingdom",
+    "images": "yes",
+    "folder": "unlisted-bible-1660",
+    "spine": "true"
   },
   "1022": {
     "title": "A Supplement to Mr. Chambers's Cyclopædia: or, Universal Dictionary of Arts and Sciences. In Two Volumes.",
@@ -18380,9 +18429,13 @@ var COMPLETE_DATA = {
     "transcript": "Essay on Pope 2 vols 5 6 London 1756",
     "format": "8vo",
     "volumes": "2",
-    "current_loc": "Indiana University Library, Bloomington, Indiana",
     "in_1908": true,
-    "link": "https://catalog.hathitrust.org/Record/008654446"
+    "link": "https://catalog.hathitrust.org/Record/008654446",
+    "current_loc": "Lilly Library, Indiana University Library, Bloomington, Indiana",
+    "images": "yes",
+    "permissions": "Courtesy Lilly Library, Indiana University, Bloomington, Indiana",
+    "folder": "warton-essay-1756",
+    "spine": "true"
   },
   "1149": {
     "title": "Narrative of a Survey of the intertropical and western Coasts of Australia performed between The Years 1818 and 1822. By Captain Phillip P. King, R.N., F.R.S., F.L.S., and member of the Royal Asiatic Society of London. With An Appendix, containing various subjects relating to hydrography and natural history. In Two Volumes, illustrated by plates, charts, and wood-cuts.",
