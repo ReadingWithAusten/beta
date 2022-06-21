@@ -54,6 +54,10 @@ input:focus:-moz-placeholder{
   color:rgb(100,100,100);
   transition:all 0.3s ease-in-out;
 }
+#query__input option {
+  background-color: rgb(249, 252, 255);
+  color: rgb(40,40,40);
+}
 #query__input input[type=text],
 #query__input select{
   display: inline-block;

@@ -16356,6 +16356,7 @@ var COMPLETE_DATA = {
     "transcript": "Holy Bible 2 vols Centre 2 [blank] 1660",
     "format": "fol.",
     "volumes": "2",
+    "notes": "The second volume is 'The Book of Common Prayer, and Administration of the Sacraments: And other Rites and Ceremonies of the Church of England: With the Psalter, or Psalmes of David.' [s.l.] [s.n.] 1660.",
     "in_1908": true,
     "ESTC": "R17044 (volume 1), R31596 (volume 2)",
     "EEBO": "B2258 (volume 1), B3619 (volume 2)",
