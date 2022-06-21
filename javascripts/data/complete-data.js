@@ -16347,22 +16347,23 @@ var COMPLETE_DATA = {
     "link": "https://catalog.hathitrust.org/Record/009310086"
   },
   "1021": {
-    "title": "The Book of Common Prayer, and Administration of the Sacraments: And other Rites and Ceremonies of the Church of England: With the Psalter, or Psalmes of David.",
+    "title": "The Holy Bible Containing the Bookes of the Old & New Testament.",
     "author": "Church of England",
     "pub_date": "1660",
-    "publisher": "[S.N.]",
-    "pub_loc": "[S.I.]",
+    "publisher": "Printed by John Field Printer to the Vnversitie. And illustrated with Chorographical Sculps by J. Ogilby",
+    "pub_loc": "Cambridge",
     "shelf": "West case: column 3, shelf 2",
     "transcript": "Holy Bible 2 vols Centre 2 [blank] 1660",
     "format": "fol.",
     "volumes": "2",
     "in_1908": true,
-    "ESTC": "R31596",
-    "EEBO": "B3619",
-    "current_loc": "Bernard Quaritch Ltd. Rare Books, London, United Kingdom",
+    "ESTC": "R17044 (volume 1), R31596 (volume 2)",
+    "EEBO": "B2258 (volume 1), B3619 (volume 2)",
+    "current_loc": "<a href='https://www.quaritch.com/books/bible/the-holy-bible-containing-the-bookes-of-the-old-an/E5717/'>Bernard Quaritch Ltd. Rare Books, London, United Kingdom</a>",
     "images": "yes",
     "folder": "unlisted-bible-1660",
-    "spine": "true"
+    "spine": "true",
+    "permissions": "With the permission of Bernard Quaritch Ltd"
   },
   "1022": {
     "title": "A Supplement to Mr. Chambers's Cyclopædia: or, Universal Dictionary of Arts and Sciences. In Two Volumes.",
